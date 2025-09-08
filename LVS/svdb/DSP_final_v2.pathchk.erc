@@ -1,0 +1,9 @@
+DSP_final_v2 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Jan 17 08:14:15 2025                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Jan 17 08:14:15 2025                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Jan 17 08:14:15 2025                                      
+ERC PATHCHK ! LABELED
+0 0 0 Jan 17 08:14:15 2025                                      

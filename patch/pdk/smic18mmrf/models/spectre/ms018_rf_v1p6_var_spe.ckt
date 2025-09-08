@@ -1,0 +1,360 @@
+//* 
+//* No part of this file can be released without the consent of SMIC.
+//*
+//******************************************************************************************
+//* 0.18um Mixed Signal 1P6M with MIM Salicide 1.8V/3.3V RF SPICE Model (for SPECTRE only) *
+//******************************************************************************************
+//*
+//* Release version    : 1.6
+//*
+//* Release date       : 07/02/2007
+//*
+//* Simulation tool    : Cadence spectre V6.0
+//*
+//*
+//*  MOSFET Varactor  :
+//*
+//*        *-----------------------------------------------------------------------* 
+//*        |                        MOSFET varactor type                           |
+//*        |=======================================================================| 
+//*        |   NMOS in NWELL 1.8V      |    pvar18w10l1_rf   |   pvar18w10ld5_rf   | 
+//*        |                           |    pvar18w5l1_rf    |   pvar18w5ld5_rf    |
+//*        |=======================================================================| 
+//*        |   NMOS in NWELL 3.3V      |    pvar33w10l1_rf   |   pvar33w10ld5_rf   | 
+//*        *-----------------------------------------------------------------------*
+//*
+//*        *-----------------------------------------------------------------------* 
+//*        |                        MOSFET varactor subckt                         |     
+//*        |=======================================================================| 
+//*        |   NMOS in NWELL 1.8V      |  pvar18w10l1_ckt_rf | pvar18w10ld5_ckt_rf | 
+//*        |                           |  pvar18w5l1_ckt_rf  | pvar18w5ld5_ckt_rf  |
+//*        |=======================================================================| 
+//*        |   NMOS in NWELL 3.3V      |  pvar33w10l1_ckt_rf | pvar33w10ld5_ckt_rf | 
+//*        *-----------------------------------------------------------------------*
+//*
+//*
+//*  Junction Diode Varactor  :  
+//*
+//*        *--------------------------------------------------------------* 
+//*        | Junction Diode type   |       1.8V       |        3.3V       |
+//*        |==============================================================| 
+//*        |       N+/PWELL        |   pvardio18_rf   |   pvardio33_rf    |
+//*        *--------------------------------------------------------------*
+//*
+//*        *--------------------------------------------------------------* 
+//*        | Junction Diode subckt |       1.8V       |        3.3V       |
+//*        |==============================================================| 
+//*        |       N+/PWELL        | pvardio18_ckt_rf | pvardio33_ckt_rf  |
+//*        *--------------------------------------------------------------*
+//* //*
+simulator lang=spectre  insensitive=yes
+//*          
+//*************************************
+//* 0.18um 1.8V MOS Varactor W/L=10/1um
+//*************************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvar18w10l1_ckt_rf (1 2)
+//* mos varactor scalable model parameters
+parameters lr=1u wr=10u nf=12 ar=lr*wr*nf 
+//* equivalent circuit
+ls    (11 22)  inductor   l=max((0.09284+(1.29385/(ar*1E12))-(0.54792/(ar*ar*1E24)))*1E-9, 1E-15)
+rs    (1  11)  resistor   r=max(0.083+(459.73273/(ar*1E12))-(556.39181/(ar*ar*1E24)), 1E-6)
+rsub1 (10  0)  resistor   r=max(556.5175-(1.57331*(ar*1E12))+(3.8559E-03*(ar*ar*1E24)), 1E-3)
+csub1 (10  0)  capacitor  c=max((8.05487+0.02149*ar*1E12)*1E-15, 1E-18)
+cox1  (1  10)  capacitor  c=max((87.71847+(0.04284*ar*1E12)-(5.6649E-05*ar*ar*1E24))*1E-15, 1E-18)
+rsub2 (20  0)  resistor   r=max(248.42-(0.96964*(ar*1E12))+(1.5562E-03*(ar*ar*1E24)), 1E-3)
+csub2 (20  0)  capacitor  c=max((47.47+0.46523*ar*1E12+2.182E-04*ar*ar*1E24)*1E-15, 1E-18)
+cox2  (2  20)  capacitor  c=max((132.012+(0.9407*ar*1E12)-(2.7708E-03*ar*ar*1E24))*1E-15, 1E-18)
+djnw (0    2) nwdio_rf area=(24.44*nf + 82.037)*1e-12  pj=(3.2264*nf + 41.13)*1e-6
+risod (3   0)  resistor   r=1E12
+risos (4   0)  resistor   r=1E12
+main (3 22 4 2) pvar18w10l1_rf l=lr w=wr*nf ad=0 as=0 pd=0 ps=0
+//* MOS Varactor Model
+model pvar18w10l1_rf bsim3v3 type=p
++version = 3.2 tnom = 25 
++capmod = 3 voffcv = 0.45 k1 = 0.724 
++vth0 = -1.463 acde = 1.14 tox = 3.46e-9 
++toxm = 3.46e-9 nch = 3.216e+17 dskip = no 
++binunit = 2 k2 = 0 k3 = 0 kt1 = 0.08
++cgbo = 9.74e-9*nf
+model nwdio_rf diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0 mj = 0.317 
++vj = 0.494 cjsw = 0 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1
++fc = 0 
+ends pvar18w10l1_ckt_rf
+//*
+//***************************************
+//* 0.18um 1.8V MOS Varactor W/L=10/0.5um
+//***************************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvar18w10ld5_ckt_rf (1 2)
+//* mos varactor scalable model parameters
+parameters lr=0.5u wr=10u nf=12 ar=lr*wr*nf 
+//* equivalent circuit
+ls    (11 22)  inductor   l=max((0.0852+(0.13076/(ar*1E12)))*1E-9, 1E-15)
+rs    (1  11)  resistor   r=max(-1.03805+(397.19513/(ar*1E12))-(1.5924E+03/(ar*ar*1E24)), 1E-6)
+rsub1 (10  0)  resistor   r=max(457.77-(1.07243*(ar*1E12)), 1E-3)
+csub1 (10  0)  capacitor  c=max((13.83156-(50.84135/(ar*1E12))+(150.48223/(ar*ar*1E24)))*1E-15, 1E-18)
+cox1  (1  10)  capacitor  c=max((134.10379-(393.92974/(ar*1E12))+(1.4666E+03/(ar*ar*1E24)))*1E-15, 1E-18)
+rsub2 (20  0)  resistor   r=max(296.4222-(1.954*(ar*1E12))+(0.01063*(ar*ar*1E24)), 1E-3)
+csub2 (20  0)  capacitor  c=max((48.2247+(0.74002*ar*1E12)-(1.0182E-03*ar*ar*1E24))*1E-15, 1E-18)
+cox2  (2  20)  capacitor  c=max((215.406+(0.2339*ar*1E12)+(4.7151E-03*ar*ar*1E24))*1E-15, 1E-18)
+djnw (0    2) nwdio_rf area=(16.572*nf+83.138)*1e-12  pj=(2.1878*nf+41.275)*1e-6
+risod (3   0)  resistor   r=1E12
+risos (4   0)  resistor   r=1E12
+main (3 22 4 2) pvar18w10ld5_rf l=lr w=wr*nf ad=0 as=0 pd=0 ps=0
+//* MOS Varactor Model
+model pvar18w10ld5_rf bsim3v3 type=p
++version = 3.2 tnom = 25 
++capmod = 3 voffcv = 0.45 k1 = 0.72 
++vth0 = -1.39 acde = 1.26 tox = 3.54e-9   
++toxm = 3.54e-9 nch = 2.016e+17 dskip = no 
++binunit = 2 k2 = 0 k3 = 0 kt1 = 0.08
++cgbo = 2.125e-8*nf
+model nwdio_rf diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0 mj = 0.317 
++vj = 0.494 cjsw = 0 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1
++fc = 0 
+ends pvar18w10ld5_ckt_rf
+//*
+//************************************
+//* 0.18um 1.8V MOS Varactor W/L=5/1um
+//************************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvar18w5l1_ckt_rf (1 2)
+//* mos varactor scalable model parameters
+parameters lr=1u wr=5u nf=12 ar=lr*wr*nf 
+//* equivalent circuit
+ls    (11 22)  inductor   l=max((0.10017+(0.83722/(ar*1E12)))*1E-9, 1E-15)
+rs    (1  11)  resistor   r=max(-0.08387+(196.2729/(ar*1E12))-(163.4976/(ar*ar*1E24)), 1E-6)
+rsub1 (10  0)  resistor   r=max(499.965-(0.64767*(ar*1E12)), 1E-3)
+csub1 (10  0)  capacitor  c=max((15.26953-(15.14071/(ar*1E12))+(34.13518/(ar*ar*1E24)))*1E-15, 1E-18)
+cox1  (1  10)  capacitor  c=max((96.91743-(0.02825*(ar*1E12))+(1.3789E-03*(ar*ar*1E24)))*1E-15, 1E-18)
+rsub2 (20  0)  resistor   r=max(309.08425-(3.30267*(ar*1E12))+(0.01572*(ar*ar*1E24)), 1E-3)
+csub2 (20  0)  capacitor  c=max((40.17346+(0.85612*ar*1E12)+(1.3059E-03*ar*ar*1E24))*1E-15, 1E-18)
+cox2  (2  20)  capacitor  c=max((136.2641+(0.83904*ar*1E12)+(2.1065E-03*ar*ar*1E24))*1E-15, 1E-18)
+djnw (0    2) nwdio_rf area=(16.374*nf+54.962)*1e-12  pj=(3.2264*nf+31.13)*1e-6
+risod (3   0)  resistor   r=1E12
+risos (4   0)  resistor   r=1E12
+main (3 22 4 2) pvar18w5l1_rf l=lr w=wr*nf ad=0 as=0 pd=0 ps=0
+//* MOS Varactor Model
+model pvar18w5l1_rf bsim3v3 type=p
++version = 3.2 tnom = 25 
++capmod = 3 voffcv = 0.45 k1 = 0.716 
++vth0 = -1.439 acde = 1.16 tox = 3.47e-9   
++toxm = 3.47e-9 nch = 2.02e+17 dskip = no 
++binunit = 2 k2 = 0 k3 = 0 kt1 = 0.08
++cgbo = 5.63e-9*nf
+model nwdio_rf diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0 mj = 0.317 
++vj = 0.494 cjsw = 0 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1
++fc = 0 
+ends pvar18w5l1_ckt_rf
+//*
+//**************************************
+//* 0.18um 1.8V MOS Varactor W/L=5/0.5um
+//**************************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvar18w5ld5_ckt_rf (1 2)
+//* mos varactor scalable model parameters
+parameters lr=0.5u wr=5u nf=12 ar=lr*wr*nf 
+//* equivalent circuit
+ls    (11 22)  inductor   l=max((0.07435-(0.01289/(ar*1E12))+(1.74048/(ar*ar*1E24)))*1E-9, 1E-15)
+rs    (1  11)  resistor   r=max(-0.48084+(107.9149/(ar*1E12))-(64.47816/(ar*ar*1E24)), 1E-6)
+rsub1 (10  0)  resistor   r=max(446.9888+(123.7474/(ar*1E12))-(138.0724/(ar*ar*1E24)), 1E-3)
+csub1 (10  0)  capacitor  c=max((25.21696-(69.19762/(ar*1E12))+(95.74595/(ar*ar*1E24)))*1E-15, 1E-18)
+cox1  (1  10)  capacitor  c=max((144.65044-(103.17346/(ar*1E12))+(145.395/(ar*ar*1E24)))*1E-15, 1E-18)
+rsub2 (20  0)  resistor   r=max(314.42393-(4.36195*(ar*1E12))+(0.0243*(ar*ar*1E24)), 1E-3)
+csub2 (20  0)  capacitor  c=max((42.67786+(0.88835*ar*1E12)-(3.9062E-04*ar*ar*1E24))*1E-15, 1E-18)
+cox2  (2  20)  capacitor  c=max((173.2516+(0.73728*ar*1E12)+(8.8677E-03*ar*ar*1E24))*1E-15, 1E-18)
+djnw (0    2) nwdio_rf area=(11.103*nf+55.7)*1e-12  pj=(2.1878*nf+31.275)*1e-6
+risod (3   0)  resistor   r=1E12
+risos (4   0)  resistor   r=1E12
+main (3 22 4 2) pvar18w5ld5_rf l=lr w=wr*nf ad=0 as=0 pd=0 ps=0
+//* MOS Varactor Model
+model pvar18w5ld5_rf bsim3v3 type=p
++version = 3.2 tnom = 25 
++capmod = 3 voffcv = 0.45 k1 = 0.716 
++vth0 = -1.407 acde = 1.16 tox = 3.41e-9   
++toxm = 3.41e-9 nch = 2.52e+17 dskip = no 
++binunit = 2 k2 = 0 k3 = 0 kt1 = 0.08
++cgbo = 1.126e-8*nf
+model nwdio_rf diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0 mj = 0.317 
++vj = 0.494 cjsw = 0 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1
++fc = 0 
+ends pvar18w5ld5_ckt_rf
+//*
+//*************************************
+//* 0.18um 3.3V MOS Varactor W/L=10/1um
+//*************************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvar33w10l1_ckt_rf (1 2)
+//* mos varactor scalable model parameters
+parameters lr=1u wr=10u nf=12 ar=lr*wr*nf 
+//* equivalent circuit
+ls    (11 22)  inductor   l=max((0.10887-(0.84214/(ar*1E12))+(42.9369/(ar*ar*1E24)))*1E-9, 1E-15)
+rs    (1  11)  resistor   r=max(-2.28745+(845.45731/(ar*1E12))-(3.3958E+03/(ar*ar*1E24)), 1E-6)
+rsub1 (10  0)  resistor   r=max(2500-(8.09363*(ar*1E12))+(0.01806*(ar*ar*1E24)), 1E-3)
+csub1 (10  0)  capacitor  c=max((-3.69447+(0.49422*(ar*1E12))-(5.1566E-04*(ar*ar*1E24)))*1E-15, 1E-18)
+cox1  (1  10)  capacitor  c=max((20.30662+(0.04881*(ar*1E12))-(7.8361E-05*(ar*ar*1E24)))*1E-15, 1E-18)
+rsub2 (20  0)  resistor   r=max(406.51895-(3.51578*(ar*1E12))+(9.7288E-03*(ar*ar*1E24)), 1E-3)
+csub2 (20  0)  capacitor  c=max((31.49815+(0.69886*ar*1E12)-(1.9439E-03*ar*ar*1E24))*1E-15, 1E-18)
+cox2  (2  20)  capacitor  c=max((48.82294+(0.44648*ar*1E12)-(5.3013E-04*ar*ar*1E24))*1E-15, 1E-18)
+djnw (0    2) nwdio_rf area=(24.44*nf + 82.037)*1e-12  pj=(3.2264*nf + 41.13)*1e-6
+risod (3   0)  resistor   r=1E12
+risos (4   0)  resistor   r=1E12
+main (3 22 4 2) pvar33w10l1_rf l=lr w=wr*nf ad=0 as=0 pd=0 ps=0
+//* MOS Varactor Model
+model pvar33w10l1_rf bsim3v3 type=p
++version = 3.2 tnom = 25 
++capmod = 3 voffcv = 2.2 k1 = 1.25 
++vth0 = -1.804 acde = 1.5 tox = 7.96e-9   
++toxm = 7.96e-9 nch = 1.26e+17 dskip = no 
++binunit = 2 k2 = 0 k3 = 0 kt1 = 0.08
++cgbo = 7.82e-9*nf
+model nwdio_rf diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0 mj = 0.317 
++vj = 0.494 cjsw = 0 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1
++fc = 0 
+ends pvar33w10l1_ckt_rf
+//*
+//***************************************
+//* 0.18um 3.3V MOS Varactor W/L=10/0.5um
+//***************************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvar33w10ld5_ckt_rf (1 2)
+//* mos varactor scalable model parameters
+parameters lr=0.5u wr=10u nf=12 ar=lr*wr*nf 
+//* equivalent circuit
+ls    (11 22)  inductor   l=max((0.06574+(3.27809/(ar*1E12))+(1.9152/(ar*ar*1E24)))*1E-9, 1E-15)
+rs    (1  11)  resistor   r=max(0.12474+(415.79482/(ar*1E12))-(601.94134/(ar*ar*1E24)), 1E-6)
+rsub1 (10  0)  resistor   r=max(1769.5-(3.25889*(ar*1E12))+(9.3714E-03*(ar*ar*1E24)), 1E-3)
+csub1 (10  0)  capacitor  c=max((2.69273+(0.31192*(ar*1E12))+(7.3263E-04*(ar*ar*1E24)))*1E-15, 1E-18)
+cox1  (1  10)  capacitor  c=max((17.5427+(0.0244*(ar*1E12))+(6.2365E-05*(ar*ar*1E24)))*1E-15, 1E-18)
+rsub2 (20  0)  resistor   r=max(437.11899-(2.13502*(ar*1E12))+(4.0197E-03*(ar*ar*1E24)), 1E-3)
+csub2 (20  0)  capacitor  c=max((26.83551+(0.68422*ar*1E12)-(4.2321E-04*ar*ar*1E24))*1E-15, 1E-18)
+cox2  (2  20)  capacitor  c=max((54.74146+(0.78482*ar*1E12)-(1.3654E-03*ar*ar*1E24))*1E-15, 1E-18)
+djnw (0    2) nwdio_rf area=(16.572*nf+83.138)*1e-12  pj=(2.1878*nf+41.275)*1e-6
+risod (3   0)  resistor   r=1E12
+risos (4   0)  resistor   r=1E12
+main (3 22 4 2) pvar33w10ld5_rf l=lr w=wr*nf ad=0 as=0 pd=0 ps=0
+//* MOS Varactor Model
+model pvar33w10ld5_rf bsim3v3 type=p
++version = 3.2 tnom = 25 
++capmod = 3 voffcv = 2.2 k1 = 1.28 
++vth0 = -1.77 acde = 1.56 tox = 8.45e-9   
++toxm = 8.45e-9 nch = 1.22e+17 dskip = no 
++binunit = 2 k2 = 0 k3 = 0 kt1 = 0.08
++cgbo = 1.272e-8*nf
+model nwdio_rf diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0 mj = 0.317 
++vj = 0.494 cjsw = 0 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1
++fc = 0 
+ends pvar33w10ld5_ckt_rf
+//****************************
+//* 0.18um 1.8V P+/NW Varactor
+//****************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvardio18_ckt_rf (1 2)
+//* P+/NW junction varactor scalable model parameters
+parameters lr=20u wr=5u nf=10 ar=lr*wr*nf pj=(lr+wr)*2*nf
+//* equivalent circuit
+ls    (1 11)  inductor   l=(0.07947+(1.7134E-05*ar*1E12)-(3.865E-09*ar*ar*1E24))*1E-9       
+rs    (11 22) resistor   r=0.23268+(3.334E+03/(ar*1E12))+(8.9147E+04/(ar*ar*1E24))
+rsub1 (10 0)  resistor   r=1E+05
+csub1 (10 0)  capacitor  c=1*1E-15
+cox1  (1 10)  capacitor  c=1*1E-15  
+rsub2 (20 0)  resistor   r=1940-(1.6342*ar*1E12)+(4.2816E-04*ar*ar*1E24)
+csub2 (20 0)  capacitor  c=(2.75025+(2.787E-03*ar*1E12)+(1.3682E-06*ar*ar*1E24))*1E-15        
+cox2  (2 20)  capacitor  c=(27.96263+(0.53519*ar*1E12)-(9.0589E-05*ar*ar*1E24))*1E-15
+diode (22 2)  pvardio18_rf area=ar pj=pj
+//* P+/Nwell varactor model
+model pvardio18_rf diode
++level = 1 is = 1.1913E-07 allow_scaling = yes dskip = no imax=1e20 isw = 1e-15
++cjo = 1.1495e-3 mj = 0.37316 
++tnom = 25 vj = 0.76958 cta = 0.000876 
++pta = 0.00153 fc = 0 
++eg = 1.16 tlev = 1 tlevc = 1
++n = 0.98812 ns = 0.98812 rs = 0 ik = 4.2216e+06 ikp = 2.43E-03 
++bv = 12 ibv = 2000 trs = 1.78e-03  xti = 3.0 
+ends pvardio18_ckt_rf
+//*
+//****************************
+//* 0.18um 3.3V P+/NW Varactor
+//****************************
+//* 1=port1, 2=port2
+//* Area=Wr*Lr*Nf
+subckt pvardio33_ckt_rf (1 2)
+//* P+/NW junction varactor scalable model parameters
+parameters lr=20u wr=5u nf=10 ar=lr*wr*nf  pj=(lr+wr)*2*nf
+//* equivalent circuit
+ls    (1 11)  inductor   l=(0.08203+(1.3302E-05*ar*1E12)-(1.844E-09*ar*ar*1E24))*1E-9       
+rs    (11 22) resistor   r=0.25902+(3.3475E+03/(ar*1E12))+(1.0295E+05/(ar*ar*1E24))
+rsub1 (10 0)  resistor   r=1E+05
+csub1 (10 0)  capacitor  c=1*1E-15
+cox1  (1 10)  capacitor  c=1*1E-15  
+rsub2 (20 0)  resistor   r=1.869E+03-(1.49373*ar*1E12)+(3.7877E-04*ar*ar*1E24)
+csub2 (20 0)  capacitor  c=(3.81691-(1.5322E-03*ar*1E12)+(4.0789E-06*ar*ar*1E24))*1E-15        
+cox2  (2 20)  capacitor  c=(64.90675+(0.37036*ar*1E12)+(1.0985E-06*ar*ar*1E24))*1E-15
+diode (22 2)  pvardio33_rf area=ar pj=pj
+//* P+/Nwell varactor model
+model pvardio33_rf diode
++level = 1 is = 1.3141E-07 allow_scaling = yes dskip = no imax=1e20 isw = 1e-15
++cjo = 1.1455E-3  mj = 0.3793 
++tnom = 25 vj = 0.792 cta = 0.000897
++pta = 0.00166 fc = 0 
++eg = 1.16 tlev = 1 tlevc = 1 
++n = 0.99195 ns = 0.99195 rs = 0 ik = 4.5171E+06  
++bv = 12 ibv = 2000 xti = 3.0  trs = 1.24e-03 ikp = 2.42e-03
+ends pvardio33_ckt_rf
+//*

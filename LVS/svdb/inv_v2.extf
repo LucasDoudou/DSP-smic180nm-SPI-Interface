@@ -1,0 +1,15 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 2
+lvs_ExtRunTimes 1734186318 1734186319
+lvs_ExtOutFile RUNDIR /home/student/Desktop/Workspace/LVS
+lvs_ExtOutFile RULES_FILE /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoErcSummary {4 0 0 0 0 4 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/student/Desktop/Workspace/LVS/inv_v2.sp
+lvs_ExtOutFile EXTRACTION_REPORT inv_v2.lvs.report.ext
+lvs_ExtOutFile LAYOUT_PDSP pdba.data
+lvs_ExtOutFile ERC_PATHCHK_DATABASE svdb/inv_v2.pathchk.erc
+lvs_ExtOutFile ERC_PATHCHK_REPORT svdb/inv_v2.pathchk.rep
+lvs_ExtOutFile ERC_DATABASE inv_v2.erc.results
+lvs_ExtOutFile ERC_SUMMARY inv_v2.erc.summary

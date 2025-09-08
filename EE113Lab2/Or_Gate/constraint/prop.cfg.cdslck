@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      student
+HostName                       localhost
+ProcessIdentifier              114161
+ProcessCreationTime_UTC        1732196630
+ProcessCreationTime_Readable   Thu Nov 21 21:43:50 2024 CST
+AppIdentifier                  /usr/cadence/IC615/tools.lnx86/dfII/bin/32bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /home/student/Desktop/Workspace/EE113Lab2/Or_Gate/constraint/prop.cfg
+TimeEditLocked                 Thu Nov 21 23:48:53 2024 CST

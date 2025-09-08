@@ -1,0 +1,334 @@
+//*Spectre Model Format
+simulator lang=spectre  insensitive=yes
+
+// *
+// * no part of this file can be released without the consent of smic.
+// *
+// ******************************************************************************************
+// *         smic 0.18um mixed signal 1p6m 1.8v/3.3v spice model (for spectre only)         *
+// ******************************************************************************************
+// *
+// * release version    : 1.7
+// *
+// * release date       : 12/13/2005
+// *
+// * simulation tool    : Cadence spectre V4.4.6
+// *
+// * model type         :
+// *       vertical bjt : spectre BJT 
+// *
+// * model name         :
+// *   vertical pnp bjt :
+// *        *-------------------------------------------------------*
+// *        | p+/nwell/psub bjt type        |   1.8v    |   3.3v    |
+// *        |=======================================================|
+// *        | emitter area: 10*10 um^2      | pnp18a100 | pnp33a100 |
+// *        |-------------------------------------------------------|
+// *        | emitter area: 5*5 um^2        |  pnp18a25 | pnp33a25  |
+// *        |-------------------------------------------------------|
+// *        | emitter area: 2*2 um^2        |  pnp18a4  | pnp33a4   |
+// *        *-------------------------------------------------------*
+// *
+// *   vertical npn bjt :
+// *        *-------------------------------------------------------*
+// *        |  n+/pwell/deepnwell bjt type  |   1.8v    |   3.3v    |
+// *        |=======================================================|
+// *        | emitter area: 10*10 um^2      | npn18a100 | npn33a100 |
+// *        |-------------------------------------------------------|
+// *        | emitter area: 5*5 um^2        | npn18a25  | npn33a25  |
+// *        |-------------------------------------------------------|
+// *        | emitter area: 2*2 um^2        | npn18a4   | npn33a4   |
+// *        *-------------------------------------------------------*
+// *
+// *   valid temperature range is from -40c to 125c
+// *
+// ***********************************************************************************
+// *      1.8v vertical p+/nwell/psub bipolar model (emitter area=10x10um^2)         *
+// ***********************************************************************************
+// *
+model pnp18a100 bjt type=pnp
++vaf = 553.93 ikf = 2.80e-03 
++ise = 9.00e-17 ne = 1.503 br = 9.00e-03 
++nr = 0.993 var = 25.0 ikr = 2.09e-03 
++isc = 5.50e-17 nc = 1.5 rb = 60.398 
++irb = 8.00e-04 rbm = 2.0 re = 1.1166 
++rc = 17.11 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 xtb = 0.00 tbf1 = 0.0049 
++tbr1 = -0.0001 tikf1 = -0.004 tnf1 = -5e-5 
++tne1 = 0.0001 ctc = 2e-3 cte = 8.76e-4 
++vje = 0.817 mje = 0.415 
++vjc = 0.494 mjc = 0.317 
++tvjc = 2.53e-3 tvje = 1.53e-3 
++is = 8.78e-18+dis_pnp18a100 
++bf = 3.224+dbf_pnp18a100 
++nf = 0.9925+dnf_pnp18a100 
++cjc = 3.71e-14+dcjc_pnp18a100 
++cje = 1.07e-13+dcje_pnp18a100 
+// *
+// ***********************************************************************************
+// *       1.8v vertical p+/nwell/psub bipolar model (emitter area=5x5um^2)          *
+// ***********************************************************************************
+// *
+model pnp18a25 bjt type=pnp
++vaf = 553.93 ikf = 1.30e-03 
++ise = 4.80e-17 ne = 1.5 br = 3.75e-03 
++nr = 1.0 var = 25.0 ikr = 2.09e-03 
++isc = 5.50e-17 nc = 1.5 rb = 70.398 
++irb = 8.00e-04 rbm = 2.0 re = 1.9166 
++rc = 17.11 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 xtb = 0.00 tbf1 = 0.0051 
++tbr1 = 0.001 tikf1 = -0.004 tnf1 = -0.0001 
++ctc = 2e-3 cte = 8.76e-4 tvjc = 2.53e-3 
++vje = 0.817 mje = 0.415 
++vjc = 0.494 mjc = 0.317 
++tvje = 1.53e-3 
++is = 3.10e-18+dis_pnp18a25 
++bf = 3.244+dbf_pnp18a25 
++nf = 1.0+dnf_pnp18a25 
++cjc = 1.75e-14+dcjc_pnp18a25 
++cje = 2.68e-14+dcje_pnp18a25 
+// *
+// ***********************************************************************************
+// *       1.8v vertical p+/nwell/psub bipolar model (emitter area=2x2um^2)          *
+// ***********************************************************************************
+// *
+model pnp18a4 bjt type=pnp
++vaf = 551.93 ikf = 4.50e-04 
++ise = 1.10e-17 ne = 1.47 br = 1.07e-03 
++nr = 1.0 var = 19.0 ikr = 1.79e-03 
++isc = 2.00e-17 nc = 1.5 rb = 122.98 
++irb = 1.50e-03 rbm = 2.0 re = 2.16 
++rc = 17.11 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 xtb = 0.00 tbf1 = 0.00563 
++tbr1 = 0.0012 tikf1 = -0.0043 tnf1 = 1.0e-4 
++ctc = 2e-3 cte = 8.76e-4 tvjc = 2.53e-3 
++vje = 0.817 mje = 0.415 
++vjc = 0.494 mjc = 0.317 
++tvje = 1.53e-3 
++is = 6.50e-19+dis_pnp18a4 
++bf = 3.4502+dbf_pnp18a4 
++nf = 1.0+dnf_pnp18a4 
++cjc = 9.28e-15+dcjc_pnp18a4 
++cje = 4.28e-15+dcje_pnp18a4 
+// *
+// ***********************************************************************************
+// *       3.3v vertival p+/nwell/psub bipolar model (emitter area=10x10um^2)        *
+// ***********************************************************************************
+// *
+model pnp33a100 bjt type=pnp
+// *
++vaf = 553.93 ikf = 2.80e-03 
++ise = 9.00e-17 ne = 1.503 br = 8.85e-03 
++nr = 0.993 var = 25.0 ikr = 2.09e-03 
++isc = 5.50e-17 nc = 1.5 rb = 60.398 
++irb = 8.00e-04 rbm = 2.0 re = 1.1166 
++rc = 17.11 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 xtb = 0.00 tbf1 = 0.0049 
++tbr1 = 0.0007 tikf1 = -0.003 tnf1 = -1.0e-4 
++tne1 = 0.0001 ctc = 2e-3 cte = 8.83e-4 
++vje = 0.807 mje = 0.401 
++vjc = 0.494 mjc = 0.317 
++tvjc = 2.53e-3 tvje = 1.57e-3 
++is = 8.78e-18+dis_pnp33a100 
++bf = 3.124+dbf_pnp33a100 
++nf = 0.9925+dnf_pnp33a100 
++cjc = 3.71e-14+dcjc_pnp33a100 
++cje = 1.01e-13+dcje_pnp33a100 
+// *
+// ***********************************************************************************
+// *         3.3v vertival p+/nwell/psub bipolar model (emitter area=5x5um^2)        *
+// ***********************************************************************************
+// *
+model pnp33a25 bjt type=pnp
++vaf = 553.93 ikf = 1.30e-03 
++ise = 4.80e-17 ne = 1.5 br = 3.65e-03 
++nr = 1.0 var = 25.0 ikr = 2.09e-03 
++isc = 5.50e-17 nc = 1.5 rb = 70.398 
++irb = 8.00e-04 rbm = 2.0 re = 1.9166 
++rc = 17.11 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 xtb = 0.00 tbf1 = 0.0051 
++tbr1 = 0.001 tikf1 = -0.004 tnf1 = -0.0001 
++ctc = 2e-3 cte = 8.83e-4 tvjc = 2.53e-3 
++vje = 0.807 mje = 0.401 
++vjc = 0.494 mjc = 0.317 tbf2 = 2.5e-6 
++tvje = 1.57e-3 
++is = 3.10e-18+dis_pnp33a25 
++bf = 3.10+dbf_pnp33a25 
++nf = 1.0+dnf_pnp33a25 
++cjc = 1.75e-14+dcjc_pnp33a25 
++cje = 2.525e-14+dcje_pnp33a25 
+// *
+// ***********************************************************************************
+// *           3.3v vertival p+/nwell/psub bipolar model (emitter area=2x2um^2)      *
+// ***********************************************************************************
+// *
+model pnp33a4 bjt type=pnp
++vaf = 551.93 ikf = 4.50e-04 
++ise = 1.10e-17 ne = 1.47 br = 1.05e-03 
++nr = 1.0 var = 19.0 ikr = 1.79e-03 
++isc = 2.00e-17 nc = 1.5 rb = 122.98 
++irb = 1.50e-03 rbm = 2.0 re = 2.16 
++rc = 17.11 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 xtb = 0.00 tbf1 = 0.00563 
++tbf2 = 2.5e-6 tikf1 = -0.004 tnf1 = 0.00 
++ctc = 2e-3 cte = 8.83e-4 tvjc = 2.53e-3 
++vje = 0.807 mje = 0.401 
++vjc = 0.494 mjc = 0.317 
++tvje = 1.57e-3 
++is = 6.50e-19+dis_pnp33a4 
++bf = 3.26+dbf_pnp33a4 
++nf = 1.0+dnf_pnp33a4 
++cjc = 9.28e-15+dcjc_pnp33a4 
++cje = 4.04e-15+dcje_pnp33a4 
+// *
+// ***********************************************************************************
+// *     1.8v vertical n+/bpwell/dnwell bipolar model (emitter area=10x10um^2)       *
+// ***********************************************************************************
+// *
+model npn18a100 bjt type=npn
++vaf = 40.0 ikf = 0.028 
++ise = 4.92e-16 ne = 1.4488 br = 1.43 
++nr = 1.004 var = 21.782 ikr = 3.30e-03 
++isc = 8.97e-16 nc = 1.4 rb = 150.0 
++irb = 2.00e-03 rbm = 0.1 re = 5.0 
++rc = 15.0 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 tbf1 = 0.0061 
++tbr1 = 0.00085 tikf1 = -0.003 tne1 = 0.00025 
++ctc = 1.2e-3 cte = 8.42e-4 tvjc = 1.9e-3 
++vje = 0.7 mje = 0.346 
++vjc = 0.693 mjc = 0.343 
++tvje = 0.00147 
++is = 4.20e-17+dis_npn18a100 
++bf = 24.9+dbf_npn18a100 
++nf = 1.006+dnf_npn18a100 
++cjc = 1.37e-13+dcjc_npn18a100 
++cje = 9.68e-14+dcje_npn18a100 
+// *
+// ***********************************************************************************
+// *       1.8v vertical n+/bpwell/dnwell bipolar model (emitter area=5x5um^2)       *
+// ***********************************************************************************
+// *
+model npn18a25 bjt type=npn
++vaf = 37.0 ikf = 8.80e-03 
++ise = 3.60e-16 ne = 1.49 br = 0.79 
++nr = 1.004 var = 21.782 ikr = 1.30e-03 
++isc = 9.00e-16 nc = 1.4 rb = 170.0 
++irb = 2.00e-03 rbm = 0.1 re = 13.0 
++rc = 18.0 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 tbf1 = 6.1e-03 
++tbr1 = 8.50e-04 tikf1 = -3.0e-03 tne1 = 2.5e-04 
++ctc = 1.2e-3 cte = 8.42e-4 tvjc = 1.9e-3 
++vje = 0.7 mje = 0.346 
++vjc = 0.693 mjc = 0.343 
++tvje = 0.00147 
++is = 1.25e-17+dis_npn18a25 
++bf = 26.2+dbf_npn18a25 
++nf = 1.0065+dnf_npn18a25 
++cjc = 6.48e-14+dcjc_npn18a25 
++cje = 2.42e-14+dcje_npn18a25 
+// *
+// ***********************************************************************************
+// *        1.8v vertical n+/bpwell/dnwell bipolar model (emitter area=2x2um^2)      *
+// ***********************************************************************************
+// *
+model npn18a4 bjt type=npn
++vaf = 38.0 ikf = 1.50e-03 
++ise = 1.15e-16 ne = 1.48 br = 0.271 
++nr = 1.007 var = 21.782 ikr = 1.30e-03 
++isc = 5.80e-16 nc = 1.43 rb = 200.0 
++irb = 1.00e-04 rbm = 0.1 re = 18.0 
++rc = 25.0 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 tbf1 = 6.1e-03 
++tbr1 = 8.50e-04 tikf1 = -3.0e-03 tne1 = 2.5e-04 
++ctc = 1.2e-3 cte = 8.42e-4 tvjc = 1.9e-3 
++vje = 0.7 mje = 0.346 
++vjc = 0.693 mjc = 0.343 
++tvje = 0.00147 
++is = 2.80e-18+dis_npn18a4 
++bf = 28.2+dbf_npn18a4 
++nf = 1.01+dnf_npn18a4 
++cjc = 3.43e-14+dcjc_npn18a4 
++cje = 3.87e-15+dcje_npn18a4 
+// *
+// ***********************************************************************************
+// *       3.3v vertical n+/bpwell/dnwell bipolar model (emitter area=10x10um^2)     *
+// ***********************************************************************************
+// *
+model npn33a100 bjt type=npn
++vaf = 30.0 ikf = 0.022 
++ise = 3.22e-16 ne = 1.4482 br = 1.83 
++nr = 1.005 var = 16.0 ikr = 0.058 
++isc = 5.57e-16 nc = 1.4 rb = 150.0 
++irb = 2.00e-03 rbm = 0.1 re = 5.0 
++rc = 15.0 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 tbf1 = 6.20e-03 
++tbr1 = 8.5e-04 tikf1 = -4.5e-03 tikr1 = -6.0e-03 
++tne1 = 1.0e-06 tnf1 = -1.50e-04 tnr1 = 0 
++ctc = 1.2e-3 cte = 8.97e-4 tvjc = 1.9e-3 
++vje = 0.708 mje = 0.321 
++vjc = 0.693 mjc = 0.343 
++tvje = 0.00166 
++is = 5.00e-17+dis_npn33a100 
++bf = 32.5+dbf_npn33a100 
++nf = 1.0075+dnf_npn33a100 
++cjc = 1.37e-13+dcjc_npn33a100 
++cje = 8.45e-14+dcje_npn33a100 
+// *
+// ***********************************************************************************
+// *       3.3v vertical n+/bpwell/dnwell bipolar model (emitter area=5x5um^2)       *
+// ***********************************************************************************
+// *
+model npn33a25 bjt type=npn
++vaf = 27.0 ikf = 6.00e-03 
++ise = 2.00e-16 ne = 1.45 br = 0.98 
++nr = 0.999 var = 20.0 ikr = 1.00e-03 
++isc = 7.00e-16 nc = 1.4 rb = 170.0 
++irb = 2.00e-03 rbm = 0.1 re = 13.0 
++rc = 18.0 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 tbf1 = 6.1e-03 
++tbr1 = 8.50e-04 tikf1 = -3.00e-03 tne1 = 2.50e-04 
++ctc = 1.2e-3 cte = 8.97e-4 tvjc = 1.9e-3 
++vje = 0.708 mje = 0.321 
++vjc = 0.693 mjc = 0.343 
++tvje = 0.00166 
++is = 1.25e-17+dis_npn33a25 
++bf = 33.0+dbf_npn33a25 
++nf = 1.0+dnf_npn33a25 
++cjc = 6.48e-14+dcjc_npn33a25 
++cje = 2.11e-14+dcje_npn33a25 
+// *
+// ***********************************************************************************
+// *       3.3v vertical n+/bpwell/dnwell bipolar model (emitter area=2x2um^2)       *
+// ***********************************************************************************
+// *
+model npn33a4 bjt type=npn
++vaf = 34.0 ikf = 1.50e-03 
++ise = 1.00e-16 ne = 1.48 br = 0.316 
++nr = 1.005 var = 21.782 ikr = 1.30e-03 
++isc = 5.80e-16 nc = 1.43 rb = 200.0 
++irb = 1.00e-04 rbm = 0.1 re = 18.0 
++rc = 25.0 xti = 3.0 eg = 1.16 
++tnom = 25.0 nkf = 0.5 tlev = 0 
++tlevc = 1 tbf1 = 0.0063 
++tbr1 = 0.00085 tikf1 = -0.003 tne1 = 0.0002 
++ctc = 1.2e-3 cte = 8.97e-4 tvjc = 1.9e-3 
++vje = 0.708 mje = 0.321 
++vjc = 0.693 mjc = 0.343 
++tvje = 0.00166 
++is = 2.90e-18+dis_npn33a4 
++bf = 34.2+dbf_npn33a4 
++nf = 1.01+dnf_npn33a4 
++cjc = 3.43e-14+dcjc_npn33a4 
++cje = 3.38e-15+dcje_npn33a4 
+// *

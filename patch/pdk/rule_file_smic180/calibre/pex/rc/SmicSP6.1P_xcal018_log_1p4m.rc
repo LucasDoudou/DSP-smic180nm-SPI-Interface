@@ -1,0 +1,3179 @@
+//
+// Generated on Fri Aug 29 13:07:31 2003 by xCalibrate v9.3_5.1 Mon Aug 4 13:54:35 PDT 2003
+//
+// Comments: 
+// $RCSfile: SmicSP6.1P_xcal018_log_1p4m.rc,v $
+// $Revision: 1.3 $
+// $Date: 2003/09/03 02:11:23 $
+// Spice Model:TD-LO18-SP-2001 Rev.: 6.1P
+//
+// Technology name: SmicSP6.1P_xcal018_log_1p4m
+// Precision: 1000
+// DBU Size: 1e-09
+// DB Magnification: 1
+// Capacitance Units: ff
+// Background Dielectric: 1
+// Stacking Mode: Unconditional
+//
+// Following line(s) should be in your rulesfile
+// UNIT CAPACITANCE ff
+// Above line(s) should be in your rulesfile
+//
+// 
+// Background dielectric = 1
+// 
+// Profile = field
+// Layers =  (field_base field_base_diel poly poly_diel poly_diel2 M1 M1_diel M1_diel2 M2 M2_diel M2_diel2 M3 M3_diel M3_diel2 M4 M4_diel M4_diel2)
+// 
+//     Z-COORD              NAME TYPE THICKNESS   DIEL   WIDTH   SPACE           NONPLANAR DIELECTRIC PARMS
+//                                                                          TYPE HEIGHT SWTHK   SWSLOPE  GAP  MIN   TYPE
+//                                                                                                       TYPE GAP  PARMS
+//  --- 7.1800  ------------------------------------------------------------------------------------------------------------------
+//  |                   M4_diel2   D    0.6000   7.9000      
+//  --- 6.5800  ------------------------------------------------------------------------------------------------------------------
+//  |                    M4_diel   D    0.1600   4.2000      
+//  --- 6.4200  ------------------------------------------------------------------------------------------------------------------
+//  |                         M4   C    0.9900           0.4400  0.4600 
+//  --- 5.4300  ------------------------------------------------------------------------------------------------------------------
+//  |                   M3_diel2   D    0.3500   4.2000      
+//  --- 5.0800  ------------------------------------------------------------------------------------------------------------------
+//  |                    M3_diel   D    0.6500   3.7000      
+//  --- 4.4300  ------------------------------------------------------------------------------------------------------------------
+//  |                         M3   C    0.5300           0.2800  0.2800 
+//  --- 3.9000  ------------------------------------------------------------------------------------------------------------------
+//  |                   M2_diel2   D    0.2000   4.2000      
+//  --- 3.7000  ------------------------------------------------------------------------------------------------------------------
+//  |                    M2_diel   D    0.6500   3.7000      
+//  --- 3.0500  ------------------------------------------------------------------------------------------------------------------
+//  |                         M2   C    0.5300           0.2800  0.2800 
+//  --- 2.5200  ------------------------------------------------------------------------------------------------------------------
+//  |                   M1_diel2   D    0.2000   4.2000      
+//  --- 2.3200  ------------------------------------------------------------------------------------------------------------------
+//  |                    M1_diel   D    0.6500   3.7000      
+//  --- 1.6700  ------------------------------------------------------------------------------------------------------------------
+//  |                         M1   C    0.5300           0.2300  0.2300 
+//  --- 1.1400  ------------------------------------------------------------------------------------------------------------------
+//  |                 poly_diel2   D    0.7500   4.2000      
+//  --- 0.3900  ------------------------------------------------------------------------------------------------------------------
+// 
+//  --- 0.5900  ------------------------------------------------------------------------------------------------------------------
+//  |   0.3900         poly_diel   D    0.0400   4.3000                      C  0.2400   0.0400  90.0000                                               
+//  --- 0.3500  ------------------------------------------------------------------------------------------------------------------
+// 
+//  --- 0.5500  ------------------------------------------------------------------------------------------------------------------
+//  |                       poly   C    0.2000           0.1800  0.2500 
+//  --- 0.3500  ------------------------------------------------------------------------------------------------------------------
+//  |            field_base_diel   D    0.3500   4.0000      
+//  --- 0.0000  ------------------------------------------------------------------------------------------------------------------
+//  |                 field_base   B    1.0000
+//  --- -1.0000 ------------------------------------------------------------------------------------------------------------------
+// 
+//  ===========================
+//  Non-planar Z coordinate map
+//  ===========================
+// 
+//  --- 7.1800 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                    M4_diel2 (7.9000)
+//  --- 6.5800 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M4_diel (4.2000)
+//  --- 6.4200 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M4_diel (4.2000)                       M4
+//  --- 5.4300 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                    M3_diel2 (4.2000)                         
+//  --- 5.0800 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M3_diel (3.7000)                         
+//  --- 4.4300 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M3_diel (3.7000)                       M3
+//  --- 3.9000 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                    M2_diel2 (4.2000)                         
+//  --- 3.7000 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M2_diel (3.7000)                         
+//  --- 3.0500 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M2_diel (3.7000)                       M2
+//  --- 2.5200 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                    M1_diel2 (4.2000)                         
+//  --- 2.3200 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M1_diel (3.7000)                         
+//  --- 1.6700 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                     M1_diel (3.7000)                       M1
+//  --- 1.1400 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                  poly_diel2 (4.2000)                         
+//  --- 0.5900 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                  poly_diel2 (4.2000)       poly_diel (4.3000)
+//  --- 0.5500 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                  poly_diel2 (4.2000)       poly_diel (4.3000)                     poly
+//  --- 0.3900 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                                            poly_diel (4.3000)                     poly
+//  --- 0.3500 ---------------------------------------------------------------------------------------------------------------------------------------------
+//             field_base_diel (4.0000)                                                  
+//  --- 0.0000 ---------------------------------------------------------------------------------------------------------------------------------------------
+//                           field_base                                                  
+// 
+// Background dielectric = 1
+// 
+// Profile = active
+// Layers =  (active_base active_base_diel poly_diel2 M1 M1_diel M1_diel2 M2 M2_diel M2_diel2 M3 M3_diel M3_diel2 M4 M4_diel M4_diel2)
+// 
+//     Z-COORD              NAME TYPE THICKNESS   DIEL   WIDTH   SPACE  
+//                                                                
+//  --- 6.8300  ---------------------------------------------------
+//  |                   M4_diel2   D    0.6000   7.9000      
+//  --- 6.2300  ---------------------------------------------------
+//  |                    M4_diel   D    0.1600   4.2000      
+//  --- 6.0700  ---------------------------------------------------
+//  |                         M4   C    0.9900           0.4400  0.4600 
+//  --- 5.0800  ---------------------------------------------------
+//  |                   M3_diel2   D    0.3500   4.2000      
+//  --- 4.7300  ---------------------------------------------------
+//  |                    M3_diel   D    0.6500   3.7000      
+//  --- 4.0800  ---------------------------------------------------
+//  |                         M3   C    0.5300           0.2800  0.2800 
+//  --- 3.5500  ---------------------------------------------------
+//  |                   M2_diel2   D    0.2000   4.2000      
+//  --- 3.3500  ---------------------------------------------------
+//  |                    M2_diel   D    0.6500   3.7000      
+//  --- 2.7000  ---------------------------------------------------
+//  |                         M2   C    0.5300           0.2800  0.2800 
+//  --- 2.1700  ---------------------------------------------------
+//  |                   M1_diel2   D    0.2000   4.2000      
+//  --- 1.9700  ---------------------------------------------------
+//  |                    M1_diel   D    0.6500   3.7000      
+//  --- 1.3200  ---------------------------------------------------
+//  |                         M1   C    0.5300           0.2300  0.2300 
+//  --- 0.7900  ---------------------------------------------------
+//  |                 poly_diel2   D    0.7500   4.2000      
+//  --- 0.0400  ---------------------------------------------------
+//  |           active_base_diel   D    0.0400   4.3000      
+//  --- 0.0000  ---------------------------------------------------
+//  |                active_base   B    1.0000
+//  --- -1.0000 ---------------------------------------------------
+//
+//  model: 2  target: intrinsicp  profile: field  layers: field_base,poly
+//
+CAPACITANCE INTRINSIC PLATE poly MASK
+[
+    PROPERTY C
+    C = 0.101189 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: field  layers: field_base,M1
+//
+CAPACITANCE INTRINSIC PLATE M1 MASK
+[
+    PROPERTY C
+    C = 0.0321533 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: field  layers: field_base,M2
+//
+CAPACITANCE INTRINSIC PLATE M2 MASK
+[
+    PROPERTY C
+    C = 0.0137951 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: field  layers: field_base,M3
+//
+CAPACITANCE INTRINSIC PLATE M3 MASK
+[
+    PROPERTY C
+    C = 0.00878195 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: field  layers: field_base,M4
+//
+CAPACITANCE INTRINSIC PLATE M4 MASK
+[
+    PROPERTY C
+    C = 0.00627835 * area()
+]
+//
+//  model: 34  target: intrinsic  profile: field  layers: field_base,poly
+//
+CAPACITANCE INTRINSIC FRINGE poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0447866 * (1 - exp(-1.42165 * (distance() + 0.0958117)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0465665
+    }
+]
+//
+//  model: 34  target: nearbody  profile: field  layers: field_base,poly
+//
+CAPACITANCE NEARBODY poly WITH SHIELD poly MASK
+[
+    PROPERTY C
+    max_calwidth = 0.72 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.46966 - 1.5713 * (distance())) + 0.00941031 / pow(distance() , 1.11065)) * 1.09685 * pow((width1() + width2()) / 2 , 0.167331)
+]
+//
+//  model: 34  target: intrinsic  profile: field  layers: field_base,M1
+//
+CAPACITANCE INTRINSIC FRINGE M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0369758 * (1 - exp(-0.587763 * (distance() + 0.215552)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0398837
+    }
+]
+//
+//  model: 34  target: nearbody  profile: field  layers: field_base,M1
+//
+CAPACITANCE NEARBODY M1 WITH SHIELD M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.75347 - 0.817973 * (distance())) + 0.0197652 / pow(distance() , 0.961824)) * 1.28889 * pow((width1() + width2()) / 2 , 0.112056)
+]
+//
+//  model: 34  target: intrinsic  profile: field  layers: field_base,M2
+//
+CAPACITANCE INTRINSIC FRINGE M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0273848 * (1 - exp(-0.356352 * (distance() + 0.52288)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0312221
+    }
+]
+//
+//  model: 34  target: nearbody  profile: field  layers: field_base,M2
+//
+CAPACITANCE NEARBODY M2 WITH SHIELD M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.627 - 0.421414 * (distance())) + 0.0170668 / pow(distance() , 0.853475)) * 1.97658 * pow((width1() + width2()) / 2 , 0.137056)
+]
+//
+//  model: 34  target: intrinsic  profile: field  layers: field_base,M3
+//
+CAPACITANCE INTRINSIC FRINGE M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0212782 * (1 - exp(-0.309239 * (distance() + 0.77923)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0270611
+    }
+]
+//
+//  model: 34  target: nearbody  profile: field  layers: field_base,M3
+//
+CAPACITANCE NEARBODY M3 WITH SHIELD M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.47835 - 0.244249 * (distance())) + 0.0213548 / pow(distance() , 0.839552)) * 1.64985 * pow((width1() + width2()) / 2 , 0.148163)
+]
+//
+//  model: 34  target: intrinsic  profile: field  layers: field_base,M4
+//
+CAPACITANCE INTRINSIC FRINGE M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0348654 * (1 - exp(-0.0834111 * (distance() + 1.32064)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0269167
+    }
+]
+//
+//  model: 34  target: nearbody  profile: field  layers: field_base,M4
+//
+CAPACITANCE NEARBODY M4 WITH SHIELD M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.02626 - 0.295553 * (distance())) + 0.0373365 / pow(distance() , 0.854206)) * 1.57816 * pow((width1() + width2()) / 2 , 0.109625)
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE CROSSOVER PLATE poly M1 MASK
+[
+    PROPERTY C
+    C = 0.0631282 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE CROSSOVER PLATE poly M2 MASK
+[
+    PROPERTY C
+    C = 0.0174748 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE CROSSOVER PLATE poly M3 MASK
+[
+    PROPERTY C
+    C = 0.0101421 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE CROSSOVER PLATE poly M4 MASK
+[
+    PROPERTY C
+    C = 0.00694468 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE CROSSOVER PLATE M1 M2 MASK
+[
+    PROPERTY C
+    C = 0.0396563 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE CROSSOVER PLATE M1 M3 MASK
+[
+    PROPERTY C
+    C = 0.0150156 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE CROSSOVER PLATE M1 M4 MASK
+[
+    PROPERTY C
+    C = 0.00892879 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE CROSSOVER PLATE M2 M3 MASK
+[
+    PROPERTY C
+    C = 0.0396563 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE CROSSOVER PLATE M2 M4 MASK
+[
+    PROPERTY C
+    C = 0.0141582 * area()
+]
+//
+//  model: 3  target: crossoverp  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE CROSSOVER PLATE M3 M4 MASK
+[
+    PROPERTY C
+    C = 0.0341881 * area()
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE NEARBODY poly INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.72 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.643 - 2.83483 * (distance())) + 0.00075623 / pow(distance() , 2.03345)) * 1.12386 * pow((width1() + width2()) / 2 , 0.0537605)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE CROSSOVER FRINGE poly M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.019893 * (1 - exp(-2.37652 * (distance() + -0.0538111)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0204814
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00477927 * (distance()) + 0.404376) * (0.101962 - exp(-(-0.777427 * (distance()) + 0.582937) * (enclose() + 3.61389 * (distance()) + 3.05363) - (0.0030108 * (distance()) + 0.160369) * (enclose() + 3.83757 * (distance()) + 1.18926) * (enclose() + 3.83757 * (distance()) + 1.18926)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.019893 * (1 - exp(-2.37652 * (distance() + -0.0538111)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.19024 * (0.101962 - exp(3.3042 * (enclose() + 21.1231) - 0.175423 * (enclose() + 20.3771) * (enclose() + 20.3771)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE INTRINSIC FRINGE poly INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0292677 * (1 - exp(-2.42675 * (distance() + -0.0468621)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0300286
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE NEARBODY poly INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.72 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.96717 - 1.74669 * (distance())) + 0.00350393 / pow(distance() , 1.51186)) * 1.07037 * pow((width1() + width2()) / 2 , 0.129144)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE CROSSOVER FRINGE poly M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00796862 * (1 - exp(-1.47422 * (distance() + 0.051504)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00840697
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00101639 * (distance()) + 0.0327069) * (0.553919 - exp(-(0.150586 * (distance()) + 0.313097) * (enclose() + 0.60146 * (distance()) + 1.28924) - (0.00067827 * (distance()) + -0.0209866) * (enclose() + -2.83655 * (distance()) + 0.290528) * (enclose() + -2.83655 * (distance()) + 0.290528)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00796862 * (1 - exp(-1.47422 * (distance() + 0.051504)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0138125 * (0.553919 - exp(-1.06603 * (enclose() + 4.29654) - -0.0175952 * (enclose() + -13.8922) * (enclose() + -13.8922)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE INTRINSIC FRINGE poly INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0378263 * (1 - exp(-1.56538 * (distance() + 0.0516266)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0395905
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE NEARBODY poly INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.72 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.13462 - 1.56224 * (distance())) + 0.00570575 / pow(distance() , 1.33589)) * 1.04509 * pow((width1() + width2()) / 2 , 0.148776)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE CROSSOVER FRINGE poly M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00501938 * (1 - exp(-1.37564 * (distance() + 0.0769775)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00537866
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00038726 * (distance()) + 0.0182516) * (0.58897 - exp(-(0.175413 * (distance()) + 0.206807) * (enclose() + -0.207098 * (distance()) + 1.77348) - (0.01747 * (distance()) + -0.0106313) * (enclose() + -0.431516 * (distance()) + 0.303449) * (enclose() + -0.431516 * (distance()) + 0.303449)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00501938 * (1 - exp(-1.37564 * (distance() + 0.0769775)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.00815765 * (0.58897 - exp(-1.08387 * (enclose() + 0.73799) - 0.0767187 * (enclose() + -1.85413) * (enclose() + -1.85413)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE INTRINSIC FRINGE poly INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0402503 * (1 - exp(-1.46535 * (distance() + 0.0745635)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0427208
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE NEARBODY poly INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.72 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.22402 - 1.51778 * (distance())) + 0.00720062 / pow(distance() , 1.24991)) * 1.02504 * pow((width1() + width2()) / 2 , 0.155294)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE CROSSOVER FRINGE poly M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00357166 * (1 - exp(-1.34782 * (distance() + 0.0872233)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00386105
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0004301 * (distance()) + 0.0135024) * (0.604687 - exp(-(0.08913 * (distance()) + 0.176393) * (enclose() + -0.126459 * (distance()) + 2.10228) - (0.00686414 * (distance()) + -0.0150053) * (enclose() + -0.578966 * (distance()) + 0.692987) * (enclose() + -0.578966 * (distance()) + 0.692987)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00357166 * (1 - exp(-1.34782 * (distance() + 0.0872233)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.00567595 * (0.604687 - exp(-0.622043 * (enclose() + 1.46998) - 0.0193154 * (enclose() + -2.20184) * (enclose() + -2.20184)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE INTRINSIC FRINGE poly INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0414687 * (1 - exp(-1.4369 * (distance() + 0.0832577)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0443674
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE NEARBODY M1 INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.13467 - 1.45162 * (distance())) + 0.00319967 / pow(distance() , 1.53434)) * 1.88827 * pow((width1() + width2()) / 2 , 0.0603981)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE CROSSOVER FRINGE M1 M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0257661 * (1 - exp(-0.964973 * (distance() + 0.0116034)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0262398
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (6.93068e-05 * (distance()) + 0.302648) * (0.164264 - exp(-(-0.0168226 * (distance()) + 0.00648459) * (enclose() + 16.6967 * (distance()) + 24.5661) - (0.0117105 * (distance()) + 0.0302176) * (enclose() + 0.819693 * (distance()) + 6.96334) * (enclose() + 0.819693 * (distance()) + 6.96334)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0257661 * (1 - exp(-0.964973 * (distance() + 0.0116034)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.151497 * (0.164264 - exp(0.0776284 * (enclose() + 108.05) - 0.0887701 * (enclose() + 11.0618) * (enclose() + 11.0618)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE INTRINSIC FRINGE M1 INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0221743 * (1 - exp(-0.930278 * (distance() + 0.0163488)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0225601
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE NEARBODY M1 INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.11436 - 1.04752 * (distance())) + 0.00750141 / pow(distance() , 1.30859)) * 1.44602 * pow((width1() + width2()) / 2 , 0.0887279)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE CROSSOVER FRINGE M1 M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0146161 * (1 - exp(-0.637439 * (distance() + 0.109833)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.014834
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0001937 * (distance()) + 0.0359748) * (0.814569 - exp(-(0.316805 * (distance()) + 0.251037) * (enclose() + 0.20574 * (distance()) + 0.749742) - (-0.00932536 * (distance()) + -0.0355158) * (enclose() + 0.7913 * (distance()) + 1.58056) * (enclose() + 0.7913 * (distance()) + 1.58056)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0146161 * (1 - exp(-0.637439 * (distance() + 0.109833)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0175032 * (0.814569 - exp(-1.83506 * (enclose() + 1.77844) - -0.0821426 * (enclose() + 5.53706) * (enclose() + 5.53706)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE INTRINSIC FRINGE M1 INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0281048 * (1 - exp(-0.670897 * (distance() + 0.0993821)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0286233
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE NEARBODY M1 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.34467 - 0.915482 * (distance())) + 0.0101252 / pow(distance() , 1.17629)) * 1.48597 * pow((width1() + width2()) / 2 , 0.0994888)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE CROSSOVER FRINGE M1 M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00998091 * (1 - exp(-0.566092 * (distance() + 0.168749)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0103231
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00018495 * (distance()) + 0.0231899) * (0.895273 - exp(-(0.186145 * (distance()) + 0.1654) * (enclose() + 0.396856 * (distance()) + 0.706462) - (-0.00344075 * (distance()) + -0.0161032) * (enclose() + 1.20622 * (distance()) + 2.32824) * (enclose() + 1.20622 * (distance()) + 2.32824)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00998091 * (1 - exp(-0.566092 * (distance() + 0.168749)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0111326 * (0.895273 - exp(-1.09613 * (enclose() + 2.69074) - -0.033307 * (enclose() + 8.35934) * (enclose() + 8.35934)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE INTRINSIC FRINGE M1 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0307897 * (1 - exp(-0.607934 * (distance() + 0.147143)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0319573
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE NEARBODY M2 INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.93267 - 1.08246 * (distance())) + 0.00851999 / pow(distance() , 1.36546)) * 1.17342 * pow((width1() + width2()) / 2 , 0.0778588)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE CROSSOVER FRINGE M2 M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0309289 * (1 - exp(-0.756224 * (distance() + 0.0567026)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0316896
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.0101151 * (distance()) + 0.472636) * (0.112274 - exp(-(-0.190625 * (distance()) + 0.422189) * (enclose() + 1.28023 * (distance()) + 4.56722) - (0.0257081 * (distance()) + 0.00215203) * (enclose() + 0.448247 * (distance()) + 5.89207) * (enclose() + 0.448247 * (distance()) + 5.89207)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0309289 * (1 - exp(-0.756224 * (distance() + 0.0567026)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.261606 * (0.112274 - exp(0.530936 * (enclose() + 10.9684) - 0.130693 * (enclose() + 8.13331) * (enclose() + 8.13331)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE INTRINSIC FRINGE M2 INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0128846 * (1 - exp(-0.692035 * (distance() + 0.0671434)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0131611
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE NEARBODY M2 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.3084 - 0.726581 * (distance())) + 0.011035 / pow(distance() , 1.18853)) * 1.3953 * pow((width1() + width2()) / 2 , 0.107509)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE CROSSOVER FRINGE M2 M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0189308 * (1 - exp(-0.426449 * (distance() + 0.236009)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0188766
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00118365 * (distance()) + 0.0365773) * (0.825387 - exp(-(0.269531 * (distance()) + 0.286031) * (enclose() + 0.351166 * (distance()) + 0.89963) - (-0.00582105 * (distance()) + -0.0294682) * (enclose() + 1.06986 * (distance()) + 2.43889) * (enclose() + 1.06986 * (distance()) + 2.43889)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0189308 * (1 - exp(-0.426449 * (distance() + 0.236009)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0212478 * (0.825387 - exp(-1.63369 * (enclose() + 2.65546) - -0.0585734 * (enclose() + 7.78819) * (enclose() + 7.78819)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE INTRINSIC FRINGE M2 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0186025 * (1 - exp(-0.425227 * (distance() + 0.233745)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0185237
+    }
+]
+//
+//  model: 36  target: nearbody  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE NEARBODY M3 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.13373 - 0.911208 * (distance())) + 0.0120447 / pow(distance() , 1.21679)) * 1.17925 * pow((width1() + width2()) / 2 , 0.0939686)
+]
+//
+//  model: 36  target: crossovere  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0313505 * (1 - exp(-0.638839 * (distance() + 0.111499)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0325593
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00039333 * (distance()) + 0.0666414) * (0.925658 - exp(-(-0.082226 * (distance()) + 2.06734) * (enclose() + -0.141657 * (distance()) + 1.57198) - (0.0272114 * (distance()) + -0.223183) * (enclose() + -0.232952 * (distance()) + 3.85335) * (enclose() + -0.232952 * (distance()) + 3.85335)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0313505 * (1 - exp(-0.638839 * (distance() + 0.111499)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0323374 * (0.925658 - exp(-1.65621 * (enclose() + 0.863695) - -0.087126 * (enclose() + 2.68859) * (enclose() + 2.68859)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE INTRINSIC FRINGE M3 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.00968863 * (1 - exp(-0.584628 * (distance() + 0.132449)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.010026
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE NEARBODY M1 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.70085 - 1.19403 * (distance())) + 0.0140714 / pow(distance() , 1.04605)) * 1.44613 * pow((width1() + width2()) / 2 , 0.0967221)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE CROSSOVER FRINGE M1 poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0451523 * (1 - exp(-0.892199 * (distance() + 0.100773)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0499493
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.0372659 * (distance()) + 1.72296) * (0.0425338 - exp(-(-0.263433 * (distance()) + 0.258208) * (enclose() + 5.25442 * (distance()) + 9.24757) - (0.00066326 * (distance()) + 0.036055) * (enclose() + 5.62643 * (distance()) + 4.15401) * (enclose() + 5.62643 * (distance()) + 4.15401)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0451523 * (1 - exp(-0.892199 * (distance() + 0.100773)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.954645 * (0.0425338 - exp(1.05896 * (enclose() + 35.5197) - 0.0393713 * (enclose() + 32.2862) * (enclose() + 32.2862)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE NEARBODY M2 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.4457 - 0.533223 * (distance())) + 0.0173217 / pow(distance() , 0.875748)) * 1.83753 * pow((width1() + width2()) / 2 , 0.132156)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE CROSSOVER FRINGE M2 poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0300731 * (1 - exp(-0.403786 * (distance() + 0.408973)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0348999
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00139378 * (distance()) + 0.0718967) * (0.600551 - exp(-(0.0346589 * (distance()) + 0.438671) * (enclose() + -0.0675057 * (distance()) + 1.42214) - (0.0194902 * (distance()) + -0.0846921) * (enclose() + -0.491535 * (distance()) + 1.63622) * (enclose() + -0.491535 * (distance()) + 1.63622)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0300731 * (1 - exp(-0.403786 * (distance() + 0.408973)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0394328 * (0.600551 - exp(-0.611965 * (enclose() + 1.08461) - 0.0127589 * (enclose() + -0.821455) * (enclose() + -0.821455)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE NEARBODY M3 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.51479 - 0.281672 * (distance())) + 0.0197685 / pow(distance() , 0.848212)) * 1.748 * pow((width1() + width2()) / 2 , 0.145916)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE CROSSOVER FRINGE M3 poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0231155 * (1 - exp(-0.318079 * (distance() + 0.706626)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0295193
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00104845 * (distance()) + 0.0520661) * (0.813743 - exp(-(0.0448633 * (distance()) + 0.11094) * (enclose() + -0.0726127 * (distance()) + 1.42899) - (0.00245978 * (distance()) + -0.0217272) * (enclose() + -0.626335 * (distance()) + 0.849169) * (enclose() + -0.626335 * (distance()) + 0.849169)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0231155 * (1 - exp(-0.318079 * (distance() + 0.706626)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0234119 * (0.813743 - exp(-0.335257 * (enclose() + 1.06593) - -0.0094283 * (enclose() + -2.28251) * (enclose() + -2.28251)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE NEARBODY M4 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.92278 - 0.312086 * (distance())) + 0.0384414 / pow(distance() , 0.864479)) * 1.50002 * pow((width1() + width2()) / 2 , 0.108532)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE CROSSOVER FRINGE M4 poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.036956 * (1 - exp(-0.086244 * (distance() + 1.23474)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0286416
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00492347 * (distance()) + 0.0178675) * (0.630526 - exp(-(0.00841015 * (distance()) + 0.219631) * (enclose() + 0.096569 * (distance()) + 1.64019) - (0.0097854 * (distance()) + -0.0099994) * (enclose() + -0.6073 * (distance()) + 3.4512) * (enclose() + -0.6073 * (distance()) + 3.4512)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.036956 * (1 - exp(-0.086244 * (distance() + 1.23474)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0212424 * (0.630526 - exp(-0.261682 * (enclose() + 2.12304) - 0.0389276 * (enclose() + 0.4147) * (enclose() + 0.4147)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE NEARBODY M2 INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.0503 - 0.911526 * (distance())) + 0.0141838 / pow(distance() , 0.983564)) * 1.70938 * pow((width1() + width2()) / 2 , 0.111606)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE CROSSOVER FRINGE M2 M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0392368 * (1 - exp(-0.679622 * (distance() + 0.153945)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0440885
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.0385925 * (distance()) + 0.784654) * (0.0707922 - exp(-(-0.130491 * (distance()) + 0.096821) * (enclose() + 7.07394 * (distance()) + 14.6754) - (0.00030926 * (distance()) + 0.0229234) * (enclose() + 5.75225 * (distance()) + 6.76288) * (enclose() + 5.75225 * (distance()) + 6.76288)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0392368 * (1 - exp(-0.679622 * (distance() + 0.153945)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.488808 * (0.0707922 - exp(0.555634 * (enclose() + 50.0451) - 0.0244697 * (enclose() + 35.5241) * (enclose() + 35.5241)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE NEARBODY M3 INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.58169 - 0.425226 * (distance())) + 0.01672 / pow(distance() , 0.864924)) * 1.96968 * pow((width1() + width2()) / 2 , 0.138151)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE CROSSOVER FRINGE M3 M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0279292 * (1 - exp(-0.370779 * (distance() + 0.499963)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0333053
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00474943 * (distance()) + 0.0830776) * (0.965429 - exp(-(0.0688814 * (distance()) + 0.326386) * (enclose() + -0.150471 * (distance()) + 1.86779) - (-0.00267602 * (distance()) + -0.0246582) * (enclose() + -0.309748 * (distance()) + 5.04381) * (enclose() + -0.309748 * (distance()) + 5.04381)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0279292 * (1 - exp(-0.370779 * (distance() + 0.499963)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0296652 * (0.965429 - exp(-0.670793 * (enclose() + 1.11544) - -0.0380383 * (enclose() + 3.49507) * (enclose() + 3.49507)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE NEARBODY M4 INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.7405 - 0.352138 * (distance())) + 0.0371372 / pow(distance() , 0.897926)) * 1.44953 * pow((width1() + width2()) / 2 , 0.105303)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE CROSSOVER FRINGE M4 M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0400923 * (1 - exp(-0.102525 * (distance() + 1.00396)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0316029
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00955766 * (distance()) + 0.0123754) * (0.552437 - exp(-(-0.0165074 * (distance()) + 0.312632) * (enclose() + 0.638314 * (distance()) + 0.609533) - (0.0169555 * (distance()) + -0.00033634) * (enclose() + -0.731603 * (distance()) + 4.18338) * (enclose() + -0.731603 * (distance()) + 4.18338)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0400923 * (1 - exp(-0.102525 * (distance() + 1.00396)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0300819 * (0.552437 - exp(-0.230095 * (enclose() + 3.8011) - 0.0844412 * (enclose() + 0.525365) * (enclose() + 0.525365)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE NEARBODY M3 INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.13297 - 0.878931 * (distance())) + 0.0144289 / pow(distance() , 0.97398)) * 1.73528 * pow((width1() + width2()) / 2 , 0.115405)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE CROSSOVER FRINGE M3 M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0389803 * (1 - exp(-0.679408 * (distance() + 0.161195)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0441103
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.026368 * (distance()) + 0.42983) * (0.124359 - exp(-(-0.115423 * (distance()) + 0.0828266) * (enclose() + 5.75 * (distance()) + 11.396) - (0.00050986 * (distance()) + 0.0302521) * (enclose() + 4.10366 * (distance()) + 5.63242) * (enclose() + 4.10366 * (distance()) + 5.63242)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0389803 * (1 - exp(-0.679408 * (distance() + 0.161195)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.280835 * (0.124359 - exp(0.494288 * (enclose() + 40.146) - 0.0328014 * (enclose() + 26.1507) * (enclose() + 26.1507)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE NEARBODY M4 INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.50861 - 0.430221 * (distance())) + 0.0331141 / pow(distance() , 0.963935)) * 1.4248 * pow((width1() + width2()) / 2 , 0.0976974)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE CROSSOVER FRINGE M4 M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0424647 * (1 - exp(-0.161358 * (distance() + 0.621989)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0373716
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00862128 * (distance()) + 0.0311649) * (0.635863 - exp(-(-0.0407766 * (distance()) + 0.622052) * (enclose() + 0.231344 * (distance()) + 0.910298) - (0.0335919 * (distance()) + -0.0735992) * (enclose() + -0.357769 * (distance()) + 2.30981) * (enclose() + -0.357769 * (distance()) + 2.30981)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0424647 * (1 - exp(-0.161358 * (distance() + 0.621989)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0371356 * (0.635863 - exp(-0.418169 * (enclose() + 2.06702) - 0.0943603 * (enclose() + 0.520965) * (enclose() + 0.520965)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 37  target: nearbody  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE NEARBODY M4 INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.3887 - 0.577425 * (distance())) + 0.0228194 / pow(distance() , 1.10276)) * 1.59832 * pow((width1() + width2()) / 2 , 0.0874696)
+]
+//
+//  model: 37  target: crossovere  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M4 M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0488006 * (1 - exp(-0.364776 * (distance() + 0.243211)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0503956
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.0639289 * (distance()) + 0.570682) * (0.0892529 - exp(-(-0.0710632 * (distance()) + 0.151162) * (enclose() + 3.03937 * (distance()) + 7.77999) - (0.00631748 * (distance()) + 0.0172441) * (enclose() + 0.949539 * (distance()) + 7.71522) * (enclose() + 0.949539 * (distance()) + 7.71522)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0488006 * (1 - exp(-0.364776 * (distance() + 0.243211)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.445163 * (0.0892529 - exp(0.204154 * (enclose() + 22.9768) - 0.0488315 * (enclose() + 12.4629) * (enclose() + 12.4629)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,poly,M1,M2
+//
+CAPACITANCE NEARBODY M1 INSIDE OF poly M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.01709 - 1.83392 * (distance())) + 0.00213235 / pow(distance() , 1.68016)) * 1.89887 * pow((width1() + width2()) / 2 , 0.0406864)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,poly,M1,M2
+//
+CAPACITANCE CROSSOVER FRINGE M1 M2 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0218753 * (1 - exp(-1.22083 * (distance() + -0.0221397)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0222574
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00109436 * (distance()) + 0.102775) * (0.432489 - exp(-(-0.0291847 * (distance()) + 0.00996927) * (enclose() + 10.8913 * (distance()) + -1.92857) - (0.0177084 * (distance()) + 0.0767816) * (enclose() + 0.864373 * (distance()) + 2.92968) * (enclose() + 0.864373 * (distance()) + 2.92968)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0218753 * (1 - exp(-1.22083 * (distance() + -0.0221397)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0486516 * (0.432489 - exp(0.135954 * (enclose() + 52.5279) - 0.165324 * (enclose() + 7.25155) * (enclose() + 7.25155)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,poly,M1,M2
+//
+CAPACITANCE CROSSOVER FRINGE M1 poly INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0312203 * (1 - exp(-1.2874 * (distance() + -0.0193472)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0318227
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00470716 * (distance()) + 0.383594) * (0.167832 - exp(-(-0.310781 * (distance()) + 0.244237) * (enclose() + 3.89397 * (distance()) + 4.78518) - (0.00246935 * (distance()) + 0.0809662) * (enclose() + 3.34569 * (distance()) + 2.32876) * (enclose() + 3.34569 * (distance()) + 2.32876)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0312203 * (1 - exp(-1.2874 * (distance() + -0.0193472)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.180029 * (0.167832 - exp(1.30967 * (enclose() + 24.255) - 0.093313 * (enclose() + 19.0572) * (enclose() + 19.0572)) + 0.00026439)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,poly,M1,M3
+//
+CAPACITANCE NEARBODY M1 INSIDE OF poly M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.06731 - 1.35313 * (distance())) + 0.00586995 / pow(distance() , 1.39271)) * 1.46905 * pow((width1() + width2()) / 2 , 0.0705303)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,poly,M1,M3
+//
+CAPACITANCE CROSSOVER FRINGE M1 M3 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0116147 * (1 - exp(-0.867867 * (distance() + 0.0449479)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0119752
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00077065 * (distance()) + 0.0356582) * (0.682237 - exp(-(0.190921 * (distance()) + 0.210005) * (enclose() + -0.10332 * (distance()) + 1.38799) - (0.00770586 * (distance()) + -0.0186258) * (enclose() + -0.14851 * (distance()) + 1.28421) * (enclose() + -0.14851 * (distance()) + 1.28421)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0116147 * (1 - exp(-0.867867 * (distance() + 0.0449479)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0159025 * (0.682237 - exp(-1.16461 * (enclose() + 0.87139) - 0.0199035 * (enclose() + 0.54166) * (enclose() + 0.54166)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,poly,M1,M3
+//
+CAPACITANCE CROSSOVER FRINGE M1 poly INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0371397 * (1 - exp(-0.989303 * (distance() + 0.037276)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0383191
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.0013873 * (distance()) + 1.6463) * (0.0433282 - exp(-(-0.247605 * (distance()) + 0.1868) * (enclose() + 6.46383 * (distance()) + 11.1751) - (0.0006436 * (distance()) + 0.0376551) * (enclose() + 5.95988 * (distance()) + 4.8821) * (enclose() + 5.95988 * (distance()) + 4.8821)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0371397 * (1 - exp(-0.989303 * (distance() + 0.037276)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.826618 * (0.0433282 - exp(1.05122 * (enclose() + 43.4943) - 0.0408731 * (enclose() + 34.6815) * (enclose() + 34.6815)) + 0.00089746)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,poly,M1,M4
+//
+CAPACITANCE NEARBODY M1 INSIDE OF poly M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.32029 - 1.21734 * (distance())) + 0.00810185 / pow(distance() , 1.24909)) * 1.53065 * pow((width1() + width2()) / 2 , 0.0838263)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,poly,M1,M4
+//
+CAPACITANCE CROSSOVER FRINGE M1 M4 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00771327 * (1 - exp(-0.795492 * (distance() + 0.0835743)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00811483
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0002593 * (distance()) + 0.019182) * (0.864448 - exp(-(0.193952 * (distance()) + 0.118978) * (enclose() + 0.24854 * (distance()) + 0.665276) - (-0.00658766 * (distance()) + -0.00600775) * (enclose() + 0.836946 * (distance()) + 1.81063) * (enclose() + 0.836946 * (distance()) + 1.81063)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00771327 * (1 - exp(-0.795492 * (distance() + 0.0835743)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.00894275 * (0.864448 - exp(-1.08874 * (enclose() + 1.90798) - -0.0389461 * (enclose() + 5.99536) * (enclose() + 5.99536)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,poly,M1,M4
+//
+CAPACITANCE CROSSOVER FRINGE M1 poly INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0396038 * (1 - exp(-0.922675 * (distance() + 0.0652692)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0416098
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00032191 * (distance()) + 0.136335) * (0.584912 - exp(-(-0.0521918 * (distance()) + 1.20267) * (enclose() + 0.13789 * (distance()) + 0.542031) - (0.0802915 * (distance()) + -0.481922) * (enclose() + -0.524937 * (distance()) + 0.714406) * (enclose() + -0.524937 * (distance()) + 0.714406)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0396038 * (1 - exp(-0.922675 * (distance() + 0.0652692)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0673627 * (0.584912 - exp(-0.941711 * (enclose() + 1.23148) - -0.0804645 * (enclose() + -1.91028) * (enclose() + -1.91028)) + 0.00157968)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,poly,M2,M3
+//
+CAPACITANCE NEARBODY M2 INSIDE OF poly M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.90818 - 1.17095 * (distance())) + 0.00660155 / pow(distance() , 1.44319)) * 1.2563 * pow((width1() + width2()) / 2 , 0.0697656)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,poly,M2,M3
+//
+CAPACITANCE CROSSOVER FRINGE M2 M3 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0295283 * (1 - exp(-0.805766 * (distance() + 0.0331363)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.030048
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00448265 * (distance()) + 0.10211) * (0.454717 - exp(-(-0.0600637 * (distance()) + 0.367612) * (enclose() + -0.85258 * (distance()) + 1.61657) - (0.0482369 * (distance()) + 0.00124931) * (enclose() + -0.401599 * (distance()) + 4.59788) * (enclose() + -0.401599 * (distance()) + 4.59788)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0295283 * (1 - exp(-0.805766 * (distance() + 0.0331363)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0622616 * (0.454717 - exp(-0.0672935 * (enclose() + -2.64633) - 0.242434 * (enclose() + 2.58989) * (enclose() + 2.58989)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,poly,M2,M3
+//
+CAPACITANCE CROSSOVER FRINGE M2 poly INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0151606 * (1 - exp(-0.747959 * (distance() + 0.0382367)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0153951
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (5.98994e-05 * (distance()) + 0.0547315) * (0.517529 - exp(-(0.0613108 * (distance()) + 0.528683) * (enclose() + -0.0876885 * (distance()) + 1.43515) - (0.0517457 * (distance()) + -0.100238) * (enclose() + -0.414109 * (distance()) + 1.66063) * (enclose() + -0.414109 * (distance()) + 1.66063)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0151606 * (1 - exp(-0.747959 * (distance() + 0.0382367)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0275155 * (0.517529 - exp(-0.835237 * (enclose() + 0.996707) - 0.15849 * (enclose() + -0.409915) * (enclose() + -0.409915)) + 0.000923561)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,poly,M2,M4
+//
+CAPACITANCE NEARBODY M2 INSIDE OF poly M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.97011 - 0.79726 * (distance())) + 0.0126573 / pow(distance() , 1.24191)) * 1.073 * pow((width1() + width2()) / 2 , 0.101287)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,poly,M2,M4
+//
+CAPACITANCE CROSSOVER FRINGE M2 M4 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0175533 * (1 - exp(-0.468378 * (distance() + 0.191248)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0174545
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00048676 * (distance()) + 0.0347464) * (0.871842 - exp(-(0.292278 * (distance()) + 0.251797) * (enclose() + 0.360907 * (distance()) + 0.669827) - (-0.00553602 * (distance()) + -0.0367327) * (enclose() + 1.13634 * (distance()) + 1.68486) * (enclose() + 1.13634 * (distance()) + 1.68486)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0175533 * (1 - exp(-0.468378 * (distance() + 0.191248)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0185901 * (0.871842 - exp(-1.71319 * (enclose() + 2.47436) - -0.0644128 * (enclose() + 7.36656) * (enclose() + 7.36656)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,poly,M2,M4
+//
+CAPACITANCE CROSSOVER FRINGE M2 poly INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0211814 * (1 - exp(-0.475717 * (distance() + 0.18311)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.021109
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00036063 * (distance()) + 0.0704983) * (0.518844 - exp(-(0.0507968 * (distance()) + 0.484895) * (enclose() + -0.0942792 * (distance()) + 1.58269) - (0.0317927 * (distance()) + -0.0990785) * (enclose() + -0.421035 * (distance()) + 1.57577) * (enclose() + -0.421035 * (distance()) + 1.57577)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0211814 * (1 - exp(-0.475717 * (distance() + 0.18311)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0361507 * (0.518844 - exp(-0.738879 * (enclose() + 1.11129) - 0.059885 * (enclose() + -0.529405) * (enclose() + -0.529405)) + 0.00251607)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,poly,M3,M4
+//
+CAPACITANCE NEARBODY M3 INSIDE OF poly M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.97664 - 0.944743 * (distance())) + 0.0121555 / pow(distance() , 1.25263)) * 1.07066 * pow((width1() + width2()) / 2 , 0.0908603)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,poly,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 M4 INSIDE OF poly MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0306757 * (1 - exp(-0.651989 * (distance() + 0.100104)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0316314
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00038335 * (distance()) + 0.0668279) * (0.829716 - exp(-(0.132482 * (distance()) + 1.1823) * (enclose() + -0.208174 * (distance()) + 1.92025) - (-0.0001921 * (distance()) + -0.0856341) * (enclose() + -0.449384 * (distance()) + 5.07561) * (enclose() + -0.449384 * (distance()) + 5.07561)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0306757 * (1 - exp(-0.651989 * (distance() + 0.100104)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0343723 * (0.829716 - exp(-1.84471 * (enclose() + 0.87938) - -0.0865946 * (enclose() + 2.82869) * (enclose() + 2.82869)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,poly,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 poly INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0108361 * (1 - exp(-0.599124 * (distance() + 0.117773)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0111311
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00120403 * (distance()) + 0.0325128) * (0.752947 - exp(-(0.090357 * (distance()) + 0.15425) * (enclose() + -0.14565 * (distance()) + 1.32115) - (0.0103219 * (distance()) + -0.0260799) * (enclose() + -0.465493 * (distance()) + 1.16205) * (enclose() + -0.465493 * (distance()) + 1.16205)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0108361 * (1 - exp(-0.599124 * (distance() + 0.117773)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0132463 * (0.752947 - exp(-0.606035 * (enclose() + 0.5929) - 0.0255296 * (enclose() + -1.16542) * (enclose() + -1.16542)) + 0.0019757)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,M1,M2,M3
+//
+CAPACITANCE NEARBODY M2 INSIDE OF M1 M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.80163 - 1.54532 * (distance())) + 0.00315709 / pow(distance() , 1.7058)) * 1.40564 * pow((width1() + width2()) / 2 , 0.0416551)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,M1,M2,M3
+//
+CAPACITANCE CROSSOVER FRINGE M2 M3 INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0244358 * (1 - exp(-1.06162 * (distance() + -0.0238106)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.02478
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0016252 * (distance()) + 0.291392) * (0.165846 - exp(-(-0.00882165 * (distance()) + -0.00433249) * (enclose() + 36.6074 * (distance()) + 40.909) - (0.0114996 * (distance()) + 0.0267801) * (enclose() + 0.881362 * (distance()) + 8.16506) * (enclose() + 0.881362 * (distance()) + 8.16506)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0244358 * (1 - exp(-1.06162 * (distance() + -0.0238106)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.141633 * (0.165846 - exp(0.0484407 * (enclose() + 223.946) - 0.0842781 * (enclose() + 12.5719) * (enclose() + 12.5719)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,M1,M2,M3
+//
+CAPACITANCE CROSSOVER FRINGE M2 M1 INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0247413 * (1 - exp(-1.05805 * (distance() + -0.0279852)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0250444
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00185727 * (distance()) + 0.280635) * (0.176444 - exp(-(-0.115267 * (distance()) + 0.049412) * (enclose() + 8.43555 * (distance()) + 12.3065) - (0.00079285 * (distance()) + 0.0400626) * (enclose() + 4.3487 * (distance()) + 4.77257) * (enclose() + 4.3487 * (distance()) + 4.77257)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0247413 * (1 - exp(-1.05805 * (distance() + -0.0279852)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.135674 * (0.176444 - exp(0.526923 * (enclose() + 54.4842) - 0.0440268 * (enclose() + 26.5161) * (enclose() + 26.5161)) + 0.000305975)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,M1,M2,M4
+//
+CAPACITANCE NEARBODY M2 INSIDE OF M1 M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.93463 - 1.09429 * (distance())) + 0.00809597 / pow(distance() , 1.37982)) * 1.19491 * pow((width1() + width2()) / 2 , 0.0776909)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,M1,M2,M4
+//
+CAPACITANCE CROSSOVER FRINGE M2 M4 INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0130262 * (1 - exp(-0.702112 * (distance() + 0.0661667)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0132877
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-5.50482e-05 * (distance()) + 0.0307522) * (0.830107 - exp(-(0.319392 * (distance()) + 0.200319) * (enclose() + 0.258084 * (distance()) + 0.612928) - (-0.0103501 * (distance()) + -0.0240429) * (enclose() + 0.885999 * (distance()) + 1.42497) * (enclose() + 0.885999 * (distance()) + 1.42497)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0130262 * (1 - exp(-0.702112 * (distance() + 0.0661667)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0152385 * (0.830107 - exp(-1.79728 * (enclose() + 1.90335) - -0.0757934 * (enclose() + 5.85496) * (enclose() + 5.85496)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,M1,M2,M4
+//
+CAPACITANCE CROSSOVER FRINGE M2 M1 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0310184 * (1 - exp(-0.761581 * (distance() + 0.0533948)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0317071
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00641567 * (distance()) + 0.391102) * (0.140064 - exp(-(-0.0640999 * (distance()) + 0.0245923) * (enclose() + 11.1133 * (distance()) + 21.22) - (0.00051822 * (distance()) + 0.0269738) * (enclose() + 4.46661 * (distance()) + 6.83383) * (enclose() + 4.46661 * (distance()) + 6.83383)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0310184 * (1 - exp(-0.761581 * (distance() + 0.0533948)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.21159 * (0.140064 - exp(0.295907 * (enclose() + 76.7865) - 0.0295649 * (enclose() + 29.1669) * (enclose() + 29.1669)) + 0.00119296)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,M1,M3,M4
+//
+CAPACITANCE NEARBODY M3 INSIDE OF M1 M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.91568 - 1.05652 * (distance())) + 0.00829609 / pow(distance() , 1.37499)) * 1.18007 * pow((width1() + width2()) / 2 , 0.0783044)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,M1,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 M4 INSIDE OF M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.028554 * (1 - exp(-0.709059 * (distance() + 0.0621628)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0290276
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00163276 * (distance()) + 0.0672942) * (0.931423 - exp(-(0.0774173 * (distance()) + 1.78222) * (enclose() + -0.173115 * (distance()) + 1.8576) - (0.00486494 * (distance()) + -0.16143) * (enclose() + -0.285841 * (distance()) + 4.56408) * (enclose() + -0.285841 * (distance()) + 4.56408)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.028554 * (1 - exp(-0.709059 * (distance() + 0.0621628)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0295652 * (0.931423 - exp(-2.16931 * (enclose() + 0.992025) - -0.137105 * (enclose() + 3.13487) * (enclose() + 3.13487)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,M1,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 M1 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0143971 * (1 - exp(-0.662619 * (distance() + 0.0706421)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0145896
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00086103 * (distance()) + 0.0414221) * (0.770708 - exp(-(0.260939 * (distance()) + 0.212187) * (enclose() + 0.0968876 * (distance()) + 1.08098) - (-0.0099757 * (distance()) + -0.0165407) * (enclose() + 0.549527 * (distance()) + 2.439) * (enclose() + 0.549527 * (distance()) + 2.439)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0143971 * (1 - exp(-0.662619 * (distance() + 0.0706421)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0185585 * (0.770708 - exp(-1.51688 * (enclose() + 1.56542) - -0.0664192 * (enclose() + 5.18663) * (enclose() + 5.18663)) + 0.00126307)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: nearbody  profile: field  layers: field_base,M2,M3,M4
+//
+CAPACITANCE NEARBODY M3 INSIDE OF M2 M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.81505 - 1.47015 * (distance())) + 0.00360639 / pow(distance() , 1.65908)) * 1.37737 * pow((width1() + width2()) / 2 , 0.0454465)
+]
+//
+//  model: 33  target: crossovere  profile: field  layers: field_base,M2,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 M4 INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0225735 * (1 - exp(-0.997992 * (distance() + -0.0188276)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0228541
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00034678 * (distance()) + 0.0850511) * (0.525294 - exp(-(-0.0147021 * (distance()) + 1.5026) * (enclose() + 0.047853 * (distance()) + 0.802448) - (0.104882 * (distance()) + -0.376693) * (enclose() + -0.280502 * (distance()) + 1.43134) * (enclose() + -0.280502 * (distance()) + 1.43134)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0225735 * (1 - exp(-0.997992 * (distance() + -0.0188276)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0416586 * (0.525294 - exp(-1.42909 * (enclose() + 1.04171) - 0.147717 * (enclose() + 0.02883) * (enclose() + 0.02883)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 33  target: intrinsice  profile: field  layers: field_base,M2,M3,M4
+//
+CAPACITANCE CROSSOVER FRINGE M3 M2 INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0255768 * (1 - exp(-1.00686 * (distance() + -0.0197171)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0259368
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0011618 * (distance()) + 0.267887) * (0.18885 - exp(-(-0.0141434 * (distance()) + 0.00268151) * (enclose() + 22.9345 * (distance()) + 18.5751) - (0.00858864 * (distance()) + 0.0352204) * (enclose() + 1.14253 * (distance()) + 6.3249) * (enclose() + 1.14253 * (distance()) + 6.3249)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0255768 * (1 - exp(-1.00686 * (distance() + -0.0197171)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.131039 * (0.18885 - exp(0.0680355 * (enclose() + 133.248) - 0.0781636 * (enclose() + 12.0375) * (enclose() + 12.0375)) + 0.000374603)
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,poly,M1
+//
+CAPACITANCE NEARBODY poly M1 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.026963 * exp(-3.98782 * realdistance - (0.703714 * realdistance) / realdistance)) / pow(realdistance , 0.00949653)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,poly,M2
+//
+CAPACITANCE NEARBODY poly M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0548725 * exp(-1.41167 * realdistance - (1.60104 * realdistance) / realdistance)) / pow(realdistance , -0.0292887)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,poly,M3
+//
+CAPACITANCE NEARBODY poly M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0551599 * exp(-0.796325 * realdistance - (1.80582 * realdistance) / realdistance)) / pow(realdistance , -0.0121402)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,poly,M4
+//
+CAPACITANCE NEARBODY poly M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0343984 * exp(-0.54837 * realdistance - (1.34597 * realdistance) / realdistance)) / pow(realdistance , -0.0107315)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,M1,M2
+//
+CAPACITANCE NEARBODY M1 M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0232498 * exp(-3.52863 * realdistance - (0.381686 * realdistance) / realdistance)) / pow(realdistance , -0.0840707)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,M1,M3
+//
+CAPACITANCE NEARBODY M1 M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0586796 * exp(-1.19997 * realdistance - (1.7765 * realdistance) / realdistance)) / pow(realdistance , -0.0198703)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,M1,M4
+//
+CAPACITANCE NEARBODY M1 M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0382945 * exp(-0.713058 * realdistance - (1.39625 * realdistance) / realdistance)) / pow(realdistance , -0.0171441)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,M2,M3
+//
+CAPACITANCE NEARBODY M2 M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0231547 * exp(-3.61983 * realdistance - (0.339828 * realdistance) / realdistance)) / pow(realdistance , -0.0951129)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,M2,M4
+//
+CAPACITANCE NEARBODY M2 M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.0799211 * exp(-1.15787 * realdistance - (2.01105 * realdistance) / realdistance)) / pow(realdistance , -0.0278114)
+]
+//
+//  model: 14  target: nearbody2  profile: field  layers: field_base,M3,M4
+//
+CAPACITANCE NEARBODY M3 M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    realdistance = distance()
+    if (realdistance < 0.01) {
+        realdistance = 0.01
+    }
+    C = length() * (0.028647 * exp(-2.9969 * realdistance - (0.428583 * realdistance) / realdistance)) / pow(realdistance , -0.0921778)
+]
+//
+//  model: 2  target: intrinsicp  profile: active  layers: active_base,M1,nsd,psd
+//
+CAPACITANCE CROSSOVER PLATE M1 nsd MASK
+[
+    PROPERTY C
+    C = 0.0471275 * area()
+]
+CAPACITANCE CROSSOVER PLATE M1 psd MASK
+[
+    PROPERTY C
+    C = 0.0471275 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: active  layers: active_base,M2,nsd,psd
+//
+CAPACITANCE CROSSOVER PLATE M2 nsd MASK
+[
+    PROPERTY C
+    C = 0.0159723 * area()
+]
+CAPACITANCE CROSSOVER PLATE M2 psd MASK
+[
+    PROPERTY C
+    C = 0.0159723 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: active  layers: active_base,M3,nsd,psd
+//
+CAPACITANCE CROSSOVER PLATE M3 nsd MASK
+[
+    PROPERTY C
+    C = 0.00961632 * area()
+]
+CAPACITANCE CROSSOVER PLATE M3 psd MASK
+[
+    PROPERTY C
+    C = 0.00961632 * area()
+]
+//
+//  model: 2  target: intrinsicp  profile: active  layers: active_base,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER PLATE M4 nsd MASK
+[
+    PROPERTY C
+    C = 0.00669361 * area()
+]
+CAPACITANCE CROSSOVER PLATE M4 psd MASK
+[
+    PROPERTY C
+    C = 0.00669361 * area()
+]
+//
+//  model: 34  target: intrinsic  profile: active  layers: active_base,M1,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0414245 * (1 - exp(-0.750549 * (distance() + 0.133477)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0443761
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0414245 * (1 - exp(-0.750549 * (distance() + 0.133477)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0443761
+    }
+]
+//
+//  model: 34  target: nearbody  profile: active  layers: active_base,M1,nsd,psd
+//
+CAPACITANCE NEARBODY M1 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.86947 - 1.03632 * (distance())) + 0.0137302 / pow(distance() , 1.00906)) * 1.63087 * pow((width1() + width2()) / 2 , 0.102801)
+]
+CAPACITANCE NEARBODY M1 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.86947 - 1.03632 * (distance())) + 0.0137302 / pow(distance() , 1.00906)) * 1.63087 * pow((width1() + width2()) / 2 , 0.102801)
+]
+//
+//  model: 34  target: intrinsic  profile: active  layers: active_base,M2,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M2 nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0290494 * (1 - exp(-0.383689 * (distance() + 0.448653)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0325176
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M2 psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0290494 * (1 - exp(-0.383689 * (distance() + 0.448653)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0325176
+    }
+]
+//
+//  model: 34  target: nearbody  profile: active  layers: active_base,M2,nsd,psd
+//
+CAPACITANCE NEARBODY M2 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.42775 - 0.48086 * (distance())) + 0.0186215 / pow(distance() , 0.869739)) * 1.74073 * pow((width1() + width2()) / 2 , 0.133401)
+]
+CAPACITANCE NEARBODY M2 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.42775 - 0.48086 * (distance())) + 0.0186215 / pow(distance() , 0.869739)) * 1.74073 * pow((width1() + width2()) / 2 , 0.133401)
+]
+//
+//  model: 34  target: intrinsic  profile: active  layers: active_base,M3,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M3 nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0224659 * (1 - exp(-0.31218 * (distance() + 0.733473)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0277492
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M3 psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0224659 * (1 - exp(-0.31218 * (distance() + 0.733473)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0277492
+    }
+]
+//
+//  model: 34  target: nearbody  profile: active  layers: active_base,M3,nsd,psd
+//
+CAPACITANCE NEARBODY M3 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.53288 - 0.267034 * (distance())) + 0.0197263 / pow(distance() , 0.844155)) * 1.76718 * pow((width1() + width2()) / 2 , 0.14733)
+]
+CAPACITANCE NEARBODY M3 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-4.53288 - 0.267034 * (distance())) + 0.0197263 / pow(distance() , 0.844155)) * 1.76718 * pow((width1() + width2()) / 2 , 0.14733)
+]
+//
+//  model: 34  target: intrinsic  profile: active  layers: active_base,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M4 nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0363835 * (1 - exp(-0.0845684 * (distance() + 1.25555)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0274524
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M4 psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0363835 * (1 - exp(-0.0845684 * (distance() + 1.25555)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0274524
+    }
+]
+//
+//  model: 34  target: nearbody  profile: active  layers: active_base,M4,nsd,psd
+//
+CAPACITANCE NEARBODY M4 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.95202 - 0.305635 * (distance())) + 0.0383607 / pow(distance() , 0.860422)) * 1.51599 * pow((width1() + width2()) / 2 , 0.108622)
+]
+CAPACITANCE NEARBODY M4 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_calwidth = 1.76 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.95202 - 0.305635 * (distance())) + 0.0383607 / pow(distance() , 0.860422)) * 1.51599 * pow((width1() + width2()) / 2 , 0.108622)
+]
+//
+//  model: 36  target: nearbody  profile: active  layers: active_base,M1,M2,nsd,psd
+//
+CAPACITANCE NEARBODY M1 INSIDE OF nsd M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.52479 - 1.97784 * (distance())) + 1.71087e-09 / pow(distance() , 10.5615)) * 1.8554 * pow((width1() + width2()) / 2 , 0.0481131)
+]
+CAPACITANCE NEARBODY M1 INSIDE OF psd M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.52479 - 1.97784 * (distance())) + 1.71087e-09 / pow(distance() , 10.5615)) * 1.8554 * pow((width1() + width2()) / 2 , 0.0481131)
+]
+//
+//  model: 36  target: crossovere  profile: active  layers: active_base,M1,M2,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 M2 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0234817 * (1 - exp(-1.10513 * (distance() + -0.0119228)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0238793
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00089471 * (distance()) + 0.130764) * (0.359124 - exp(-(-0.0258249 * (distance()) + 0.0120689) * (enclose() + 10.9985 * (distance()) + 1.64861) - (0.0175264 * (distance()) + 0.0603003) * (enclose() + 0.771242 * (distance()) + 3.65582) * (enclose() + 0.771242 * (distance()) + 3.65582)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0234817 * (1 - exp(-1.10513 * (distance() + -0.0119228)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0631452 * (0.359124 - exp(0.117056 * (enclose() + 56.6411) - 0.147932 * (enclose() + 7.51203) * (enclose() + 7.51203)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 M2 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0234817 * (1 - exp(-1.10513 * (distance() + -0.0119228)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0238793
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00089471 * (distance()) + 0.130764) * (0.359124 - exp(-(-0.0258249 * (distance()) + 0.0120689) * (enclose() + 10.9985 * (distance()) + 1.64861) - (0.0175264 * (distance()) + 0.0603003) * (enclose() + 0.771242 * (distance()) + 3.65582) * (enclose() + 0.771242 * (distance()) + 3.65582)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0234817 * (1 - exp(-1.10513 * (distance() + -0.0119228)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0631452 * (0.359124 - exp(0.117056 * (enclose() + 56.6411) - 0.147932 * (enclose() + 7.51203) * (enclose() + 7.51203)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: active  layers: active_base,M1,M2,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 nsd INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0271318 * (1 - exp(-1.1144 * (distance() + -0.0102275)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0276438
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 psd INSIDE OF M2 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0271318 * (1 - exp(-1.1144 * (distance() + -0.0102275)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0276438
+    }
+]
+//
+//  model: 36  target: nearbody  profile: active  layers: active_base,M1,M3,nsd,psd
+//
+CAPACITANCE NEARBODY M1 INSIDE OF nsd M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.08316 - 1.21809 * (distance())) + 0.00637652 / pow(distance() , 1.36271)) * 1.47194 * pow((width1() + width2()) / 2 , 0.0770951)
+]
+CAPACITANCE NEARBODY M1 INSIDE OF psd M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.08316 - 1.21809 * (distance())) + 0.00637652 / pow(distance() , 1.36271)) * 1.47194 * pow((width1() + width2()) / 2 , 0.0770951)
+]
+//
+//  model: 36  target: crossovere  profile: active  layers: active_base,M1,M3,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 M3 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0127736 * (1 - exp(-0.764524 * (distance() + 0.065708)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0130893
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00072848 * (distance()) + 0.0389012) * (0.679762 - exp(-(0.174103 * (distance()) + 0.192123) * (enclose() + -0.0994041 * (distance()) + 1.45688) - (0.00568249 * (distance()) + -0.0120103) * (enclose() + -0.0873834 * (distance()) + 1.41846) * (enclose() + -0.0873834 * (distance()) + 1.41846)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0127736 * (1 - exp(-0.764524 * (distance() + 0.065708)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0176294 * (0.679762 - exp(-1.06264 * (enclose() + 0.959859) - 0.0164021 * (enclose() + 0.981543) * (enclose() + 0.981543)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 M3 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0127736 * (1 - exp(-0.764524 * (distance() + 0.065708)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0130893
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00072848 * (distance()) + 0.0389012) * (0.679762 - exp(-(0.174103 * (distance()) + 0.192123) * (enclose() + -0.0994041 * (distance()) + 1.45688) - (0.00568249 * (distance()) + -0.0120103) * (enclose() + -0.0873834 * (distance()) + 1.41846) * (enclose() + -0.0873834 * (distance()) + 1.41846)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0127736 * (1 - exp(-0.764524 * (distance() + 0.065708)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0176294 * (0.679762 - exp(-1.06264 * (enclose() + 0.959859) - 0.0164021 * (enclose() + 0.981543) * (enclose() + 0.981543)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: active  layers: active_base,M1,M3,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 nsd INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0330607 * (1 - exp(-0.83917 * (distance() + 0.0543102)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0339657
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 psd INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0330607 * (1 - exp(-0.83917 * (distance() + 0.0543102)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0339657
+    }
+]
+//
+//  model: 36  target: nearbody  profile: active  layers: active_base,M1,M4,nsd,psd
+//
+CAPACITANCE NEARBODY M1 INSIDE OF nsd M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.35219 - 1.08976 * (distance())) + 0.00858226 / pow(distance() , 1.2162)) * 1.56744 * pow((width1() + width2()) / 2 , 0.0900386)
+]
+CAPACITANCE NEARBODY M1 INSIDE OF psd M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 0.92 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.35219 - 1.08976 * (distance())) + 0.00858226 / pow(distance() , 1.2162)) * 1.56744 * pow((width1() + width2()) / 2 , 0.0900386)
+]
+//
+//  model: 36  target: crossovere  profile: active  layers: active_base,M1,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 M4 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00857432 * (1 - exp(-0.690714 * (distance() + 0.112001)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00896278
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0002612 * (distance()) + 0.0211513) * (0.868233 - exp(-(0.192674 * (distance()) + 0.140255) * (enclose() + 0.314836 * (distance()) + 0.658401) - (-0.00485703 * (distance()) + -0.0117188) * (enclose() + 1.01922 * (distance()) + 1.97608) * (enclose() + 1.01922 * (distance()) + 1.97608)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00857432 * (1 - exp(-0.690714 * (distance() + 0.112001)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.00992265 * (0.868233 - exp(-1.10363 * (enclose() + 2.23258) - -0.0360039 * (enclose() + 7.07218) * (enclose() + 7.07218)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 M4 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00857432 * (1 - exp(-0.690714 * (distance() + 0.112001)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.00896278
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.0002612 * (distance()) + 0.0211513) * (0.868233 - exp(-(0.192674 * (distance()) + 0.140255) * (enclose() + 0.314836 * (distance()) + 0.658401) - (-0.00485703 * (distance()) + -0.0117188) * (enclose() + 1.01922 * (distance()) + 1.97608) * (enclose() + 1.01922 * (distance()) + 1.97608)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.00857432 * (1 - exp(-0.690714 * (distance() + 0.112001)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.00992265 * (0.868233 - exp(-1.10363 * (enclose() + 2.23258) - -0.0360039 * (enclose() + 7.07218) * (enclose() + 7.07218)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: active  layers: active_base,M1,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M1 nsd INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0356109 * (1 - exp(-0.774849 * (distance() + 0.0884386)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0372886
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M1 psd INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0356109 * (1 - exp(-0.774849 * (distance() + 0.0884386)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0372886
+    }
+]
+//
+//  model: 36  target: nearbody  profile: active  layers: active_base,M2,M3,nsd,psd
+//
+CAPACITANCE NEARBODY M2 INSIDE OF nsd M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.92287 - 1.13482 * (distance())) + 0.00724281 / pow(distance() , 1.41261)) * 1.23195 * pow((width1() + width2()) / 2 , 0.0731)
+]
+CAPACITANCE NEARBODY M2 INSIDE OF psd M3 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-2.92287 - 1.13482 * (distance())) + 0.00724281 / pow(distance() , 1.41261)) * 1.23195 * pow((width1() + width2()) / 2 , 0.0731)
+]
+//
+//  model: 36  target: crossovere  profile: active  layers: active_base,M2,M3,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M2 M3 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0300772 * (1 - exp(-0.785474 * (distance() + 0.0415788)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0306743
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00819811 * (distance()) + 0.474888) * (0.111094 - exp(-(-0.168619 * (distance()) + 0.33229) * (enclose() + 1.51016 * (distance()) + 5.04693) - (0.0233284 * (distance()) + 0.00886116) * (enclose() + 0.49208 * (distance()) + 6.13513) * (enclose() + 0.49208 * (distance()) + 6.13513)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0300772 * (1 - exp(-0.785474 * (distance() + 0.0415788)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.257939 * (0.111094 - exp(0.510805 * (enclose() + 12.5977) - 0.125503 * (enclose() + 8.59553) * (enclose() + 8.59553)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M2 M3 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0300772 * (1 - exp(-0.785474 * (distance() + 0.0415788)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0306743
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00819811 * (distance()) + 0.474888) * (0.111094 - exp(-(-0.168619 * (distance()) + 0.33229) * (enclose() + 1.51016 * (distance()) + 5.04693) - (0.0233284 * (distance()) + 0.00886116) * (enclose() + 0.49208 * (distance()) + 6.13513) * (enclose() + 0.49208 * (distance()) + 6.13513)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0300772 * (1 - exp(-0.785474 * (distance() + 0.0415788)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.257939 * (0.111094 - exp(0.510805 * (enclose() + 12.5977) - 0.125503 * (enclose() + 8.59553) * (enclose() + 8.59553)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: active  layers: active_base,M2,M3,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M2 nsd INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0142774 * (1 - exp(-0.723285 * (distance() + 0.0501839)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0145198
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M2 psd INSIDE OF M3 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0142774 * (1 - exp(-0.723285 * (distance() + 0.0501839)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0145198
+    }
+]
+//
+//  model: 36  target: nearbody  profile: active  layers: active_base,M2,M4,nsd,psd
+//
+CAPACITANCE NEARBODY M2 INSIDE OF nsd M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.03456 - 0.769069 * (distance())) + 0.0127744 / pow(distance() , 1.22232)) * 1.11436 * pow((width1() + width2()) / 2 , 0.103821)
+]
+CAPACITANCE NEARBODY M2 INSIDE OF psd M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.03456 - 0.769069 * (distance())) + 0.0127744 / pow(distance() , 1.22232)) * 1.11436 * pow((width1() + width2()) / 2 , 0.103821)
+]
+//
+//  model: 36  target: crossovere  profile: active  layers: active_base,M2,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M2 M4 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0180986 * (1 - exp(-0.450336 * (distance() + 0.207197)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0179916
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00096462 * (distance()) + 0.0364205) * (0.820794 - exp(-(0.273756 * (distance()) + 0.261071) * (enclose() + 0.333689 * (distance()) + 0.813024) - (-0.00621752 * (distance()) + -0.0296177) * (enclose() + 1.05037 * (distance()) + 2.06426) * (enclose() + 1.05037 * (distance()) + 2.06426)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0180986 * (1 - exp(-0.450336 * (distance() + 0.207197)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0206218 * (0.820794 - exp(-1.62985 * (enclose() + 2.48147) - -0.0607053 * (enclose() + 7.31611) * (enclose() + 7.31611)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M2 M4 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0180986 * (1 - exp(-0.450336 * (distance() + 0.207197)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0179916
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (0.00096462 * (distance()) + 0.0364205) * (0.820794 - exp(-(0.273756 * (distance()) + 0.261071) * (enclose() + 0.333689 * (distance()) + 0.813024) - (-0.00621752 * (distance()) + -0.0296177) * (enclose() + 1.05037 * (distance()) + 2.06426) * (enclose() + 1.05037 * (distance()) + 2.06426)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0180986 * (1 - exp(-0.450336 * (distance() + 0.207197)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0206218 * (0.820794 - exp(-1.62985 * (enclose() + 2.48147) - -0.0607053 * (enclose() + 7.31611) * (enclose() + 7.31611)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: active  layers: active_base,M2,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M2 nsd INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0201839 * (1 - exp(-0.454866 * (distance() + 0.201275)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.020103
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M2 psd INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0201839 * (1 - exp(-0.454866 * (distance() + 0.201275)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.020103
+    }
+]
+//
+//  model: 36  target: nearbody  profile: active  layers: active_base,M3,M4,nsd,psd
+//
+CAPACITANCE NEARBODY M3 INSIDE OF nsd M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.08882 - 0.929963 * (distance())) + 0.0114587 / pow(distance() , 1.24042)) * 1.17095 * pow((width1() + width2()) / 2 , 0.0912968)
+]
+CAPACITANCE NEARBODY M3 INSIDE OF psd M4 MASK
+[
+    PROPERTY C
+    max_calwidth = 1.12 // For reference
+    max_caldistance = 5 // For reference
+    max_width = 3
+    max_distance = 3
+    C = length() * (exp(-3.08882 - 0.929963 * (distance())) + 0.0114587 / pow(distance() , 1.24042)) * 1.17095 * pow((width1() + width2()) / 2 , 0.0912968)
+]
+//
+//  model: 36  target: crossovere  profile: active  layers: active_base,M3,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M3 M4 INSIDE OF nsd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0309265 * (1 - exp(-0.647712 * (distance() + 0.103454)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0319804
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00047641 * (distance()) + 0.0660512) * (0.929342 - exp(-(-0.087055 * (distance()) + 2.12256) * (enclose() + -0.147144 * (distance()) + 1.60748) - (0.0276757 * (distance()) + -0.225886) * (enclose() + -0.231513 * (distance()) + 3.9257) * (enclose() + -0.231513 * (distance()) + 3.9257)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0309265 * (1 - exp(-0.647712 * (distance() + 0.103454)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0318346 * (0.929342 - exp(-1.68729 * (enclose() + 0.87176) - -0.0875075 * (enclose() + 2.76814) * (enclose() + 2.76814)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M3 M4 INSIDE OF psd MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_calenclose = 5 // For reference
+    max_distance = 3
+    max_enclose = 3
+    C = 0.0
+    if ((distance() > 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0309265 * (1 - exp(-0.647712 * (distance() + 0.103454)))
+    }
+    if ((distance() <= 0.0) && (enclose() >= max_enclose)) {
+        C = length() * 0.0319804
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() < distance())) {
+        C = length() * 0.5 * (-0.00047641 * (distance()) + 0.0660512) * (0.929342 - exp(-(-0.087055 * (distance()) + 2.12256) * (enclose() + -0.147144 * (distance()) + 1.60748) - (0.0276757 * (distance()) + -0.225886) * (enclose() + -0.231513 * (distance()) + 3.9257) * (enclose() + -0.231513 * (distance()) + 3.9257)))
+    }
+    if ((distance() > 0.0) && (enclose() < max_enclose) && (enclose() >= distance())) {
+        C = length() * 0.0309265 * (1 - exp(-0.647712 * (distance() + 0.103454)))
+    }
+    if ((distance() <= 0.0) && (enclose() < max_enclose)) {
+        C = length() * 0.0318346 * (0.929342 - exp(-1.68729 * (enclose() + 0.87176) - -0.0875075 * (enclose() + 2.76814) * (enclose() + 2.76814)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+]
+//
+//  model: 36  target: intrinsic  profile: active  layers: active_base,M3,M4,nsd,psd
+//
+CAPACITANCE CROSSOVER FRINGE M3 nsd INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0104053 * (1 - exp(-0.592938 * (distance() + 0.123471)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0107149
+    }
+]
+CAPACITANCE CROSSOVER FRINGE M3 psd INSIDE OF M4 MASK
+[
+    PROPERTY C
+    max_caldistance = 5 // For reference
+    max_distance = 3
+    C = 0.0
+    if (distance() > 0.0) {
+        C = length() * 0.0104053 * (1 - exp(-0.592938 * (distance() + 0.123471)))
+    }
+    if (distance() <= 0.0) {
+        C = length() * 0.0107149
+    }
+]
+
+RESISTANCE SHEET poly [ 7.960 0 ]
+RESISTANCE SHEET M1   [ 0.078 0 ]
+RESISTANCE SHEET M2   [ 0.078 0 ]
+RESISTANCE SHEET M3   [ 0.078 0 ]
+RESISTANCE SHEET M4   [ 0.078 0 ]
+RESISTANCE SHEET nsd  [ 7.080 0 ]
+RESISTANCE SHEET psd  [ 7.830 0 ]
+CAPACITANCE ORDER nsd psd poly M1 M2 M3 M4 
+RESISTANCE CONNECTION M1 nsd  [ 0.31944 0 ]
+RESISTANCE CONNECTION M1 psd  [ 0.43076 0 ]
+RESISTANCE CONNECTION M1 poly [ 0.31460 0 ]
+RESISTANCE CONNECTION M2 M1   [ 0.32448 0 ]
+RESISTANCE CONNECTION M3 M2   [ 0.39884 0 ]
+RESISTANCE CONNECTION M4 M3   [ 0.48600 0 ]
+

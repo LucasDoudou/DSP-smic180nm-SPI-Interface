@@ -1,0 +1,595 @@
+//  This rule file will check Metal 6 as Top Metal 
+//      MT  -- "Top Metal" ==> for layout using Regular-Top-Metal DRC check
+//      The thickness of Top Metal is 0.99um
+
+
+
+//$Revision: 1.1 
+//$Date: 2005/09/30 03:06:56 $
+
+//=================================================================================
+//|                                                                               |
+//|  0.18um 1P6M Calibre Antenna rule file for                                    |
+//|                                                                               |
+//|    SMIC:     0.18um LOGIC Salicide 1P6M 1.8V/3.3V Antenna Ratio / Scribe Line |
+//|  		 and Guard Ring Guideline /Bond Pad Opening Design Guide Rule 	  |
+//|    Doc No:   TD-LO18-DR-2004             Rev:  3 T                            |
+//|                                                                               |
+//|    SMIC:     0.18um LOGIC - Salicide 1P6M 1.8V/3.3V Spice Model	    	  |
+//|    Doc No:   TD-LO18-SP-2001             Rev: 10 P                            |
+//|                                                                               |
+//|    SMIC DSD Technologies                                                      |
+//|                                                                               |
+//|===============================================================================|
+//|                                                                               |
+//|    DISCLAIMER                                                                 |
+//|                                                                               |
+//|   SMIC hereby provides the quality information to you but makes no claims,    |
+//| promises or guarantees about the accuracy, completeness, or adequacy of the   |
+//| information herein. The information contained herein is provided on an "AS IS"|
+//| basis without any warranty, and SMIC assumes no obligation to provide support |
+//| of any kind or otherwise maintain the information.                            |
+//|                                                                               |
+//|   SMIC disclaims any representation that the information does not infringe any|
+//| intellectual property rights or proprietary rights of any third parties.SMIC  |
+//| makes no other warranty, whether express, implied or statutory as to any      |
+//| matter whatsoever, including but not limited to the accuracy or sufficiency of|
+//| any information or the merchantability and fitness for a particular purpose.  |
+//| Neither SMIC nor any of its representatives shall be liable for any cause of  |
+//| action incurred to connect to this service.                                   |
+//|                                                                               |
+//|===============================================================================|
+//|                                                                               |
+//|    STATEMENT OF USE AND CONFIDENTIALITY                                       |
+//|                                                                               |
+//|   The following/attached material contains confidential and proprietary       |
+//| information of SMIC. This material is based upon information which SMIC       |
+//| considers reliable, but SMIC neither represents nor warrants that such        |
+//| information is accurate or complete, and it must not be relied upon as such.  |
+//| This information was prepared for informational purposes and is for the use by|
+//| SMIC's customer only. SMIC reserves the right to make changes in the          |
+//| information at any time without notice.                                       |
+//|   No part of this information may be reproduced, transmitted, transcribed,    |
+//| stored in a retrieval system, or translated into any human or computer        |
+//| language, in any form or by any means, electronic, mechanical, magnetic,      |
+//| optical, chemical, manual, or otherwise, without the prior written consent of |
+//| SMIC. Any unauthorized use or disclosure of this material is strictly         |
+//| prohibited and may be unlawful. By accepting this material, the receiving     |
+//| party shall be deemed to have acknowledged, accepted, and agreed to be bound  |
+//| by the foregoing limitations and restrictions. Thank you.                     |
+//|                                                                               |
+//|===============================================================================|
+//|                                                                               |
+//| Revision History :                                                            |
+//|                                                                               |
+//|  Rev      Date           Who                      What                        |
+//| ----- ------------- -------------- -------------------------------------------|
+//|  1.1   30-Sep-2005     Jenny Jiang   spice model revise to 11P,               |
+//|                                      No rule check  changed .                 |
+//|                                                                               |
+//|*******************************************************************************|
+//| Old File Name : SmicAT3TSP9P_cal018_log_p1mt6.ant                             |
+//|                                                                               |
+//|  1.1   13-Oct-2004     Rimbo Yan     spice model revise to 9P,rule to 3T      |
+//|                                      No rule check  changed .                 |
+//|                                                                               |
+//|*******************************************************************************|
+//| Old File Name : SmicAT0TSP7P_cal018_log_p1mt6.ant                             |
+//|                                                                               |
+//|  1.1   29-Jan-2004     Rimbo Yan     spice model revise to 7P                 |
+//|                                                                               |
+//|*******************************************************************************|
+//| Old File Name : SmicAT0TSP6.1P_cal018_log_p1mt6.ant                           |
+//|                                                                               |
+//|  Rev      Date           Who                      What                        |
+//| ----- ------------- -------------- -------------------------------------------|
+//|  1.3   12-DEC-2003     Micky Yu     Change default as not checking Pad rules  |
+//|  1.2   02-DEC-2003     Micky Yu         D/R revise to 1T; Add Pad rules	  |
+//|                                                                               |
+//|*******************************************************************************|
+//|                                                                               |
+//| Old File Name : SmicAT0TSP6.1P_cal018_log_p1mt6.lvs                           |
+//|                                                                               |
+//|  Rev      Date           Who                      What                        |
+//| ----- ------------- -------------- -------------------------------------------|
+//|  1.2   20-NOV-2003     Micky Yu      Add Design Rule document No.             |
+//|  1.1   01-SEP-2003     Micky Yu   Update for New Antenna Rule (from TD YuXing)|
+//|                                                                               |
+//|*******************************************************************************|
+//|                                                                               |
+//| Old File Name : SmicSP6P_cal018_log_p1mt6.lvs                                 |
+//|                                                                               |
+//|  Rev      Date           Who                      What                        |
+//| ----- ------------- -------------- -------------------------------------------|
+//|  1.2   22-MAR-2003   Yonghoon Kim    Updated for 6P spice model modi Via rule |
+//|  1.1   10-JUL-2002    Peter Tien    Created by 0.18um Antenna ratio rules.0527|
+//|                                                                               |
+//|===============================================================================|
+
+
+
+
+//*****************************************************************************************
+//   User Choice !  ( Recommended to make some useful choices to speed DRC running time! )
+//*****************************************************************************************
+
+
+   DRC UNSELECT CHECK GPA               //; PAD Guidelines checking choice !
+                                        //; Open the mark is NOT to check guidelines
+
+
+
+
+//*************************************
+//     DIRECTIVE SECTION
+//*************************************
+
+LAYOUT PRIMARY "TOPCELL"
+LAYOUT PATH "my_design.gds"
+LAYOUT SYSTEM GDSII
+
+DRC RESULTS DATABASE "cal_ant.out" ASCII
+DRC SUMMARY REPORT "cal_ant.sum"
+
+DRC MAXIMUM RESULTS 1000
+DRC MAXIMUM VERTEX 199
+
+
+//************************************
+//    INPUT LAYER STATEMENTS
+//************************************
+
+LAYER 	AA	10  //Active Area
+LAYER 	GT	30  //Poly Gate
+LAYER   CT  	50  //Contact
+LAYER   M1  	61  //Metal 1 interconnect
+LAYER   M2  	62  //Metal 2 interconnect
+LAYER   M3  	63  //Metal 3 interconnect
+LAYER   M4  	64  //Metal 4 interconnect
+LAYER   M5  	65  //Metal 5 interconnect
+LAYER   M6  	66  //Metal 6 interconnect
+LAYER   V1  	70  //Metal 2 to metal 1 via
+LAYER   V2  	71  //Metal 3 to metal 2 via
+LAYER   V3  	72  //Metal 4 to metal 3 via
+LAYER   V4  	73  //Metal 5 to metal 4 via
+LAYER   V5  	74  //Metal 6 to metal 5 via
+LAYER   PA  	80  //Bonding PAD                
+
+
+GATE = GT AND AA
+SD = AA NOT GT
+
+DRC INCREMENTAL CONNECT YES 
+
+
+//*******************************************
+//    LAYER DERIVATIONS AND OPERATIONS
+//*******************************************
+
+//=================
+//    GT Layer 
+//=================
+
+CONNECT GT GATE
+
+ANT.GT.1 { 
+@ Max. (Poly perim*thickness / gate area) is 200
+
+  NET AREA RATIO GT GATE > 200
+      [ PERIMETER(GT) * 0.2 / AREA(GATE) ] 
+  RDB ANT_GT1.rep GT GATE
+}                                        
+
+//=================
+//    CT Layer
+//=================
+
+CONNECT CT GT
+
+ANT.GT.4 { 
+@ Max. (contact area / gate area) is 10
+
+  CO_POLY = CT AND GT
+  NET AREA RATIO CO_POLY GATE > 10
+      [ AREA(CO_POLY) / AREA(GATE) ] 
+  RDB ANT_GT4.rep CO_POLY GATE
+}                                 
+
+
+
+//=================
+//    M1 Layer 
+//=================
+
+CONNECT M1 GT SD BY CT
+CONNECT V1 M1
+
+M1_DIO = NET AREA SD  >=0.203 // minimum effective diode 0.203um2 
+
+ANT.GT.2_3.M1 { 
+@ Max. (M1 perim*thickness / gate area) is 400 (without effective diode)
+@ Max. (M1 perim*thickness / gate area) is Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 V1 M1_DIO GATE > 400  
+      [ PERIMETER(M1)*0.53/AREA(GATE) - (AREA(M1_DIO)*400 + !!AREA(M1_DIO)*1800) ]   
+  RDB ANT_GT23_M1.rep GT M1 M1_DIO GATE     
+}  
+
+
+//=================
+//   V1 Layer
+//=================
+
+ANT.GT.5_6.V1 {
+@ (V1 area / gate area) > 20 (without effective diode)
+@ (V1 area / gate area) > Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 V1 M1_DIO GATE > 20
+    [ AREA(V1)/AREA(GATE) - (AREA(M1_DIO)*83.33 + !!AREA(M1_DIO)*55) ] 
+  RDB ANT_GT56_V1.rep GT M1 V1 M1_DIO GATE 
+}
+
+
+
+
+//=================
+//    M2 Layer 
+//=================
+
+CONNECT M2 M1 BY V1
+CONNECT V2 M2
+
+M2_DIO = NET AREA SD  >=0.203 // minimum effective diode 0.203um2 
+
+ANT.GT.2_3.M2 { 
+@ Max. (M2 perim*thickness / gate area) is 400 (without effective diode)
+@ Max. (M2 perim*thickness / gate area) is Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 V2 M2_DIO GATE > 400     
+      [ PERIMETER(M2)*0.53/AREA(GATE) - (AREA(M2_DIO)*400 + !!AREA(M2_DIO)*1800) ]   
+  RDB ANT_GT23_M2.rep GT M1 M2 M2_DIO GATE  
+}  
+
+
+//=================
+//   V2 Layer
+//=================
+
+ANT.GT.5_6.V2 {
+@ (V2 area / gate area) > 20 (without effective diode)
+@ (V2 area / gate area) > Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 V2 M2_DIO GATE > 20
+      [ AREA(V2)/AREA(GATE) - (AREA(M2_DIO)*83.33 + !!AREA(M2_DIO)*55) ]
+  RDB ANT_GT56_V2.rep GT M1 M2 V2 M2_DIO GATE  
+}
+
+
+
+//=================
+//    M3 Layer 
+//=================
+
+CONNECT M3 M2 BY V2
+CONNECT V3 M3
+
+M3_DIO = NET AREA SD  >=0.203 // minimum effective diode 0.203um2 
+
+ANT.GT.2_3.M3 { 
+@ Max. (M3 perim*thickness / gate area) is 400 (without effective diode)
+@ Max. (M3 perim*thickness / gate area) is Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 V3 M3_DIO GATE > 400     
+      [ PERIMETER(M3)*0.53/AREA(GATE) - (AREA(M3_DIO)*400 + !!AREA(M3_DIO)*1800) ]   
+  RDB ANT_GT23_M3.rep GT M1 M2 M3 M3_DIO GATE  
+}  
+
+
+//=================
+//   V3 Layer
+//=================
+
+ANT.GT.5_6.V3 {
+@ (V3 area / gate area) > 20 (without effective diode)
+@ (V3 area / gate area) > Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 V3 M3_DIO GATE > 20
+      [ AREA(V3)/AREA(GATE) - (AREA(M3_DIO)*83.33 + !!AREA(M3_DIO)*55) ]
+  RDB ANT_GT56_V3.rep GT M1 M2 M3 V3 M3_DIO GATE  
+}
+
+
+
+//=================
+//    M4 Layer 
+//=================
+
+CONNECT M4 M3 BY V3
+CONNECT V4 M4
+
+M4_DIO = NET AREA SD  >=0.203 // minimum effective diode 0.203um2 
+
+ANT.GT.2_3.M4 { 
+@ Max. (M4 perim*thickness / gate area) is 400 (without effective diode)
+@ Max. (M4 perim*thickness / gate area) is Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 M4 V4 M4_DIO GATE > 400     
+      [ PERIMETER(M4)*0.53/AREA(GATE) - (AREA(M4_DIO)*400 + !!AREA(M4_DIO)*1800) ]   
+  RDB ANT_GT23_M4.rep GT M1 M2 M3 M4 M4_DIO GATE  
+}  
+
+
+//=================
+//   V4 Layer
+//=================
+
+ANT.GT.5_6.V4 {
+@ (V4 area / gate area) > 20 (without effective diode)
+@ (V4 area / gate area) > Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 M4 V4 M4_DIO GATE > 20
+      [ AREA(V4)/AREA(GATE) - (AREA(M4_DIO)*83.33 + !!AREA(M4_DIO)*55) ]
+  RDB ANT_GT56_V4.rep GT M1 M2 M3 M4 V4 M4_DIO GATE  
+}
+
+
+
+//=================
+//    M5 Layer 
+//=================
+
+CONNECT M5 M4 BY V4
+CONNECT V5 M5
+
+M5_DIO = NET AREA SD  >=0.203 // minimum effective diode 0.203um2 
+
+ANT.GT.2_3.M5 { 
+@ Max. (M5 perim*thickness / gate area) is 400 (without effective diode)
+@ Max. (M5 perim*thickness / gate area) is Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 M4 M5 V5 M5_DIO GATE > 400     
+      [ PERIMETER(M5)*0.53/AREA(GATE) - (AREA(M5_DIO)*400 + !!AREA(M5_DIO)*1800) ]   
+  RDB ANT_GT23_M5.rep GT M1 M2 M3 M4 M5 M5_DIO GATE  
+}  
+
+
+//=================
+//   V5 Layer
+//=================
+
+ANT.GT.5_6.V5 {
+@ (V5 area / gate area) > 20 (without effective diode)
+@ (V5 area / gate area) > Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 M4 M5 V5 M5_DIO GATE > 20
+      [ AREA(V5)/AREA(GATE) - (AREA(M5_DIO)*83.33 + !!AREA(M5_DIO)*55) ]
+  RDB ANT_GT56_V5.rep GT M1 M2 M3 M4 M5 V5 M5_DIO GATE  
+}
+
+
+
+//=================
+//    MT Layer 
+//=================
+
+CONNECT M6 M5 BY V5
+
+M6_DIO = NET AREA SD  >=0.203 // minimum effective diode 0.203um2 
+
+ANT.GT.2_3.MT { 
+@ Max. (MT perim*thickness / gate area) is 400 (without effective diode)
+@ Max. (MT perim*thickness / gate area) is Ratio Equation (with effective diode)
+
+  NET AREA RATIO GT M1 M2 M3 M4 M5 M6  M6_DIO GATE > 400   
+      [ PERIMETER(M6)*0.99/AREA(GATE) - (AREA(M6_DIO)*8000 + !!AREA(M6_DIO)*29600) ]   
+  RDB ANT_GT23_MT.rep GT M1 M2 M3 M4 M5 M6  M6_DIO GATE     
+}  
+
+
+
+//=========================
+//   PA - PAD Rules DRC
+//=========================
+
+GROUP GPA PA_?
+
+TMP = SIZE PA BY 5.0
+PADM1 = M1 AND TMP
+PADM2 = M2 AND TMP
+PADM3 = M3 AND TMP
+PADM4 = M4 AND TMP
+PADM5 = M5 AND TMP
+PADM6 = M6 AND TMP
+PADV1 = V1 AND PADM1
+PADV2 = V2 AND PADM2
+PADV3 = V3 AND PADM3
+PADV4 = V4 AND PADM4
+PADV5 = V5 AND PADM5
+
+MPADV1 = SIZE PADV1 BY 1.0 OVERUNDER
+MPADV2 = SIZE PADV2 BY 1.0 OVERUNDER
+MPADV3 = SIZE PADV3 BY 1.0 OVERUNDER
+MPADV4 = SIZE PADV4 BY 1.0 OVERUNDER
+MPADV5 = SIZE PADV5 BY 1.0 OVERUNDER
+
+PA_1a {
+  PA NOT ENCLOSE V1
+  PA NOT INSIDE M1
+}
+PA_1b {
+  PA NOT ENCLOSE V2
+  PA NOT INSIDE M2
+}
+PA_1c {
+  PA NOT ENCLOSE V3
+  PA NOT INSIDE M3
+}
+PA_1d {
+  PA NOT ENCLOSE V4
+  PA NOT INSIDE M4
+}
+PA_1e {
+  PA NOT ENCLOSE V5
+  PA NOT INSIDE M5
+}
+PA_1f { PA NOT INSIDE M6 }
+PA_2 {
+@ Minimum dimension of a bond pad window is 86um
+  INT PA < 86 ABUT<90 SINGULAR REGION
+}
+PA_3 {
+@ Minimum space between two bond pad windows is 15um
+  EXT PA < 15 ABUT<90 SINGULAR REGION
+}
+PA_4a {
+@ Minimum and maximum extension of Metal 1 over a bond pad is 5um
+  X = XOR M1 TMP
+  Y = X COIN EDGE TMP
+  PATH LENGTH Y >= 86.0
+}
+PA_4b {
+@ Minimum and maximum extension of Metal 2 over a bond pad is 5um
+  X = XOR M2 TMP
+  Y = X COIN EDGE TMP
+  PATH LENGTH Y >= 86.0
+}
+PA_4c {
+@ Minimum and maximum extension of Metal 3 over a bond pad is 5um
+  X = XOR M3 TMP
+  Y = X COIN EDGE TMP
+  PATH LENGTH Y >= 86.0
+}
+PA_4d {
+@ Minimum and maximum extension of Metal 4 over a bond pad is 5um
+  X = XOR M4 TMP
+  Y = X COIN EDGE TMP
+  PATH LENGTH Y >= 86.0
+}
+PA_4e {
+@ Minimum and maximum extension of Metal 5 over a bond pad is 5um
+  X = XOR M5 TMP
+  Y = X COIN EDGE TMP
+  PATH LENGTH Y >= 86.0
+}
+PA_4f {
+@ Minimum and maximum extension of Metal 6 over a bond pad is 5um
+  X = XOR M6 TMP
+  Y = X COIN EDGE TMP
+  PATH LENGTH Y >= 86.0
+}
+PA_5_6a {
+@ Minimum extension of Metal 1 over the nearest Via 1 is 3.0um
+@ Max. is 6.0um ;  Vias on the four corner of diamond
+  USIZE_PADM1 = SIZE PADM1 BY -6.001
+  MPADV1 INSIDE USIZE_PADM1
+  ENC MPADV1 PADM1 < 3.0 ABUT<90 SINGULAR REGION
+}
+PA_5_6b {
+  USIZE_PADM2 = SIZE PADM2 BY -6.001
+  MPADV1 INSIDE USIZE_PADM2
+  MPADV2 INSIDE USIZE_PADM2
+  ENC MPADV1 PADM2 < 3.0 ABUT<90 SINGULAR REGION
+  ENC MPADV2 PADM2 < 3.0 ABUT<90 SINGULAR REGION
+}
+PA_5_6c {
+  USIZE_PADM3 = SIZE PADM3 BY -6.001
+  MPADV2 INSIDE USIZE_PADM3
+  MPADV3 INSIDE USIZE_PADM3
+  ENC MPADV2 PADM3 < 3.0 ABUT<90 SINGULAR REGION
+  ENC MPADV3 PADM3 < 3.0 ABUT<90 SINGULAR REGION
+}
+PA_5_6d {
+  USIZE_PADM4 = SIZE PADM4 BY -6.001
+  MPADV3 INSIDE USIZE_PADM4
+  MPADV4 INSIDE USIZE_PADM4
+  ENC MPADV3 PADM4 < 3.0 ABUT<90 SINGULAR REGION
+  ENC MPADV4 PADM4 < 3.0 ABUT<90 SINGULAR REGION
+}
+PA_5_6e {
+  USIZE_PADM5 = SIZE PADM5 BY -6.001
+  MPADV4 INSIDE USIZE_PADM5
+  MPADV5 INSIDE USIZE_PADM5
+  ENC MPADV4 PADM5 < 3.0 ABUT<90 SINGULAR REGION
+  ENC MPADV5 PADM5 < 3.0 ABUT<90 SINGULAR REGION
+}
+PA_5_6f {
+  USIZE_PADM6 = SIZE PADM6 BY -6.001
+  MPADV5 INSIDE USIZE_PADM6
+  ENC MPADV5 PADM6 < 3.0 ABUT<90 SINGULAR REGION
+}
+PA_7a { 
+@ Minimum and maximum width of Via 1 in a bond pad is 0.36um 
+  NOT RECTANGLE PADV1 == 0.36 BY == 0.36
+} 
+PA_7b { 
+@ Minimum and maximum width of Via 2 in a bond pad is 0.36um 
+  NOT RECTANGLE PADV2 == 0.36 BY == 0.36
+} 
+PA_7c { 
+@ Minimum and maximum width of Via 3 in a bond pad is 0.36um 
+  NOT RECTANGLE PADV3 == 0.36 BY == 0.36
+} 
+PA_7d { 
+@ Minimum and maximum width of Via 4 in a bond pad is 0.36um 
+  NOT RECTANGLE PADV4 == 0.36 BY == 0.36
+} 
+PA_7e { 
+@ Minimum and maximum width of Via 5 in a bond pad is 0.36um 
+  NOT RECTANGLE PADV5 == 0.36 BY == 0.36
+} 
+PA_8a {
+@ Mnimum space between two Via 1 in a bond pad is 0.68um
+  EXT PADV1 < 0.68 ABUT SINGULAR REGION
+} 
+PA_8b {
+@ Mnimum space between two Via 2 in a bond pad is 0.68um
+  EXT PADV2 < 0.68 ABUT SINGULAR REGION
+} 
+PA_8c {
+@ Mnimum space between two Via 3 in a bond pad is 0.68um
+  EXT PADV3 < 0.68 ABUT SINGULAR REGION
+} 
+PA_8d {
+@ Mnimum space between two Via 4 in a bond pad is 0.68um
+  EXT PADV4 < 0.68 ABUT SINGULAR REGION
+} 
+PA_8e {
+@ Mnimum space between two Via 5 in a bond pad is 0.68um
+  EXT PADV5 < 0.68 ABUT SINGULAR REGION
+} 
+PA_9a {
+@ Minimum space between Via 1 and Via 2 is 0.2um
+  EXT PADV1 PADV2 < 0.2 ABUT SINGULAR REGION
+}
+PA_9b {
+@ Minimum space between Via 2 and Via 3 is 0.2um
+  EXT PADV2 PADV3 < 0.2 ABUT SINGULAR REGION
+}
+PA_9c {
+@ Minimum space between Via 3 and Via 4 is 0.2um
+  EXT PADV3 PADV4 < 0.2 ABUT SINGULAR REGION
+}
+PA_9d {
+@ Minimum space between Via 4 and Via 5 is 0.2um
+  EXT PADV4 PADV5 < 0.2 ABUT SINGULAR REGION
+}
+PA_10a {
+@ Minimum ratio of total exposed Via 1 area to bond pad window is 5 %
+  DENSITY PADV1 < 0.05 INSIDE OF LAYER PA
+}
+PA_10b {
+@ Minimum ratio of total exposed Via 2 area to bond pad window is 5 %
+  DENSITY PADV2 < 0.05 INSIDE OF LAYER PA
+}
+PA_10c {
+@ Minimum ratio of total exposed Via 3 area to bond pad window is 5 %
+  DENSITY PADV3 < 0.05 INSIDE OF LAYER PA
+}
+PA_10d {
+@ Minimum ratio of total exposed Via 4 area to bond pad window is 5 %
+  DENSITY PADV4 < 0.05 INSIDE OF LAYER PA
+}
+PA_10e {
+@ Minimum ratio of total exposed Via 5 area to bond pad window is 5 %
+  DENSITY PADV5 < 0.05 INSIDE OF LAYER PA
+}

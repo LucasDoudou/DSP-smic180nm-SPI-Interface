@@ -1,0 +1,861 @@
+5_6_Mul_final_test2 1000
+NW_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of an NW region is 0.86um
+NW_2a
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two NW regions with the same potential is 0.60um
+Merge if space is less than 0.6um
+NW_2b
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two NW with different potential is 1.40um
+NW_3
+0 0 5 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum dimension of an NW region not connected to the most
+positive power supply is 2.10um.
+Need to be changed depending on your power supply name
+In this case the most positive voltage
+NR_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of AA beyond an NW is 1.0
+NR_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of salicide NW to CT is 0.3
+NR_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from SAB to related NW is 0.3
+NR_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from SAB to related AA is 0.22
+NR_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum overlap of SN to SAB inside NW is 0.4
+NR_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from SAB to related CT in SAB hole is 0.3
+NR_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. NW space is 1.4
+NR_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+LDD,SN and SP implant inside NW resistance region is not allowed
+NN_1
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.1
+NN inside or cross over a N-Well is not allowed
+NN_2
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.2
+NN inside or cross over a Deep N-Well is not allowed
+NN_3
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.3
+Minimum dimension of NN region is 0.84
+NN_4
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.4
+Minimum space between 2 NN regions in same potential is 0.84
+NN_5
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.5
+Minimum Gate dimension of 1.8V native device is 0.5
+NN_5a
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.5a
+Minimum Gate dimension of 3.3V native device is 1.2
+NN_6
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.6
+Minimum and Maximum NN extension beyond SN(N+) AA region is 0.26
+NN_7
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.7
+Minimum clearance from NN region to a nominal AA region is 0.52
+NN_8
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.8
+Minimum clearance from NN region to N-Well edge is 1.62
+NN_9
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.9
+Bent Gate Poly is not allowed to put in NN region
+NN_10
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.10
+P+ region is not allowed to put in NN region
+NN_11
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NN.11
+Only one AA region is allowed to put in NN region
+AA_1_2
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of an active region for interconnect is 0.22um
+Minimum width of an active region to define the width of MOS is 0.22um
+AA_3
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between N+ AA and N+ AA or P+ AA and P+ AA is 0.28um
+(both regions are either inside or outside NW)
+AA_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure from NW edge to an N-well pick-up is 0.12um
+AA_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between N-Well edge and an N+ AA region is 0.43um
+AA_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between N-Well edge and a P+ AA region is 0.43um
+AA_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between N-Well edge and a P+ AA region is 0.12um
+AA_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between poly edge and edge of a butted diffusion AA region is 0.32um
+AA_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between N+ AA and P+ AA for butted diffusion is 0.00um
+AA_10a
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a butted diffusion AA is 0.176um2. At lease
+one segment(AA.10) of the consecutive SN/SP edge of butted
+diffusion AA should be longer than 0.42um.
+AA_10b
+0 0 1 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+AA_11
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a stand-along AA region is 0.20um
+AA_12
+0 0 5 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+For the situation where N-well and P-well pick-ups are put
+head-to-head across the well boundary, the space between N-
+pick-up and P-pick-up should be 0.36um in order to meet
+the implant layout rules
+DG_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of DG beyond the active AA region is 0.32um
+DG_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum DG space between two DG regions is 0.45, merge if space <0.45
+DG_3a
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between DG edge and AA region is 0.32um (For MOS AA)
+DG_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between DG region and 1.8V transistor gate is 0.40um
+DG_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of DG region beyond 3.3V transistor gate is 0.40um
+GT_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a GT region for interconnects is 0.18um
+GT_2a&b
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a GT region for channel length of 1.8V MOS is 0.18um
+GT_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two GT regions on AA with no contact is 0.25um
+GT_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two GT regions on field oxide area is 0.25um
+GT_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Extension beyond diffusion to form poly end cap is 0.22um
+GT_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension from AA region to GT is 0.32um
+GT_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between field interconnect poly and AA is 0.10um
+GT_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a GT region for 3.3V PMOS is 0.30um
+GT_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of GT region for channel length of 3.3V NMOS is 0.35um
+GT_10ab
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Maximum length of poly between two contacts is 50um when poly width <=0.24
+Maximum length of poly between 1 contact and poly line is 50um when poly width <=0.24
+GT_11a
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+90 degree bent gate is not allowed
+GT_13
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two GT's with CT on active area is 0.375um
+GT_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. channel length of 1.8V device poly gate on AA with 45 bent is 0.21 
+NLL_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of an NLL region is 0.44um
+NLL_2
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two NLL regions is 0.44um
+Merge if the space is less than 0.44um
+NLL_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between an NLL region and a P+ AA region is 0.26um
+NLL_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between an NLL region and a P+ pick-up AA region is 0.10um
+NLL_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum overlap from an NLL edge to an AA is 0.23um
+NLL_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an NLL region over SN active region is 0.18um
+NLL_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between an NLL region and an NLH AA region is 0.21um
+NLL_8_12
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an NLL region to an N-channel poly gate is 0.32um
+Minimum enclosure of an NLL region over N-channel
+along the direction of poly gate is 0.35
+NLL_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of an NLL region is 0.40um
+NLL_10
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Separation from an NLL to a butted edge of a butted diffustion P+AA is 0
+NLL_11_NLH_11
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between NLL and NLH if two AAs are overlapped is 0
+NLL_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NLL is not allowed in Non-salicide AA/poly resistor 
+PLL_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a PLL region is 0.44um
+PLL_2
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two PLL regions is 0.44um
+Merge if the space is less than 0.44um
+PLL_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from a PLL region to an N+ AA region is 0.26um
+PLL_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from a PLL region to an N+ pick-up AA region is 0.10um
+PLL_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure from a PLL edge to an AA is 0.23um
+PLL_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a PLL region beyond a SP active region is 0.18um
+PLL_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space of a PLL region to a PLH AA region is 0.21um
+PLL_8_12
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an PLL region to an P-channel poly gate is 0.32um
+Minimum enclosure of an PLL region over P-channel
+along the direction of poly gate is 0.35
+PLL_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a PLL region is 0.40um
+PLL_10
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Separation from a PLL to a butted edge of a butted diffustion N+ AA is 0.00um
+PLL_11_PLH_11
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between PLL and PLH if two AAs are overlapped is 0.00um
+PLL_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+PLL implant is not allowed in Non-salicide AA/poly resistor 
+NLH_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of an NLH region is 0.44um
+NLH_2
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two NLH regions is 0.44um
+Merge if the space is less than 0.44um
+NLH_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between an NLH region and a P+ AA region is 0.26um
+NLH_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between an NLH region and a Pwell pick-up P+ AA is 0.10um
+NLH_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum overlap from an NLH edge to an AA is 0.23um
+NLH_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an NLH region beyond an NP active region is 0.18um
+NLH_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between an NLH region and an NLL AA region is 0.21um
+NLH_8_12
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an NLH region to an N-channel poly gate is 0.32um
+Minimum enclosure of an NLH region over N-channel
+along the direction of poly gate is 0.35
+NLH_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of an NLH region is 0.40um
+NLH_10
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Separation from an NLH to a butted edge of a butted diffustion P+ AA is 0.00um
+NLH_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NLH is not allowed in Non-salicide AA/poly resistor 
+PLH_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a PLH region is 0.44um
+PLH_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two PLH regions is less than 0.44um
+PLH_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a PLH region and an N+ AA is 0.26um
+PLH_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a PLH region and an N+ pick-up AA region is 0.10um
+PLH_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum overlap from a PLH edge to an AA is 0.23um
+PLH_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a PLH region beyond a SP active region is 0.18um
+PLH_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a PLH region and a PLL AA region is 0.21um
+PLH_8_12
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an PLH region to an P-channel poly gate is 0.32um
+Minimum enclosure of an PLH region over P-channel
+along the direction of poly gate is 0.35
+PLH_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a PLH region is 0.40um
+PLH_10
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Separation from a PLH to butted edge of a butted N+ AA
+PLH_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+PLH is not allowed in Non-salicide AA/poly resistor 
+SN_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a SN region is 0.44um
+SN_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two SN regions is less than 0.44um
+SN_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a SN region and a P+ AA is 0.26um
+SN_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a SN region and of P+ pick-up AA region is 0.10um
+SN_5
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a SN region and a non-butted edge of P-well pick-up
+P+ AA region if the distance between P+ AA and N-well<0.43um is 0.18um
+SN_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from a SN edge to a P-channel Poly gate is 0.32um
+SN_7_17
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a SN edge to an N-channel Poly gate is 0.32um
+Minimum space from a SN edge to a N-channel Poly gate
+along the direction of poly gate is 0.35
+SN_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum overlap from a SN edge to an AA is 0.23um
+SN_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a SN region beyond a SN active region is 0.18um
+SN_10&11
+0 0 7 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a SN region beyond an N+ pick-up AA region is 0.02um
+if the distance between N+ AA and P-well>=0.43um
+a. To obey this rule and SN.3 simultaneously, the minimum space
+between N+ pick-up AA and SP active AA should be increased to 0.44um
+b. To obey this rule and SN.5 simultaneously, the minimum space
+between N+ pick-up AA and SP active AA should be increased to 0.36um
+SN_12&SP_12
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Separation from a SN region to butted edge of a butted diffusion SP AA is 0.00um
+SN_13&SP_13
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of a SN region along the edge of a butted diffusion N+ AA/P+ AA is 0.00um
+SN_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a SN region is 0.40um
+SN_15
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of a SN region beyond a poly as a resistor
+SAB poly without SN or SP is not allowed
+SN_16
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from a SN edge to a P-channel Poly gate
+along the direction of poly gate is 0.35
+SN_18&SP_18
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+SN is not allowed to overlap with SP
+SP_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a SP region is 0.44um
+SP_2
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two SP regions is 0.44um
+Merge if the space is less than 0.44um
+SP_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a SP region and a N+ AA is 0.26um
+SP_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a SP region and a N+ pick-up AA region is 0.10um
+SP_5
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between a SP region and a non-butted edge of N-well pick-up
+N+AA region if the distance between N+ AA and P-well<0.43um is 0.18um
+SP_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from a SP edge to N-channel Poly gate is 0.32um
+SP_7_17
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a SP edge to P-channel Poly gate is 0.32um
+Minimum space from a SP edge to a P-channel Poly gate
+along the direction of poly gate is 0.35
+SP_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum overlap from a SP edge to an AA is 0.23um
+SP_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a SP region beyond a SP active region is 0.18um
+SP_10&11
+0 0 7 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of an SP region beyond a P+ pick-up AA region is 0.02um
+if the distance between P+AA and Nwell>=0.43um
+c. To obey this rule and SP.3 simultaneously,
+P+ pick-up AA to SN active AA minimum spacing must be increased to 0.44um
+d. To obey this rule and SP.5 simultaneously,
+P+ pick-up AA to SN pick-up AA minimum spacing must be increased to 0.36um
+SP_14
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a SP region is 0.40um
+SP_15
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of a SP region beyond a poly as a resistor
+SP_16
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space from a SP edge to a N-channel Poly gate
+along the direction of poly gate is 0.35
+SAB_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width is 0.43um
+SAB_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space is 0.43um
+SAB_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space to unrelated diffusion is 0.22um
+SAB_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space to contact is 0.22um
+SAB_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space to poly on diffusion is 0.45um
+SAB_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension over related diffusion is 0.22um
+SAB_7
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of an diffusion over related SAB is 0.22um
+SAB_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of SAB over related poly on field oxide is 0.22um
+SAB_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space of SAB to unrelated poly on field oxide is 0.30um
+SAB_10
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of SAB is 2.00um
+CT_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Mininmum/Maximum contact size is 0.22um
+CT_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two contacts is 0.25um
+CT_3
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two contacts in a contact array
+with row and column numbers are both greater than 3 is 0.28um
+CT_4
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between poly contact to AA is 0.20um
+CT_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between poly to diffusion contact is 0.16um
+CT_6_7
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an AA region beyond an AA CT region is 0.10um
+Minimum enclosure of a poly region beyond a poly CT region is 0.10um
+CT_8
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of a SN region beyond an AA CT region is 0.12um
+CT_9
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of an SP region beyond an AA CT region is 0.12um
+CT_10
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+CT on gate region is forbidden
+CT_11
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+AA contact located on SN/SP boundary is not allowed
+CT_12
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Non-salicided contacts are not allowed
+M1_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of M1 region is 0.23um
+M1_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two M1 regions is 0.23um
+M1_3&4
+0 0 4 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum enclosure of M1 region over CT region is 0.005um
+Minimum enclosure of M1 line end region beyond CT region is 0.06um
+For CT at 90 degree corner, one side must be considered as line end
+M1_5
+0 0 6 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between M1 lines with one or both metal line width
+and length are greater than 10um is 0.60um
+The minimum space must be maintained between a metal line and a
+small piece of metal(<10) that is connected to the wide metal
+within 1.0um range from the wide metal
+M1_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of M1 region is 0.20um
+M2_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of an M2 region is 0.28um
+M2_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two M2 regions is 0.28um
+M2_3_4
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of M2 region beyond V1 region is 0.01
+Minimum extension of M2 line end region beyond V1 region is 0.06
+M2_5
+0 0 6 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between M2 lines with one or both metal line width
+and length are greater than 10um is 0.60um
+The minimum space must be maintained between a metal line and a
+small piece of metal(<10) that is connected to the wide metal
+within 1.0um range from the wide metal
+M2_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a M2 region is 0.20um
+M3_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of an M3 region is 0.28um
+M3_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two M3 regions is 0.28um
+M3_3_4
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of M3 region beyond V2 region is 0.01
+Minimum extension of M3 line end region beyond V2 region is 0.06
+M3_5
+0 0 6 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between M3 lines with one or both metal line width
+and length are greater than 10um is 0.60um
+The minimum space must be maintained between a metal line and a
+small piece of metal(<10) that is connected to the wide metal
+within 1.0um range from the wide metal
+M3_6
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of a M3 region is 0.20um
+MT_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum width of a top metal is 0.44um
+MT_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two top metal regions is 0.46um
+MT_3
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum extension of MT region over V3 region is 0.09
+MT_4
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between top metal lines with one or both metal line width
+and length are greater than 10um is 0.60um
+MT_5
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum area of an MT region is 0.56um
+V1_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum/maximum size of a V1 is 0.26um 
+V1_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two V1 is 0.26um
+V1_3_4
+0 0 5 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum metal 1 enclosure for a V1 is 0.01um
+If Metal 1 line end beyond V1, 0.06um
+For V1 located at the 90 degree corner, one side of metal extension
+must be treated as end-of-line and the other side follows V1.3
+V2_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum/maximum size of a V2 is 0.26um 
+V2_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two V2 is 0.26um
+V2_3_4
+0 0 5 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum metal 2 enclosure for a V2 is 0.01um
+If Metal 2 line end beyond V2, 0.06um
+For V2 located at the 90 degree corner, one side of metal extension
+must be treated as end-of-line and the other side follows V2.3
+VT_1
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum/maximum size of a VT is 0.36um
+VT_2
+0 0 2 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum space between two VT is 0.35um
+VT_3_4
+0 0 3 Dec 18 22:45:10 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Minimum M3 enclosure for VT is 0.01um
+Minimum enclosure of M3 over VT along metal line direction is 0.06um
+PD_GT
+1 1 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. Poly GDS pattern density is 14%
+p 1 4
+16890 -61345
+124640 -61345
+124640 -7365
+16890 -7365
+PD_M1
+1 1 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. Metal 1 GDS pattern density is 30%
+p 1 4
+16890 -61345
+124640 -61345
+124640 -7365
+16890 -7365
+PD_M2
+1 1 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. Metal 2 GDS pattern density is 30%
+p 1 4
+16890 -61345
+124640 -61345
+124640 -7365
+16890 -7365
+PD_M3
+1 1 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. Metal 3 GDS pattern density is 30%
+p 1 4
+16890 -61345
+124640 -61345
+124640 -7365
+16890 -7365
+PD_M4
+1 1 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Min. Metal 4 GDS pattern density is 30%
+p 1 4
+16890 -61345
+124640 -61345
+124640 -7365
+16890 -7365
+Convention_FLT_NW
+0 0 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+NW without N+ pick up
+Convention_BPMO
+0 0 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+Pmos in PW
+Convention_BAD_IMP
+0 0 2 Dec 18 22:45:11 2024                     
+Rule File Pathname: /home/student/Desktop/Workspace/DRC/_SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc_
+AA area without any implant
+DENSITY_PRINT_FILES
+0 0 5 Dec 18 22:45:11 2024
+density_report_GT.log
+density_report_M1.log
+density_report_M2.log
+density_report_M3.log
+density_report_M4.log

@@ -1,0 +1,15 @@
+* SPICE NETLIST
+***************************************
+
+.SUBCKT 3AND A B C VDD GND VO
+** N=9 EP=6 IP=0 FDC=8
+M0 4 A 8 GND NM L=1.8e-07 W=2.2e-07 $X=4665 $Y=-5290 $D=0
+M1 5 B 4 GND NM L=1.8e-07 W=2.2e-07 $X=5465 $Y=-5290 $D=0
+M2 GND C 5 GND NM L=1.8e-07 W=2.2e-07 $X=6265 $Y=-5290 $D=0
+M3 VO 8 GND GND NM L=1.8e-07 W=2.2e-07 $X=7065 $Y=-5290 $D=0
+M4 VDD A 8 VDD PM L=1.8e-07 W=4.4e-07 $X=4745 $Y=-3395 $D=4
+M5 8 B VDD VDD PM L=1.8e-07 W=4.4e-07 $X=5465 $Y=-3395 $D=4
+M6 VDD C 8 VDD PM L=1.8e-07 W=4.4e-07 $X=6185 $Y=-3395 $D=4
+M7 VO 8 VDD VDD PM L=1.8e-07 W=4.4e-07 $X=6905 $Y=-3395 $D=4
+.ENDS
+***************************************

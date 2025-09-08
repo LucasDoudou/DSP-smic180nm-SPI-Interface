@@ -1,0 +1,14 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 2
+lvs_ExtRunTimes 1734159796 1734159796
+lvs_ExtOutFile RUNDIR /home/student/Desktop/Workspace/PEX
+lvs_ExtOutFile RULES_FILE /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoErcSummary {4 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/student/Desktop/Workspace/PEX/svdb/Full_Adder_Cobar.sp
+lvs_ExtOutFile EXTRACTION_REPORT Full_Adder_Cobar.lvs.report.ext
+lvs_ExtOutFile LAYOUT_PDSP pdba.data
+lvs_ExtOutFile ERC_PATHCHK_DATABASE svdb/Full_Adder_Cobar.pathchk.erc
+lvs_ExtOutFile ERC_PATHCHK_REPORT svdb/Full_Adder_Cobar.pathchk.rep
+lvs_ExtOutFile ERC_DATABASE erc.db

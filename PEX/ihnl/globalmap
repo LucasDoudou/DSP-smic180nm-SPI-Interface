@@ -1,0 +1,21 @@
+CADENCE IHNL01070
+$model
+EE113Lab2/And_Gate/schematic And_Gate
+EE113_DSP/5_6_Multiplier/schematic 5_6_Multiplier
+EE113_DSP/4_Full_Adder_Type28/schematic 4_Full_Adder_Type28
+EE113_DSP/DSP_final_v2/schematic DSP_final_v2
+EE113_DSP/4_flip_flop_1x4/schematic 4_flip_flop_1x4
+EE113_DSP/6_FA_v3/schematic 6_FA_v3
+EE113Lab2/inv/schematic inv
+EE113_DSP/Full_Adder_Sum/schematic Full_Adder_Sum
+EE113_DSP/D_Flip_Flop/schematic D_Flip_Flop
+EE113_DSP/12_bit_Register/schematic 12_bit_Register
+EE113_DSP/TG/schematic TG
+EE113_DSP/6_FA_vhalf/schematic 6_FA_vhalf
+EE113_DSP/6_FA_v2/schematic 6_FA_v2
+EE113_DSP/11FA/schematic 11FA
+$endmodel
+$net
+$endnet
+$param
+$endparam

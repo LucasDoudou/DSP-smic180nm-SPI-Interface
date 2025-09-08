@@ -1,0 +1,26 @@
+********************************************************************************
+Program:	@(#)$CDS: cdb2oa version 6.1.5 05/04/2012 23:30 (sjfdl224) $
+		sub-version  IC6.1.5.500.11 
+Started at:	Apr 22 16:55:21 2015
+Hierarchy:	/usr/cadence/IC615
+User Name:	root
+Host Name:	Student
+Options:	-cdslibpath /home/student/Desktop/Workspace/MRF/smic18mmrf_1P6M/ 
+          -lib smic18mmrf -log cdb2oa.gui.log -appendlog 
+          -mapundefinedpingroups strong 
+Directory:	/home/student/Desktop/Workspace/MRF/work
+Log File:	/home/student/Desktop/Workspace/MRF/work/cdb2oa.gui.log
+
+	Copyright (C) 2001-2005 Cadence Design Systems, Inc. All rights reserved  worldwide
+********************************************************************************
+
+
+
+********************************************************************************
+Finished at:   Apr 22 16:56:17 2015
+
+104 cells and 748 cellviews were translated from library 'smic18mmrf' in 53.6s.
+
+********************************************************************************
+
+

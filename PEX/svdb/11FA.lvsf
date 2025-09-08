@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/student/Desktop/Workspace/PEX
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_LvsOutFile LVS_REPORT 11FA.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/student/Desktop/Workspace/PEX/11FA.src.net
+lvs_LvsOutFile RULES_FILE /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_
+lvs_LvsRunTimes 1734626892 1734626892

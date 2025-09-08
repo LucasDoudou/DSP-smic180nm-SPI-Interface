@@ -1,0 +1,261 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         DSP_final_v2.lvs.report
+LAYOUT NAME:              /home/student/Desktop/Workspace/LVS/DSP_final_v2.sp ('DSP_final_v2')
+SOURCE NAME:              /home/student/Desktop/Workspace/LVS/DSP_final_v2.src.net ('DSP_final_v2')
+RULE FILE:                /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+CREATION TIME:            Fri Jan 17 08:14:16 2025
+CURRENT DIRECTORY:        /home/student/Desktop/Workspace/LVS
+USER NAME:                student
+CALIBRE VERSION:          v2011.2_34.26    Wed Jul 6 05:20:09 PDT 2011
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  CORRECT        DSP_final_v2                  DSP_final_v2
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD" "SAVDD?" "?VDD?" "?VCC?" "?vcc?" "?vdd?"
+   LVS GROUND NAME                        "VSS" "SAVSS?" "?gnd?" "?GND?" "?VSS?" "?vss?"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       YES
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       YES
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  YES
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            NO
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        65536
+   // LVS SIGNATURE MAXIMUM
+   // LVS FILTER UNUSED OPTION
+   // LVS REPORT OPTION
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+
+   // Map Device
+
+   LVS MAP DEVICE                      MN(NM) MN(N18)
+   LVS MAP DEVICE                      MP(PM) MP(P18)
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Trace Property
+
+   TRACE PROPERTY  mn(nm)  l l 5
+   TRACE PROPERTY  mn(nm)  w w 5
+   TRACE PROPERTY  mn(n33)  l l 5
+   TRACE PROPERTY  mn(n33)  w w 5
+   TRACE PROPERTY  m(c1)  l l 5
+   TRACE PROPERTY  m(c1)  w w 5
+   TRACE PROPERTY  m(c2)  l l 5
+   TRACE PROPERTY  m(c2)  w w 5
+   TRACE PROPERTY  mp(pm)  l l 5
+   TRACE PROPERTY  mp(pm)  w w 5
+   TRACE PROPERTY  mp(p33)  l l 5
+   TRACE PROPERTY  mp(p33)  w w 5
+   TRACE PROPERTY  d(pdio18)  a a 5
+   TRACE PROPERTY  d(pdio33)  a a 5
+   TRACE PROPERTY  d(ndio18)  a a 5
+   TRACE PROPERTY  d(ndio33)  a a 5
+   TRACE PROPERTY  d(nwdio)  a a 5
+   TRACE PROPERTY  q(pnp)  a a 5
+   TRACE PROPERTY  r(rnwaa)  r r 10
+   TRACE PROPERTY  r(rnwsti)  r r 10
+   TRACE PROPERTY  r(rndif)  r r 10
+   TRACE PROPERTY  r(rndifsab)  r r 10
+   TRACE PROPERTY  r(rpdif)  r r 10
+   TRACE PROPERTY  r(rpdifsab)  r r 10
+   TRACE PROPERTY  r(rnpo)  r r 10
+   TRACE PROPERTY  r(rnposab)  r r 10
+   TRACE PROPERTY  r(rppo)  r r 10
+   TRACE PROPERTY  r(rpposab)  r r 10
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+LAYOUT CELL NAME:         DSP_final_v2
+SOURCE CELL NAME:         DSP_final_v2
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             40        40
+
+ Nets:             772       772
+
+ Instances:        768       768         MN (4 pins)
+                   768       768         MP (4 pins)
+                ------    ------
+ Total Inst:      1536      1536
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             40        40
+
+ Nets:             340       340
+
+ Instances:         48        48         MN (4 pins)
+                    48        48         MP (4 pins)
+                    39        39         SPDW_2_1 (4 pins)
+                    39        39         SPDW_3_1 (5 pins)
+                    39        39         SPUP_2_1 (4 pins)
+                    39        39         SPUP_3_1 (5 pins)
+                   168       168         _invv (4 pins)
+                    12        12         _invx2v (4 pins)
+                    30        30         _nand2v (5 pins)
+                    39        39         _smn2v (4 pins)
+                    39        39         _smn3v (5 pins)
+                    39        39         _sup2v (4 pins)
+                    39        39         _sup3v (5 pins)
+                ------    ------
+ Total Inst:       618       618
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:              40         40            0            0
+
+   Nets:              340        340            0            0
+
+   Instances:          48         48            0            0    MN(N18)
+                       48         48            0            0    MP(P18)
+                       39         39            0            0    SPDW_2_1
+                       39         39            0            0    SPDW_3_1
+                       39         39            0            0    SPUP_2_1
+                       39         39            0            0    SPUP_3_1
+                      168        168            0            0    _invv
+                       12         12            0            0    _invx2v
+                       30         30            0            0    _nand2v
+                       39         39            0            0    _smn2v
+                       39         39            0            0    _smn3v
+                       39         39            0            0    _sup2v
+                       39         39            0            0    _sup3v
+                  -------    -------    ---------    ---------
+   Total Inst:        618        618            0            0
+
+
+o Initial Correspondence Points:
+
+   Ports:        VDD GND CLK Q<3> Q<2> Q<1> Q<0> Q<7> Q<6> Q<5> Q<4> Q<11> Q<10> Q<9> Q<8> A<2>
+                 A<0> A<4> A<1> A<3> A<5> C<0> C<4> C<3> C<2> C<5> C<1> C<8> C<6> C<7> C<10>
+                 C<9> D<0> B<0> D<1> B<1> D<2> B<2> D<3> B<3>
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      0 sec
+Total Elapsed Time:  0 sec

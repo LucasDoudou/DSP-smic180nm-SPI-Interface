@@ -1,0 +1,8 @@
+//OK 
+//NUMBER_OF_HEADER_LINES: 6
+//VERSION: 1
+//TOKEN_DELIMITER: "
+//TOKEN_SEPARATOR: " "
+//FORMAT: "time" "calibre version" "command line"
+"Mon Dec 16 00:05:37 2024 " "v2011.2_34.26" "-xrc -pdb -rcc -turbo 1 /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_"
+"Mon Dec 16 00:05:37 2024 " "v2011.2_34.26" "-xrc -fmt -all /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_"

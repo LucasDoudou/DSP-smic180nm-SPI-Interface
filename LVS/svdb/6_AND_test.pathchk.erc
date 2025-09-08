@@ -1,0 +1,9 @@
+6_AND_test 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 18 19:03:39 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 18 19:03:39 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 18 19:03:39 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 18 19:03:39 2024                                      

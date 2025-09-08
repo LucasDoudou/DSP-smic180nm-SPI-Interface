@@ -1,0 +1,17 @@
+DSP_final_v2 1000
+ptd_to_power
+0 0 2 Jan 17 08:14:51 2025                                      
+Rule File Pathname: /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_
+Pwell pick-up layer ptd texted with power net.
+ntd_to_ground
+0 0 2 Jan 17 08:14:51 2025                                      
+Rule File Pathname: /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_
+Nwell pick-up layer ntd texted with ground net.
+mntopg
+0 0 2 Jan 17 08:14:51 2025                                      
+Rule File Pathname: /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_
+NMOS connect to both Power and Ground.
+mptopg
+0 0 2 Jan 17 08:14:51 2025                                      
+Rule File Pathname: /home/student/Desktop/Workspace/PEX/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex_
+PMOS connect to both Power and Ground.

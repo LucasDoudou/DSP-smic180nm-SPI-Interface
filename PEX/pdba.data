@@ -1,0 +1,131 @@
+* Calibre pushdown separate-properties (back-annotation) data
+***************************************
+*
+* These lvs-actionable properties, indexed by DEVICE element(model) will be kept in the netlist:
+*
+* KEEP_PROP_BEGIN
+* KEEP_PROP D(NDIO18) A
+* KEEP_PROP D(NDIO33) A
+* KEEP_PROP D(NWDIO) A
+* KEEP_PROP D(PDIO18) A
+* KEEP_PROP D(PDIO33) A
+* KEEP_PROP M(C1) L W
+* KEEP_PROP M(C2) L W
+* KEEP_PROP MN(N33) L W
+* KEEP_PROP MN(NM) L W
+* KEEP_PROP MP(P33) L W
+* KEEP_PROP MP(PM) L W
+* KEEP_PROP Q(PNP) A
+* KEEP_PROP R(RNDIF) R
+* KEEP_PROP R(RNDIFSAB) R
+* KEEP_PROP R(RNPO) R
+* KEEP_PROP R(RNPOSAB) R
+* KEEP_PROP R(RNWAA) R
+* KEEP_PROP R(RNWSTI) R
+* KEEP_PROP R(RPDIF) R
+* KEEP_PROP R(RPDIFSAB) R
+* KEEP_PROP R(RPPO) R
+* KEEP_PROP R(RPPOSAB) R
+* KEEP_PROP_END
+*
+.SUBCKT p18_1
+M0 $X=0 $Y=0 $D=4
+.ENDS
+***************************************
+.SUBCKT n18_3
+M0 $X=0 $Y=0 $D=0
+.ENDS
+***************************************
+.SUBCKT p18_0
+M0 $X=0 $Y=0 $D=4
+M1 $X=720 $Y=0 $D=4
+.ENDS
+***************************************
+.SUBCKT n18_2
+M0 $X=0 $Y=0 $D=0
+M1 $X=720 $Y=0 $D=0
+.ENDS
+***************************************
+.SUBCKT p18_5
+M0 $X=0 $Y=0 $D=4
+M1 $X=720 $Y=0 $D=4
+M2 $X=1440 $Y=0 $D=4
+.ENDS
+***************************************
+.SUBCKT n18_4
+M0 $X=0 $Y=0 $D=0
+M1 $X=720 $Y=0 $D=0
+M2 $X=1440 $Y=0 $D=0
+.ENDS
+***************************************
+.SUBCKT Full_Adder_Sum
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT inv
+M0 $X=-3205 $Y=4225 $D=0
+M1 $X=-3205 $Y=5665 $D=4
+.ENDS
+***************************************
+.SUBCKT ICV_1
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT TG
+M0 $X=-4200 $Y=-1655 $D=0
+M1 $X=-4200 $Y=500 $D=4
+.ENDS
+***************************************
+.SUBCKT D_Flip_Flop
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT 4_flip_flop_1x4
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT And_Gate
+M0 $X=1890 $Y=-4485 $D=0
+M1 $X=2690 $Y=-4485 $D=0
+M2 $X=3490 $Y=-4485 $D=0
+M3 $X=1890 $Y=-2095 $D=4
+M4 $X=2610 $Y=-2095 $D=4
+M5 $X=3330 $Y=-2095 $D=4
+.ENDS
+***************************************
+.SUBCKT 6_AND_test
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT ICV_2
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT 6_FA_v3
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT ICV_3
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT ICV_4
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT 5_6_Multiplier
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT ICV_5
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT 11FA
+* nothing transcripted
+.ENDS
+***************************************
+.SUBCKT DSP_final_v2
+* nothing transcripted
+.ENDS
+***************************************

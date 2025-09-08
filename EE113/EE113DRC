@@ -1,0 +1,19 @@
+*drcRulesFile: /home/student/Desktop/Workspace/rule_file_smic180/calibre/drc/SmicDRL2TM5P_cal018_mixlog_p1mt4_sali.drc
+*drcRunDir: /home/student/Desktop/Workspace/DRC
+*drcLayoutPaths: RAM_v1.calibre.db
+*drcLayoutPrimary: RAM_v1
+*drcLayoutLibrary: EE113_SPI
+*drcLayoutView: layout
+*drcLayoutGetFromViewer: 1
+*drcResultsFile: RAM_v1.drc.results
+*drcSummaryFile: RAM_v1.drc.summary
+*drcIncrDRCSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*drcIncrDRCLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*drcIncrDRCGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnWarnLayoutOverwrite: 0
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: EE113_SPI
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: RAM_v1.def

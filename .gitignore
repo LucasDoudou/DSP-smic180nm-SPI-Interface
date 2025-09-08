@@ -1,0 +1,15 @@
+/assura*/
+/rcx*/
+/spectre*/
+/calibre*/
+*.psf
+*.raw
+*.dat
+*.bin
+*.tr0
+*.trn
+*.zip
+*.tar
+*.7z
+*.o
+*.exe

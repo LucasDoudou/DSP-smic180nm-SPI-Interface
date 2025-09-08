@@ -1,0 +1,9 @@
+inv 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 15 14:51:42 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 15 14:51:42 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 15 14:51:42 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 15 14:51:42 2024                                      

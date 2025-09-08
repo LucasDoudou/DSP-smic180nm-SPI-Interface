@@ -1,0 +1,9 @@
+Full_Adder_Cobar 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 14 15:03:01 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 14 15:03:01 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 14 15:03:01 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 14 15:03:01 2024                                      

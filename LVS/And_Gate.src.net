@@ -1,0 +1,43 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113Lab2
+* Top Cell Name: And_Gate
+* View Name:     schematic
+* Netlisted on:  Dec 17 22:32:53 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv GND VDD VI VO
+*.PININFO VI:I VO:O GND:B VDD:B
+MNM0 VO VI GND GND n18 W=220n L=180n m=1
+MPM0 VO VI VDD VDD p18 W=660n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    And_Gate
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT And_Gate GND VDD VIN_A VIN_B VOUT
+*.PININFO VIN_A:I VIN_B:I VOUT:O GND:B VDD:B
+MPM1 net16 VIN_B VDD VDD p18 W=440n L=180n m=1
+MPM0 net16 VIN_A VDD VDD p18 W=440n L=180n m=1
+MNM1 net15 VIN_B GND GND n18 W=220n L=180n m=1
+MNM0 net16 VIN_A net15 GND n18 W=220n L=180n m=1
+XI0 GND VDD net16 VOUT / inv
+.ENDS
+

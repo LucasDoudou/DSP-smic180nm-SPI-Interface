@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      student
+HostName                       localhost
+ProcessIdentifier              14716
+ProcessCreationTime_UTC        1729174561
+ProcessCreationTime_Readable   Thu Oct 17 22:16:01 2024 CST
+AppIdentifier                  /usr/cadence/IC615/tools.lnx86/dfII/bin/32bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       Set lock by hiiLockFile
+FilePathUsedToEditLock         /home/student/Desktop/Workspace/logs_student/logs0/Job0.log
+TimeEditLocked                 Thu Oct 17 22:16:01 2024 CST

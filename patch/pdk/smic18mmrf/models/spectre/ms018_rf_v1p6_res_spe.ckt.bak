@@ -1,0 +1,180 @@
+//* 
+//* No part of this file can be released without the consent of SMIC.
+//*
+//******************************************************************************************
+//* 0.18um Mixed Signal 1P6M with MIM Salicide 1.8V/3.3V RF SPICE Model (for SPECTRE only) *
+//******************************************************************************************
+//*
+//* Release version    : 1.6
+//*
+//* Release date       : 07/02/2007
+//*
+//* Simulation tool    : Cadence spectre V6.0
+//*
+//*
+//*  Resistor   :
+//*        *-----------------------------------------* 
+//*        | Resistor subckt |                       |
+//*        *=========================================*
+//*        | SAB N+ Diff     |    rndifsab_ckt_rf    | 
+//*        *-----------------------------------------*
+//*        | SAB P+ Diff     |    rpdifsab_ckt_rf    |
+//*        *-----------------------------------------*
+//*        | SAB N+ poly     |    rnposab_ckt_rf     |
+//*        *-----------------------------------------*
+//*        | SAB p+ poly     |    rpposab_ckt_rf     |
+//*        *-----------------------------------------*
+//*        | HRP             |    rhrpo_ckt_rf       |
+//*        *-----------------------------------------*
+//*
+simulator lang=spectre  insensitive=yes
+ahdl_include "res_rf.def"
+//* 
+//************************************
+//* Non-silicide N+ diffusion resistor
+//************************************
+//* l=length, w=width
+subckt rndifsab_ckt_rf (port1 port2)
+parameters l=0 w=0
++devt=temp tc1r = 1.51E-03 tc2r = 4.22E-07
++dw = -2.62E-08 tref =25.0 rsh = 57.5+drndifsab_rf
+//+vc1 = 1.86E-04 vc2 = 2.05E-04
++rjc1a = 2.13E-04 rjc1b = -6.60E-10
++rjc2a = 4.38E-09 rjc2b = 1.28E-14
++rintc = 12.25 rint0 = 2.18E-05 rint1 = 0.00E+00
++rinttc1 = 1.81E-03 rinttc2 = 7.75E-07
++rintjc1a = -1.56E-03 rintjc1b = 2.44E+4
++rintjc2a = 4.07E-02 rintjc2b = 2.81E+4
+ls_rf    (2 port2)   inductor    l=max((-6.2 + 1.66*l*1e6 - 0.0106*l*l*1e12 - 5.44*w*1e6)*1e-9, 1e-12)
+cf_rf    (port1 2)   capacitor   c=max((-25.5 + 3.86*l*1e6 - 0.0416*l*l*1e12 - 6.98*w*1e6)*1e-15, 1e-16)
+rs_inta_rf (port1 n1 port1 n1) rint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rmaxvcoef=1.13
+rs_rf    (n1 n2 n1 n2)    diffres_hdl lr=l wr=w rtemp=devt etch=dw tc1=tc1r tc2=tc2r jc1a=rjc1a jc1b=rjc1b jc2a=rjc2a jc2b=rjc2b rsh0=rsh tnom=tref rmaxvcoef=1.15
+rs_intb_rf (n2 1 n2 1) rint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rmaxvcoef=1.13
+rs2_rf   (2 port2)   resistor    r=max(221.0 + 11.9*l*1e6 - 48.0*w*1e6, 0.1)                           
+ls2_rf   (1 2)       inductor    l=max((0.243 - 0.0233*l*1e6 + 3.85e-04*l*l*1e12)*1e-9, 1e-12)         
+rsub1_rf (3 0)       resistor    r=max(2.48e+03 - 42.7*l*1e6 + 0.268*l*l*1e12 + 0.6*w*1e6, 0.1)        
+csub1_rf (3 0)       capacitor   c=max((0.0513 + 0.0393*l*1e6 + 0.102*w*1e6)*1e-15, 1e-16)             
+cox1_rf  (port1 3)   capacitor   c=max((-25.4 + 0.54*l*1e6 + 0.016*l*l*1e12 + 16.7*w*1e6)*1e-15, 1e-16)
+rsub2_rf (4 0)       resistor    r=max(2.69e+03 - 56.9*l*1e6 + 0.375*l*l*1e12 + 25.6*w*1e6, 0.1)       
+csub2_rf (4 0)       capacitor   c=max((-0.466 + 0.04*l*1e6 + 0.119*w*1e6)*1e-15, 1e-16)               
+cox2_rf  (port2 4)   capacitor   c=max((-28.9 + 0.67*l*1e6 + 0.015*l*l*1e12 + 17.3*w*1e6)*1e-15, 1e-16)
+ends rndifsab_ckt_rf
+//*
+//************************************
+//* Non-silicide P+ diffusion resistor
+//************************************
+//* l=length, w=width
+subckt rpdifsab_ckt_rf (port1 port2)
+parameters l=0 w=0 devt=temp tc1r = 1.41E-03 tc2r = 6.87E-07
++dw = -1.37E-09 tref =25.0 rsh = 116.2+drpdifsab_rf
+//+vc1 = -6.92E-06 vc2 = 1.08E-04
++rjc1a = -6.82E-06 rjc1b = -2.24E-12
++rjc2a = 2.46E-09 rjc2b = 3.25E-15
++rintc = 15.446 rint0 = 4.37E-05 rint1 = 0.00E+00
++rinttc1 = 1.38E-03 rinttc2 = 6.47E-07
++rintjc1a = 9.03E-04 rintjc1b = -4.74E+2
++rintjc2a = 1.00E-02 rintjc2b = 1.74E+4
+ls_rf    (2 port2)  inductor    l=max((0.192 + 1.28*l*1e6 + 0.0098*l*l*1e12 - 5.12*w*1e6)*1e-9, 1e-12)
+cf_rf    (port1 2)  capacitor   c=max((-15.9 + 0.437*l*1e6 - 8.31e-04*l*l*1e12 + 8.57*w*1e6)*1e-15, 1e-16)
+rs_inta_rf (port1 n1 port1 n1) rint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rmaxvcoef=1.11
+rs_rf    (n1 n2 n1 n2)  diffres_hdl lr=l wr=w rtemp=devt etch=dw tc1=tc1r tc2=tc2r jc1a=rjc1a jc1b=rjc1b jc2a=rjc2a jc2b=rjc2b rsh0=rsh tnom=tref rmaxvcoef=1.12
+rs_intb_rf (n2 1 n2 1) rint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rmaxvcoef=1.11
+rs2_rf   (2 port2)  resistor    r=max(119.0 + 52.8*l*1e6 - 0.258*l*l*1e12 - 159.0*w*1e6, 0.1)
+ls2_rf   (1 2)      inductor    l=max((-1.16 + 0.486*l*1e6 + 1.59e-04*l*l*1e12 - 1.99*w*1e6)*1e-9, 1e-12)
+rsub1_rf (3 0)      resistor    r=max(1.27e+03 - 8.08*l*1e6 + 0.0412*l*l*1e12 - 40.2*w*1e6, 0.1)
+csub1_rf (3 0)      capacitor   c=max((-0.673 + 0.0276*l*1e6 + 0.263*w*1e6)*1e-15, 1e-16)
+cox1_rf  (port1 3)  capacitor   c=max((-15.9 + 0.853*l*1e6 + 10.8*w*1e6)*1e-15, 1e-16)
+rsub2_rf (4 0)      resistor    r=max(1.25e+03 - 10.8*l*1e6 + 0.0587*l*l*1e12 - 28.0*w*1e6, 0.1)
+csub2_rf (4 0)      capacitor   c=max((-0.693 + 0.0234*l*1e6 + 0.268*w*1e6)*1e-15, 1e-16)
+cox2_rf  (port2 4)  capacitor   c=max((-16.2 + 0.811*l*1e6 + 11.3*w*1e6)*1e-15, 1e-16)
+ends rpdifsab_ckt_rf
+//*                                                
+//************************************             
+//* Non-silicide N+ poly resistor             
+//************************************             
+//* l=length, w=width                          
+subckt rnposab_ckt_rf (port1 port2)               
+parameters l=0 w=0 devt=temp tc1r = -1.35E-03 tc2r = 2.29E-06
++dw = 4.71E-08 tref =25.0 rsh = 271.6+drnposab_rf
+//+vc1 = 3.70E-04 vc2 = -1.74E-04
++rjc1a = 8.23E-04 rjc1b = -4.36E-08
++rjc2a = -1.45E-08 rjc2b = -2.17E-13
++rintc = 23.415 rint0 = 9.5E-05 rint1 = 0.00E+00
++rinttc1 = -9.76E-04 rinttc2 = 1.70E-06
++rintjc1a = 1.20E-03 rintjc1b = -9.43E+2
++rintjc2a = -4.78E-02 rintjc2b = -8.34E+4
+ls_rf    (2 port2)  inductor    l=max(((19.5 - 3.26*l*1e6 + 0.18*l*l*1e12)/(w*1e6))*1e-9, 1e-12)              
+cf_rf    (port1 2)  capacitor   c=max((-1.34 + 3.09/(l*1e6) + 1.04*w*1e6)*1e-15, 1e-16) 
+rs_inta_rf (port1 n1 port1 n1) absrint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rminvcoef=0.86
+rs_rf    (port1 1 port1 1)      polyres_hdl lr=l wr=w rtemp=devt etch=dw tc1=tc1r tc2=tc2r jc1a=rjc1a jc1b=rjc1b jc2a=rjc2a jc2b=rjc2b rsh0=rsh tnom=tref rminvcoef=0.84
+rs_intb_rf (n2 1 n2 1)  absrint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rminvcoef=0.86
+rs2_rf   (2 port2)  resistor    r=max((101.0 + 95.3*l*1e6 + 2.25*l*l*1e12)/(w*1e6), 0.1) 
+ls2_rf   (1 2)      inductor    l=max((1.1 + 0.305*l*1e6 + 8.96e-04*l*l*1e12 - 2.53*w*1e6)*1e-9, 1e-12)      
+rsub1_rf (3 0)      resistor    r=max(3.51E+03 - 28.4*l*1e6 + 0.168*l*l*1e12 - 133.0*w*1e6, 0.1)             
+csub1_rf (3 0)      capacitor   c=max((-0.633 + 23.9/(l*1e6) + 0.244*w*1e6)*1e-15, 1e-16)                    
+cox1_rf  (port1 3)  capacitor   c=max((1.37 + 0.0392*l*1e6)*(w*1e6)*1e-15, 1e-16)                            
+rsub2_rf (4 0)      resistor    r=max(2.83E+04/(l*1e6) + 70.2*w*1e6, 0.1)                                    
+csub2_rf (4 0)      capacitor   c=max((0.408 + 0.0225*l*1e6 + 1.46e-05*l*l*1e12)*1e-15, 1e-16)                
+cox2_rf  (port2 4)  capacitor   c=max((1.27 + 0.0399*l*1e6)*(w*1e6)*1e-15, 1e-16)
+ends rnposab_ckt_rf  
+//*                                                
+//************************************             
+//* Non-silicide P+ poly resistor             
+//************************************             
+//* l=length, w=width                            
+subckt rpposab_ckt_rf (port1 port2)               
+parameters l=0 w=0 devt=temp tc1r = -1.63E-04 tc2r = 7.46E-07
++dw = 2.73E-08 tref =25.0 rsh = 311.3+drpposab_rf
+//+vc1 = 2.52E-05 vc2 = -1.62E-05
++rjc1a = 1.09E-04 rjc1b = -8.08E-09
++rjc2a = -1.27E-09 rjc2b = -2.73E-14
++rintc = 29.965 rint0 = 1.1786E-04 rint1 = 0.00E+00
++rinttc1 = -2.76E-04 rinttc2 = 3.25E-07
++rintjc1a = 4.74E-03 rintjc1b = -2.60E+2
++rintjc2a = -2.87E-03 rintjc2b = -5.30E+4
+ls_rf    (2 port2)  inductor    l=max(((32.5 - 4.56*l*1e6 + 0.238*l*l*1e12)/(w*1e6))*1e-9, 1e-12)                                        
+cf_rf    (port1 2)  capacitor   c=max(((0.621 + 5.69e-04*l*1e6)*w*1e6)*1e-15, 1e-16)
+rs_inta_rf (port1 n1 port1 n1) absrint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rminvcoef=0.88
+rs_rf    (port1 1 port1 1)      polyres_hdl lr=l wr=w rtemp=devt etch=dw tc1=tc1r tc2=tc2r jc1a=rjc1a jc1b=rjc1b jc2a=rjc2a jc2b=rjc2b rsh0=rsh tnom=tref rminvcoef=0.89
+rs_intb_rf (n2 1 n2 1)  absrint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rminvcoef=0.88           
+rs2_rf   (2 port2)  resistor    r=max(984.0 + 132.0*l*1e6 - 0.497*l*l*1e12 - 508.0*w*1e6, 0.1)               
+ls2_rf   (1 2)      inductor    l=max((-0.725 + 0.301*l*1e6 + 0.0028*l*l*1e12 - 2.56*w*1e6)*1e-9, 1e-12)            
+rsub1_rf (3 0)      resistor    r=max(922.0 + 1.67E+04/(l*1e6) - 2.21*w*1e6, 0.1)                            
+csub1_rf (3 0)      capacitor   c=max(((0.0025*l*1e6)*w*1e6)*1e-15, 1e-16)                                   
+cox1_rf  (port1 3)  capacitor   c=max((-1.68 + 0.0583*l*1e6 + 0.0027*l*l*1e12 + 2.01*w*1e6)*1e-15, 1e-16)    
+rsub2_rf (4 0)      resistor    r=max(2.21E+03 + 1.60E+04/(l*1e6) - 130.0*w*1e6, 0.1)                        
+csub2_rf (4 0)      capacitor   c=max((0.508 + 0.0209*l*1e6 + 0.0604*w*1e6)*1e-15, 1e-16)                    
+cox2_rf  (port2 4)  capacitor   c=max((-2.98 + 0.11*l*1e6 + 0.0024*l*l*1e12 + 2.33*w*1e6)*1e-15, 1e-16)
+ends rpposab_ckt_rf 
+//*                                                     
+//************************************            
+//* HR poly resistor                 
+//************************************            
+//* l=length, w=width                           
+subckt rhrpo_ckt_rf (port1 port2)               
+parameters l=0 w=0 devt=temp tc1r = -8.52E-04 tc2r = 1.98E-06
++dw = -6E-09 tref =25.0 rsh = 995+drhrpo_rf
+//+vc1 = 5.41E-05 vc2 = -5.33E-05
++rjc1a = 9.43E-05 rjc1b = -2.90E-09
++rjc2a = -2.82E-09 rjc2b = -7.32E-14
++rintc = 7.88 rint0 = 3.96E-5 rint1 = 0.00E+00
++rinttc1 = -4.36E-04 rinttc2 = 1.23E-06
++rintjc1a = -3.54E-02 rintjc1b = 2.52E+4
++rintjc2a = 1.36E+00 rintjc2b = -9.35E+5
++cj    = 1.01E-04            cjsw  = 8.92E-11
++dl = -6E-09 cap = cj*(w-2.0*dw)*(l-2.0*dl)/2+cjsw*(w-2.0*dw+l-2.0*dl)
+ls_rf    (1 port2)     inductor    l=max((153.0 - 21.3*l*1e6 + 0.502*l*l*1e12)*1e-9, 1e-12)
+cf_rf    (port1 2)     capacitor   c=max((-2.57 - 0.0112*l*1e6 - 3.26e-04*l*l*1e12 + 1.53*w*1e6)*1e-15, 1e-16)
+rs_inta_rf (port1 n1 port1 n1) rint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rminvcoef=0.89
+rs_rf    (n1 n2 n1 n2)  polyres_hdl lr=l wr=w rtemp=devt etch=dw tc1=tc1r tc2=tc2r jc1a=rjc1a jc1b=rjc1b jc2a=rjc2a jc2b=rjc2b rsh0=rsh tnom=tref rminvcoef=0.89
+rs_intb_rf (n2 1 n2 1) rint_hdl wr=w etch=dw rshc=rintc rsh0=rint0 rsh1=rint1 rtemp=devt tc1=rinttc1 tc2=rinttc2 jc1a=rintjc1a jc1b=rintjc1b jc2a=rintjc2a jc2b=rintjc2b tnom=tref rminvcoef=0.89
+rs2_rf   (2 port2)     resistor    r=max(9.83e+03 + 87.7*l*1e6 - 1.12e+03*w*1e6, 0.1)
+cf2_rf   (Port1 port2) capacitor   c=max((-0.0858 + 0.0288*l*1e6 - 1.98E-04*l*l*1e12 - 0.0356*w*1e6)*1e-15, 1e-16)
+rsub1_rf (3 0)         resistor    r=max(-1.71e+04 + 3.34e+05/(l*1e6) + 1.76e+03*w*1e6, 0.1)
+csub1_rf (3 0)         capacitor   c=max((1.31 + 0.0052*l*1e6 - 0.133*w*1e6)*1e-15, 1e-16)
+cox1_rf  (port1 3)     capacitor   c=max((-8.86 + 0.301*l*1e6 + 0.0033*l*l*1e12 + 2.92*w*1e6)*1e-15, 1e-16)
+rsub2_rf (4 0)         resistor    r=max(-2.13e+04 + 4.01e+05/(l*1e6) + 1.85e+03*w*1e6, 0.1)
+csub2_rf (4 0)         capacitor   c=max((1.86 + 0.0086*l*1e6 - 0.2*w*1e6)*1e-15, 1e-16)
+cox2_rf  (port2 4)     capacitor   c=max((-15.0 + 0.709*l*1e6 - 0.0093*l*l*1e12 + 4.58*w*1e6)*1e-15, 1e-16)
+ends rhrpo_ckt_rf
+//*

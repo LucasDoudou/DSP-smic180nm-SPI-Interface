@@ -1,0 +1,52 @@
+//* No part of this file can be released without the consent of SMIC.
+//*
+//***************************************************************************************************************
+//* 0.18um Mixed Signal 1P6M with MIM Salicide 1.8V/3.3V RF SPICE Model (for SPECTRE only) *
+//***************************************************************************************************************
+//* Release version    : 1.6
+//*
+//* Release date       : 07/02/2007
+//*
+//* Simulation tool    : Cadence spectre V6.0
+//*
+//*  Inductor   :
+//*
+//*        *-----------------------------------* 
+//*        | Inductor subckt |  diff_ind_rf    |
+//*        *-----------------------------------*
+simulator lang=spectre  insensitive=yes
+//*********************************
+//* 0.18um differential Inductor
+//*********************************
+//* 1=port1(M6), 2=port2(M5)
+//* R means inner redius; N means turns
+//* Spacing is fixed at 1.5um and width is fixed at 8um
+subckt diff_ind_rf (1 2) 
+parameters r=30u n=3 l00_rf=(-0.00043*r*1E+6+0.0326)*n*n*n+(0.00798*r*1E+6-0.4421)*n*n+(-0.0296*r*1E+6+1.95)*n+(0.0437*r*1E+6-2.5533)   
+//* equivalent circuit
+l00 (1 n1)      inductor    l=max(l00_rf*1E-9, 1E-12)
+r00 (n1 nm)     resistor    r=max((-0.0005414*r*1E+6+0.022909)*n*n*n+(0.0091377*r*1E+6-0.359131)*n*n+(-0.0398784*r*1E+6+2.084685)*n+(0.0643148*r*1E+6-2.873445), 1E-6)
+l01 (n1 n11)    inductor    l=1.33E-10
+r01 (n11 nm)    resistor    r=125
+l10 (nm n2)     inductor    l=max(((-0.00043*r*1E+6+0.0326)*n*n*n+(0.00798*r*1E+6-0.4421)*n*n+(-0.0296*r*1E+6+1.95)*n+(0.0437*r*1E+6-2.5533))*1E-9, 1E-15)
+r10 (n2 2)      resistor    r=max((-0.0005414*r*1E+6+0.022909)*n*n*n+(0.0091377*r*1E+6-0.359131)*n*n+(-0.0398784*r*1E+6+2.084685)*n+(0.0643148*r*1E+6-2.873445), 1E-6)
+l11 (n2 n21)    inductor    l=1.33E-10
+r11 (n21 2)     resistor    r=125
+coxm (nm nsm)   capacitor   c=max((0.67851*l00_rf*l00_rf*l00_rf-8.27182*l00_rf*l00_rf+34.35047*l00_rf+30.06634)*1E-15, 1E-18)
+rsm (nsm 0)     resistor    r=max((42.31593*l00_rf*l00_rf*l00_rf-411.80075*l00_rf*l00_rf+1389.18524*l00_rf+1419.43733), 1E-6)
+csm (nsm 0)     capacitor   c=max((0.1322*l00_rf*l00_rf*l00_rf-1.7049*l00_rf*l00_rf+9.96*l00_rf-1.3483)*1E-15, 1E-18)
+cpass (1 2)     capacitor   c=max(((-0.0068648*r*1E+6+0.732611)*n*n*n+(0.1468104*r*1E+6-10.650026)*n*n+(-0.697329*r*1E+6+51.120355)*n+(1.1635258*r*1E+6-82.029203))*1E-15, 1E-18)
+cci (1 nm)      capacitor   c=max(((0.012491*r*1E+6-0.569096)*n*n*n+(-0.20918*r*1E+6+6.17064)*n*n+(0.913908*r*1E+6+9.895997)*n+(-0.14843*r*1E+6-95.477512))*1E-15, 1E-18)
+cco (nm 2)      capacitor   c=max(((0.012491*r*1E+6-0.569096)*n*n*n+(-0.20918*r*1E+6+6.17064)*n*n+(0.913908*r*1E+6+9.895997)*n+(-0.14843*r*1E+6-95.477512))*1E-15, 1E-18)
+rci (nsi nsm)   resistor    r=max((49.11941*l00_rf*l00_rf*l00_rf-503.65103*l00_rf*l00_rf+1625.77739*l00_rf+1312.52424), 1E-6)
+rco (nsm nso)   resistor    r=max((49.11941*l00_rf*l00_rf*l00_rf-503.65103*l00_rf*l00_rf+1625.77739*l00_rf+1312.52424), 1E-6)
+coxi (1 nsi)    capacitor   c=max(((-0.020551*r*1E+6+1.147253)*n*n+(0.194817*r*1E+6-1.934667)*n+(-0.108661*r*1E+6-12.53573))*1E-15, 1E-18)
+rsi (nsi 0)     resistor    r=max((13.34945*l00_rf*l00_rf*l00_rf-135.42118*l00_rf*l00_rf+436.81570*l00_rf+319.07449), 1E-6)
+csi (nsi 0)     capacitor   c=max(((0.00202687*r*1E+6-0.009606)*n*n*n+(-0.040912*r*1E+6-0.125553)*n*n+(0.209166*r*1E+6+7.262962)*n+(-0.105972*r*1E+6-22.808747))*1E-15, 1E-18)
+coxo (2 nso)    capacitor   c=max(((-0.020551*r*1E+6+1.147253)*n*n+(0.194817*r*1E+6-1.934667)*n+(-0.108661*r*1E+6-12.53573))*1E-15, 1E-18)
+rso (nso 0)     resistor    r=max((13.34945*l00_rf*l00_rf*l00_rf-135.42118*l00_rf*l00_rf+436.81570*l00_rf+319.07449), 1E-6)
+cso (nso 0)     capacitor   c=max(((0.00202687*r*1E+6-0.009606)*n*n*n+(-0.040912*r*1E+6-0.125553)*n*n+(0.209166*r*1E+6+7.262962)*n+(-0.105972*r*1E+6-22.808747))*1E-15, 1E-18)         
+k01 mutual_inductor coupling=0.205 ind1=l10 ind2=l01
+k11 mutual_inductor coupling=0.205 ind1=l00 ind2=l11
+ends diff_ind_rf
+//*

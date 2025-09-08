@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+smic18mmrf/rm1 type="cell"
+smic18mmrf/rm2 type="cell"
+smic18mmrf/rm3 type="cell"
+smic18mmrf/rm4 type="cell"
+smic18mmrf/rm4_rf type="cell"

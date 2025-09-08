@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/6_Full_Adder_Type28.dv
+dv_start matched
+dv_cell {6_Full_Adder_Type28} {6_Full_Adder_Type28} matched
+dv_obj_count -transformed_nets {38 38} -transformed_inst {60 60} -transformed_port {21 21}
+dv_end

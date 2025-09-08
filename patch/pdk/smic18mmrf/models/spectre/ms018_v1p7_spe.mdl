@@ -1,0 +1,934 @@
+//*Spectre Model Format
+simulator lang=spectre  insensitive=yes
+
+// *
+// * no part of this file can be released without the consent of smic.
+// *
+// ******************************************************************************************
+// *         smic 0.18um mixed signal 1p6m 1.8v/3.3v spice model (for spectre only)         *
+// ******************************************************************************************
+// *
+// * release version    : 1.7
+// *
+// * release date       : 1/10/2007
+// *
+// * simulation tool    : Cadence spectre V4.4.6
+// *
+// * model type         :
+// *   mosfet           : bsim3v3.24
+// *   1/f mosfet noise : flkmod = 1, noimod = 1
+// *   junction diode   : spectre level 1
+// *
+// * model name         :
+// *   mosfet           :
+// *        *--------------------------------------*
+// *        |     mosfet type    |  1.8v  |  3.3v  |
+// *        |======================================|
+// *        |        nmos        |   n18  |   n33  |
+// *        *--------------------------------------*
+// *        |        pmos        |   p18  |   p33  |
+// *        *--------------------------------------*
+// *        |    native nmos     |  nnt18 | nnt33  |
+// *        *--------------------------------------*
+// *        |   medium nmos      | nmvt18 | nmvt33 |
+// *        *--------------------------------------*
+// *        |   medium pmos      | pmvt18 |  ----  |
+// *        *--------------------------------------*
+// *
+// *   junction diode   :
+// *        *-------------------------------------------*
+// *        |  junctio diode type     |  1.8v  |  3.3v  |
+// *        |===========================================|
+// *        |      n+/pwell           | ndio18 | ndio33 |
+// *        |-------------------------------------------|
+// *        |      p+/nwell           | pdio18 | pdio33 |
+// *        |-------------------------------------------|
+// *        |      nwell/psub         |      nwdio      |
+// *        |-------------------------------------------|
+// *        |     native n+/pwell     | nndio18| nndio33|
+// *        |-------------------------------------------|
+// *        | buried pwell/deep nwell |     diobpw      |
+// *        *-------------------------------------------*
+// *
+// *    valid temperature range is from -40c to 125c
+// *
+// ***********************************************************************************
+// *                              1.8v core nmos model                               *
+// ***********************************************************************************
+model n18 bsim3v3 type=n
+// *
+// * general parameters
+// *
++lmin = 1.5e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 3.87e-09+dtox_n18 toxm = 3.87e-09 xj = 1.6000000e-07 
++nch = 3.8694000e+17 lln = 1.1205959 lwn = 0.9200000 
++wln = 1.0599999 wwn = 0.8768474 lint = 1.5757085e-08 
++ll = 2.6352781e-16 lw = -2.2625584e-16 lwl = -2.0576711e-22 
++wint = -1.4450482e-09 wl = -2.3664573e-16 ww = -3.6409690e-14 
++wwl = -4.0000000e-21 mobmod = 1 binunit = 2 
++xl = 1.8e-8+dxl_n18 xw = 0.00+dxw_n18 dwg = -5.9600000e-09 
++dwb = 4.5000000e-09 
+// * diode parameters
++dskip = no ldif = 7.00e-08 hdif = 2.00e-07 
++rsh = 7.08 rd = 0 rs = 0 
++rsc = 1.7 rdc = 1.7 
+// *
+// * threshold voltage parameters
+// *
++vth0 = 0.39+dvth_n18 wvth0 = -2.9709472e-08 pvth0 = 5.0000000e-16+dpvth0_n18 
++k1 = 0.6801043 wk1 = -2.4896840e-08 pk1 = 1.3000000e-15 
++k2 = -4.9977830e-02 k3 = 10.0000000 dvt0 = 1.3000000 
++dvt1 = 0.5771635 dvt2 = -0.1717554 dvt0w = 0.00 
++dvt1w = 0.00 dvt2w = 0.00 nlx = 7.5451030e-08 
++w0 = 5.5820150e-07 k3b = -3.0000000 
+// *
+// * mobility parameters
+// *
++vsat = 8.2500000e+04 pvsat = -8.3000000e-10 ua = -1.0300000e-09 
++lua = 7.7349790e-19 pua = -1.0000000e-24 ub = 2.3666682e-18 
++uc = 1.2000000e-10 puc = 1.5000000e-24 rdsw = 55.5497200 
++prwb = -0.2400000 prwg = 0.4000000 wr = 1.0000000 
++u0 = 3.4000000e-02 lu0 = 2.3057663e-11 wu0 = -3.1009695e-09 
++a0 = 0.8300000 keta = -3.0000000e-03 lketa = -1.7000000e-09 
++a1 = 0.00 a2 = 0.9900000 ags = 0.3200000 
++b0 = 6.0000000e-08 b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -0.1030000 lvoff = -3.3000000e-09 nfactor = 1.2500000 
++lnfactor = 4.5000000e-08 cit = 0.00 cdsc = 0.00 
++cdscb = 0.00 cdscd = 1.0000000e-04 eta0 = 2.8000001e-02 
++etab = -2.7000001e-02 dsub = 0.4000000 
+// *
+// * rout parameters
+// *
++pclm = 1.2000000 ppclm = 2.9999999e-15 pdiblc1 = 2.5000000e-02 
++pdiblc2 = 3.8000000e-03 ppdiblc2 = 2.7000001e-16 pdiblcb = 0.00 
++drout = 0.5600000 pscbe1 = 3.4500000e+08 pscbe2 = 1.0000000e-06 
++pvag = 0.00 delta = 1.0000000e-02 alpha0 = 1.7753978e-08 
++alpha1 = 0.1764000 lalpha1 = 7.6250000e-09 beta0 = 11.1683940 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.2572866 kt2 = -4.0000000e-02 at = 3.7000000e+04 
++pat = -7.5000000e-10 ute = -1.5500000 ua1 = 1.7600000e-09 
++lua1 = 6.0000000e-18 wua1 = -1.1000000e-16 pua1 = -5.0000000e-25 
++ub1 = -2.4000000e-18 uc1 = -1.0000000e-10 luc1 = 1.6999999e-17 
++puc1 = -3.0000000e-24 kt1l = -1.0000000e-09 prt = -55.0000000 
+// *
+// * noise parameters
+// *
++noimod = 2 noia = 8.2282E+19 noib = 1.3327E+04 
++noic = -2.4937E-14 em = 1.7767E+07 ef = 0.818 
+// *
+// * capacitance parameters
+// *
++cj = 9.68e-04+dcj_n18 mj = 0.346 pb = 0.7 
++cjsw = 7.95e-11+dcjsw_n18 mjsw = 0.538 pbsw = 1 
++cjswg = 4.18e-10+dcjswg_n18 mjswg = 0.538 pbswg = 1 
++tcj = 8.42e-04 tcjsw = 6.69e-04 tcjswg = 6.69e-04 
++tpb = 1.47e-03 tpbsw = 8.68e-04 tpbswg = 8.68e-04 
++js = 3.52e-07 jsw = 3.0e-13 n = 1.0392 
++xti = 3.25 nqsmod = 0 elm = 5 
++cgdo = 3.70e-10+dcgdo_n18 cgso = 3.70e-10+dcgso_n18 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.64 moin = 24 noff = 1.2025 
++dlc = 8.5e-09 dwc = 4.5e-08 
+// *
+// ***********************************************************************************
+// *                              1.8v core pmos model                               *
+// ***********************************************************************************
+// *
+model p18 bsim3v3 type=p
+// *
+// * general parameters
+// *
++lmin = 1.5e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 3.74e-09+dtox_p18 toxm = 3.74e-09 xj = 1.7000001e-07 
++nch = 5.5000000e+17 lln = 1.0000000 lwn = 1.0000000 
++wln = 1.0450000 wwn = 1.0000000 lint = 1.0000000e-08 
++ll = 3.4000000e-15 lw = -3.3600000e-16 lwl = 0.00 
++wint = 8.0000010e-09 wl = 3.5904200e-15 ww = -1.8999999e-15 
++wwl = -1.1205000e-21 mobmod = 1 binunit = 2 
++xl = -5.7e-09+dxl_p18 xw = 0.00+dxw_p18 dwg = -1.7361970e-08 
++dwb = 2.0000000e-08 
+// * diode parameters
++dskip = no ldif = 7.00e-08 hdif = 2.00e-07 
++rsh = 7.83 rd = 0 rs = 0 
++rsc = 1.5 rdc = 1.5 
+// *
+// * threshold voltage parameters
+// *
++vth0 = -0.402+dvth_p18 wvth0 = 1.2675420e-08 pvth0 = -1.2500000e-15+dpvth0_p18 
++k1 = 0.5872390 lk1 = 3.5532110e-09 k2 = 7.0906860e-03 
++k3 = 2.5999999 dvt0 = 0.7194931 dvt1 = 0.2467441 
++dvt2 = 7.8089680e-02 dvt0w = 0.00 dvt1w = 8.0000000e+05 
++dvt2w = 0.00 nlx = 9.0000000e-08 w0 = 0.00 
++k3b = 2.4862001 ngate = 3.1680000e+20 
+// *
+// * mobility parameters
+// *
++vsat = 1.0000000e+05 ua = 2.8500000e-10 lua = 5.5000000e-18 
++pua = -2.0000000e-24 ub = 1.0000000e-18 uc = -4.7700000e-11 
++wuc = 3.1668000e-17 puc = -2.5000000e-24 rdsw = 4.5500000e+02 
++prwb = -0.4000000 prwg = 0.00 wr = 1.0000000 
++u0 = 8.6610000e-03 lu0 = -2.0000000e-11 wu0 = 1.3815350e-10 
++a0 = 1.0000000 keta = 2.0000000e-02 lketa = -8.5000000e-09 
++pketa = 5.0000000e-16 a1 = 0.00 a2 = 0.9900000 
++ags = 0.2000000 b0 = 6.3000000e-08 b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -9.5000000e-02 lvoff = -1.7000000e-09 wvoff = -1.9999999e-09 
++pvoff = -1.0000000e-16 nfactor = 0.9000000 lnfactor = 1.0000000e-07 
++pnfactor = -5.0000000e-15 cit = 0.00 cdsc = 0.00 
++cdscb = 0.00 cdscd = 0.00 eta0 = 4.0000000e-02 
++etab = -2.5000000e-02 dsub = 0.5600000 
+// *
+// * rout parameters
+// *
++pclm = 0.7000000 pdiblc1 = 0.00 pdiblc2 = 7.0000000e-03 
++pdiblcb = 0.00 drout = 0.5600000 pscbe1 = 4.0000000e+08 
++pscbe2 = 1.0000000e-07 pvag = 0.00 delta = 1.0000000e-02 
++alpha0 = 7.0000000e-08 alpha1 = 7.0491700 beta0 = 22.8424000 
++lbeta0 = -7.5000000e-08 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.2577007 kt2 = -3.0979900e-02 lkt2 = -3.0000000e-09 
++pkt2 = -6.5331750e-16 at = 1.0000000e+04 pat = -1.0000000e-09 
++ute = -1.2703574 ua1 = 5.3866300e-10 wua1 = 1.1000000e-16 
++pua1 = -2.3700001e-24 ub1 = -2.0709999e-18 uc1 = 2.0609721e-11 
++kt1l = -8.0000000e-09 prt = 90.0000000 
+// *
+// * noise parameters
+// *
++noimod = 2 noia = 3.3617E+18 noib = 1.9536E+05 
++noic = 5.2658E-12 em = 6.2548E+07 ef = 1.1307E+00 
+// *
+// * capacitance parameters
+// *
++cj = 0.00107+dcj_p18 mj = 0.415 pb = 0.817 
++cjsw = 9.89e-11+dcjsw_p18 mjsw = 0.489 pbsw = 1 
++cjswg = 5.07e-10+dcjswg_p18 mjswg = 0.489 pbswg = 1 
++tpb = 0.00153 tpbsw = 0.00117 tpbswg = 0.00117 
++tcj = 0.000876 tcjsw = 0.000745 tcjswg = 0.000745 
++js = 1.66e-07 jsw = 1.2e-13 n = 1.0384 
++xti = 4.5 nqsmod = 0 elm = 5 
++cgdo = 4.20e-10+dcgdo_p18 cgso = 4.20e-10+dcgso_p18 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.8505076 moin = 14.95341 noff = 1.431824 
++dlc = -1.5e-09 
+// *
+// ***********************************************************************************
+// *                               3.3v io nmos model                                *
+// ***********************************************************************************
+// *
+model n33 bsim3v3 type=n
+// *
+// * general parameters
+// *
++lmin = 3.0e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 6.65e-09+dtox_n33 toxm = 6.65e-09 xj = 1.6000000e-07 
++nch = 4.3441000e+17 lln = 1.0625758 lwn = 1.0101005 
++wln = 0.9810000 wwn = 0.9060000 lint = 6.3891300e-08 
++ll = -2.3305548e-15 lw = -2.4634918e-15 lwl = 2.6243002e-24 
++wint = 3.5850000e-08 wl = -1.8902563e-15 ww = -1.3000000e-14 
++wwl = -1.3027796e-20 mobmod = 1 binunit = 2 
++xl = 1e-8+dxl_n33 xw = 0.00+dxw_n33 dwg = -3.9100000e-09 
++dwb = 3.2000000e-09 
+// * diode parameters
++dskip = no ldif = 6.50e-08 hdif = 2.05e-07 
++rsh = 7.08 rd = 0 rs = 0 
++rsc = 1.6 rdc = 1.6 
+// *
+// * threshold voltage parameters
+// *
++vth0 = 0.695+dvth_n33 lvth0 = 4.0100000e-10 wvth0 = 1.0200000e-08 
++pvth0 = 8.0000000e-16+dpvth0_n33 k1 = 0.8451000 lk1 = 5.8182560e-10 
++wk1 = -6.2456240e-09 pk1 = 1.9938927e-15 k2 = 4.4575000e-02 
++k3 = -3.8500000 dvt0 = 9.4991400 ldvt0 = 8.0839730e-09 
++dvt1 = 0.6300000 ldvt1 = 5.5000000e-08 dvt2 = -0.1450000 
++dvt0w = 0.00 dvt1w = 0.1057000 dvt2w = 0.00 
++nlx = 2.0274594e-07 lnlx = -2.8608589e-14 w0 = 0.00 
++k3b = 0.5669292 ngate = 2.6812141e+21 
+// *
+// * mobility parameters
+// *
++vsat = 8.5000000e+04 lvsat = -1.7300000e-03 pvsat = 1.2000000e-10 
++ua = -8.6001130e-10 ub = 2.3000001e-18 uc = 1.3100000e-10 
++puc = 5.0000000e-25 rdsw = 2.4208382e+02 prwb = -8.5000000e-02 
++prwg = 3.8000000e-02 wr = 1.0000000 u0 = 3.5000000e-02 
++lu0 = 5.0000000e-10 a0 = 1.0200000 la0 = -1.2000000e-07 
++keta = 0.00 lketa = -1.4000000e-08 wketa = -1.9999999e-09 
++pketa = 1.0000000e-15 a1 = 0.00 a2 = 0.9900000 
++ags = 0.1700000 b0 = 1.0000000e-08 b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -0.1200000 nfactor = 1.1000000 lnfactor = 4.0000000e-08 
++pnfactor = -1.4000000e-14 cit = 1.0000000e-04 cdsc = 5.0000000e-04 
++cdscb = 0.00 cdscd = 0.00 eta0 = 4.0000000e-02 
++peta0 = 3.0000001e-16 etab = -0.1000000 dsub = 0.6000000 
+// *
+// * rout parameters
+// *
++pclm = 0.8000000 lpclm = 5.0000000e-08 ppclm = 8.0000000e-15 
++pdiblc1 = 9.0000000e-02 pdiblc2 = 1.6000000e-03 ppdiblc2 = -7.0000000e-17 
++pdiblcb = 0.00 drout = 0.5987002 pscbe1 = 3.4000000e+08 
++lpscbe1 = 13.0000000 pscbe2 = 3.8000000e-06 pvag = 0.00 
++delta = 1.0000000e-02 alpha0 = -4.4760000e-08 alpha1 = 0.8998877 
++beta0 = 18.8771250 lbeta0 = -5.7118000e-07 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.3250000 pkt1 = -2.3708420e-15 kt2 = -3.6844640e-02 
++at = 2.2000000e+04 ute = -1.4100000 ua1 = 2.0599999e-09 
++wua1 = -1.2600000e-16 pua1 = -1.0000000e-24 ub1 = -2.5000000e-18 
++wub1 = 1.1000000e-25 uc1 = -1.1000000e-10 luc1 = 1.6999999e-17 
++kt1l = -5.0000000e-09 prt = 40.0000000 
+// *
+// * noise parameters
+// *
++noimod = 2 noia = 1.5500E+20 noib = 7.1866E+04 
++noic = 1.4952E-13 em = 3.2163E+07 ef = 9.9600E-01 
+// *
+// *
+// * capacitance parameters
+// *
++cj = 0.000845+dcj_n33 mj = 0.321 pb = 0.708 
++cjsw = 9.15e-11+dcjsw_n33 mjsw = 0.447 pbsw = 1 
++cjswg = 3.41e-10+dcjswg_n33 mjswg = 0.447 pbswg = 1 
++tpb = 0.00166 tpbsw = 0.00162 tpbswg = 0.00162 
++tcj = 0.000897 tcjsw = 0.000695 tcjswg = 0.000695 
++js = 3.65e-07 jsw = 3.0e-13 n = 1.04 
++xti = 3.9 nqsmod = 0 elm = 5 
++cgdo = 3.86e-10+dcgdo_n33 cgso = 3.86e-10+dcgso_n33 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.45 moin = 24 noff = 2.3177 
++dlc = 6.50e-08 
+// *
+// ***********************************************************************************
+// *                             3.3v io pmos model                                  *
+// ***********************************************************************************
+// *
+model p33 bsim3v3 type=p
+// *
+// * general parameters
+// *
++lmin = 2.6e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 6.62e-09+dtox_p33 toxm = 6.62e-09 xj = 1.7000001e-07 
++nch = 5.4852000e+17 lln = 1.0471729 lwn = 0.9530895 
++wln = 1.0257638 wwn = 0.9617700 lint = 3.5000000e-08 
++ll = 5.5000000e-15 lw = -4.7160380e-14 lwl = 7.0054450e-22 
++wint = 1.3000000e-08 wl = -3.1491245e-14 ww = 2.3000000e-15 
++wwl = -2.4167156e-22 mobmod = 1 binunit = 2 
++xl = -1.70e-08+dxl_p33 xw = 0.00+dxw_p33 dwg = 0.00 
++dwb = 8.6000000e-09 
+// * diode parameters
++dskip = no ldif = 6.50e-08 hdif = 2.05e-07 
++rsh = 9.8 rd = 0 rs = 0 
++rsc = 1 rdc = 1 
+// *
+// * threshold voltage parameters
+// *
++vth0 = -0.672+dvth_p33 wvth0 = 4.0000000e-09 pvth0 = 6.0000000e-15+dpvth0_p33 
++k1 = 0.9145741 pk1 = -1.7000000e-14 k2 = 4.1276220e-02 
++k3 = 0.1293833 dvt0 = 1.8000000 dvt1 = 0.7100000 
++dvt2 = -7.0000000e-02 dvt0w = 0.00 dvt1w = 0.00 
++dvt2w = 0.00 nlx = 1.2000000e-08 w0 = 1.0021131e-09 
++k3b = 0.4000000 ngate = 1.1600000e+20 
+// *
+// * mobility parameters
+// *
++vsat = 8.5500000e+04 pvsat = -5.8000000e-09 ua = 3.1500000e-10 
++lua = 1.5000001e-17 wua = -1.6763224e-16 pua = -1.1000000e-23 
++ub = 1.0444180e-18 lub = -7.0000000e-27 uc = -3.5000000e-11 
++luc = 4.0000000e-18 puc = 5.0000000e-24 rdsw = 9.5000000e+02 
++prwb = 0.00 prwg = 6.3755660e-03 wr = 1.0000000 
++u0 = 9.2500000e-03 lu0 = -4.1500680e-10 wu0 = -1.7001526e-12 
++pu0 = -3.7999640e-16 a0 = 0.8500000 keta = 1.5000000e-02 
++lketa = -1.0000000e-08 wketa = 1.0000000e-09 pketa = -6.0000000e-15 
++a1 = 0.00 a2 = 0.9900000 ags = 4.0000000e-02 
++b0 = 4.6000000e-08 b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -0.1000000 lvoff = 1.8000000e-09 pvoff = -2.9999999e-15 
++nfactor = 1.1000000 pnfactor = -4.0000000e-14 cit = 1.9999999e-04 
++cdsc = 4.5263850e-05 cdscb = 0.00 cdscd = 0.00 
++eta0 = 5.0000000e-03 peta0 = 7.0000000e-15 etab = -1.5000000e-02 
++petab = -2.0000000e-15 dsub = 0.5800000 
+// *
+// * rout parameters
+// *
++pclm = 0.6000000 ppclm = 1.3000000e-13 pdiblc1 = 6.0000000e-03 
++pdiblc2 = 2.5000001e-04 wpdiblc2 = 8.0000000e-11 pdiblcb = 0.00 
++drout = 0.5600000 pscbe1 = 3.3000000e+08 ppscbe1 = -7.0000000e-06 
++pscbe2 = 2.0000000e-07 pvag = 0.00 delta = 8.0000000e-03 
++pdelta = 4.0000000e-16 alpha0 = 1.3410400e-06 alpha1 = 5.6136910e-02 
++beta0 = 27.5998000 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.3840900 wkt1 = -9.4333370e-10 pkt1 = 4.9999980e-15 
++kt2 = -4.1563480e-02 at = -2.0000000e+03 pat = -7.5000000e-09 
++ute = -1.3236057 ua1 = 3.0000002e-10 wua1 = 8.0000000e-18 
++pua1 = 1.0000000e-23 ub1 = -2.0704662e-18 wub1 = 1.4000000e-25 
++uc1 = -5.0000000e-11 kt1l = -6.0000000e-09 prt = 1.3000000e+02 
+// *
+// * noise parameters
+// *
++noimod = 2 noia = 3.5911E+19 noib = 3.0215E+03 
++noic = 6.7064E-12 em = 4.2400E+07 ef = 1.0829E+00 
+// *
+// * capacitance parameters
+// *
++cj = 0.00101+dcj_p33 mj = 0.401 pb = 0.807 
++cjsw = 8.96e-11+dcjsw_p33 mjsw = 0.45 pbsw = 1 
++cjswg = 3.19e-10+dcjswg_p33 mjswg = 0.45 pbswg = 1 
++tpb = 0.00157 tpbsw = 0.00137 tpbswg = 0.00137 
++tcj = 0.000883 tcjsw = 0.000709 tcjswg = 0.000709 
++js = 1.68e-07 jsw = 4.0e-13 n = 1.07 
++xti = 3.0 nqsmod = 0 elm = 5 
++cgdo = 3.23e-10+dcgdo_p33 cgso = 3.23e-10+dcgso_p33 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.55 moin = 15 noff = 0.565 
++dlc = 7.0e-09 dwc = 6.0e-8 
+// *
+// ************************************************************************************
+// *                              1.8v native nmos model                              *
+// ************************************************************************************
+// *
+model nnt18 bsim3v3 type=n
+// *
+// * general parameters
+// *
++lmin = 4.5e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 3.87e-09+dtox_nnt18 toxm = 3.87e-09 xj = 1.6000000e-07 
++nch = 4.4440000e+16 lln = 1.0000000 lwn = 1.0000000 
++wln = 1.0000000 wwn = 1.0000000 lint = 3.2000000e-08 
++ll = 0.00 lw = 0.00 lwl = 0.00 
++wint = 0.00 wl = 0.00 ww = 0.00 
++wwl = 0.00 mobmod = 1 binunit = 2 
++xl = 2.5e-8+dxl_nnt18 xw = 0.00+dxw_nnt18 dwg = 0.00 
++dwb = 0.00 
+// * diode parameters
++dskip = no ldif = 7.00e-08 hdif = 2.0e-07 
++rsh = 7.08 rd = 0 rs = 0 
++rsc = 1 rdc = 1 
+// *
+// * threshold voltage parameters
+// *
++vth0 = -0.015+dvth_nnt18 lvth0 = 2.8000000e-08 k1 = 9.6053920e-02 
++k2 = -2.5212668e-02 k3 = -0.5717283 dvt0 = 1.0000000e-02 
++dvt1 = 0.00 dvt2 = -1.0000000e-02 dvt0w = -9.0000010e-02 
++dvt1w = 1.3570372e+05 dvt2w = 0.00 nlx = 4.3929600e-07 
++w0 = 0.00 k3b = -0.8582231 pvth0=0+dpvth0_nnt18 
+// *
+// * mobility parameters
+// *
++vsat = 1.3500000e+05 lvsat = -1.8200000e-02 wvsat = 1.0000000e-04 
++pvsat = 3.6000000e-09 ua = 9.6000e-10 lua = -5.0000000e-17 
++pua = -3.0000002e-23 ub = 2.1696805e-18 uc = -2.2999993e-11 
++wuc = -3.5000000e-17 puc = 2.0000000e-23 rdsw = 1.2000000e+02 
++prwb = 0.00 prwg = 0.00 wr = 1.0000000 
++u0 = 6.1000000e-02 wu0 = 2.2000000e-09 pu0 = -1.0000000e-16 
++a0 = 1.5500000 keta = -2.9847301e-03 a1 = 0.00 
++a2 = 0.9800000 ags = 1.5000000 b0 = 0.00 
++b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -0.1100000 nfactor = 1.0000000 cit = 1.9915700e-04 
++cdsc = 0.00 cdscb = 0.00 cdscd = 0.00 
++eta0 = 8.0000000e-02 leta0 = 4.0000000e-08 peta0 = 5.0000000e-14 
++etab = -1.0000000e-02 petab = 8.0000000e-15 dsub = 0.5600000 
+// *
+// * rout parameters
+// *
++pclm = 1.6000000 pdiblc1 = 1.0000000e-02 pdiblc2 = 0.1200000 
++pdiblcb = 5.7750700e-02 drout = 0.5600000 pscbe1 = 6.4335600e+08 
++pscbe2 = 1.0000000e-20 pvag = 0.00 delta = 1.0000000e-02 
++alpha0 = 9.3800000e-09 alpha1 = 1.0385719e-02 beta0 = 5.8915170
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.2961084 kt2 = 1.0000000e-03 at = 2.0456400e+04 
++ute = -1.6500000 wute = -1.1000000e-09 ua1 = 3.8350100e-09 
++wua1 = -2.0736400e-16 pua1 = 6.0000000e-23 ub1 = -7.4901900e-18 
++wub1 = -1.7708197e-26 uc1 = -6.6000000e-11 kt1l = -7.4000000e-15 
++prt = 0.00 
+// *
+// * noise parameters
+// *
++noimod = 2 noia = 4.4361E+20 noib = 1.0074E+04 
++noic = 2.9928E-13 em = 1.039E+06 ef = 9.075E-01 
+// *
+// * capacitance parameters
+// *
++cj = 1.45e-04+dcj_nnt18 mj = 0.334 pb = 0.538 
++cjsw = 1.63e-10+dcjsw_nnt18 mjsw = 0.0689 pbsw = 0.563 
++cjswg = 6.60e-11+dcjswg_nnt18 mjswg = 0.0689 pbswg = 0.563 
++tcj = 0.00246 tcjsw = 0.00122 tcjswg = 0.00122 
++tpb = 0.00277 tpbsw = 0.00204 tpbswg = 0.00204 
++js = 5.2e-06 jsw = 1.0e-13 n = 1.0651 
++xti = 3 nqsmod = 0 elm = 5 
++cgdo = 2.66e-10+dcgdo_nnt18 cgso = 2.66e-10+dcgso_nnt18 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.64 moin = 24 noff = 2.50 
+// *
+// ************************************************************************************
+// *                              3.3v native nmos model                              *
+// ************************************************************************************
+// *
+model nnt33 bsim3v3 type=n
+// *
+// * general parameters
+// *
++lmin = 1.0e-6 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 6.65e-09+dtox_nnt33 toxm = 6.65e-09 xj = 1.6000000e-07 
++nch = 5.5313000e+15 lln = 1.0000000 lwn = 1.0000000 
++wln = 1.0000000 wwn = 1.0000000 lint = 6.4999990e-08 
++ll = 0.00 lw = 0.00 lwl = 0.00 
++wint = 0.00 wl = 0.00 ww = 0.00 
++wwl = 0.00 mobmod = 1 binunit = 2 
++xl = -1.5e-8+dxl_nnt33 xw = 0.00+dxw_nnt33 dwg = 0.00 
++dwb = 0.00 
+// * diode parameters
++dskip = no ldif = 6.50e-08 hdif = 2.05e-07 
++rsh = 7.08 rd = 0 rs = 0 
++rsc = 1 rdc = 1 
+// *
+// * threshold voltage parameters
+// *
++vth0 = -9.1e-02+dvth_nnt33 lvth0 = -7.0000000e-08 pvth0 = 1.0000000e-14+dpvth0_nnt33 
++k1 = 9.0587460e-02 k2 = -9.5673000e-03 k3 = -8.8000000 
++dvt0 = 0.00 dvt1 = 0.00 dvt2 = 0.00 
++dvt0w = 0.00 dvt1w = 0.00 dvt2w = 0.00 
++nlx = 0.00 w0 = 0.00 k3b = -2.4000001 
+// * mobility parameters
+// *
++vsat = 1.1500000e+05 lvsat = -2.0000000e-02 wvsat = -1.7000001e-02 
++pvsat = 2.1000000e-08 ua = 3.2000000e-10 lua = 1.8461700e-17 
++wua = -3.0000001e-17 pua = 1.5000001e-23 ub = 2.1500000e-18 
++lub = 1.0000000e-27 wub = -1.5000000e-25 uc = 1.6885901e-11 
++wuc = -1.8830001e-17 rdsw = 2.8000000e+02 prwb = 0.00 
++prwg = 0.00 wr = 0.8500000 u0 = 4.9435450e-02 
++lu0 = 1.6700000e-09 wu0 = 2.0000000e-10 pu0 = 1.0000000e-15 
++a0 = 1.0500000 keta = -1.0000000e-03 wketa = -1.0000000e-09 
++a1 = 0.00 a2 = 0.9800000 ags = 1.3000000 
++b0 = 0.00 b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -0.1080000 nfactor = 1.0000000 cit = 1.7250000e-04 
++cdsc = 0.00 cdscb = 0.00 cdscd = 0.00 
++eta0 = 5.8832400e-02 leta0 = 3.45000000e-07 etab = -5.0000000e-02 
++dsub = 0.5600000 
+// *
+// * rout parameters
+// *
++pclm = 0.6000000 pdiblc1 = 2.0000000e-02 pdiblc2 = 3.5568000e-02 
++pdiblcb = 5.9980500e-02 drout = 0.5600000 pscbe1 = 5.0000000e+08 
++pscbe2 = 1.0000000e-07 pvag = 0.00 delta = 1.0000000e-02 
++alpha0 = 1.3993774e-08 alpha1 = -3.0000000e-03 beta0 = 4.6188860 
++lbeta0 = 1.6556398e-06 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.2122575 kt2 = 5.0000000e-04 at = 1.6500000e+04 
++ute = -1.4421700 wute = 5.0000000e-08 ua1 = 3.3785630e-09 
++pua1 = -1.0000000e-23 ub1 = -6.1694750e-18 uc1 = -4.6000000e-11 
++wuc1 = -3.0000001e-17 kt1l = -7.3966800e-09 prt = 0.00 
+// *
+// * noise parameters
+// *
++noimod = 2 noia = 6.01E+20 noib = -1.05E+04 
++noic = 3.20E-13 em = 1.33E+06 ef = 9.46E-01 
+// *
+// * capacitance parameters
+// *
++cj = 0.000148+dcj_nnt33 mj = 0.344 pb = 0.542 
++cjsw = 2.16e-10+dcjsw_nnt33 mjsw = 0.149 pbsw = 0.536 
++cjswg = 1.25e-10+dcjswg_nnt33 mjswg = 0.149 pbswg = 0.536 
++tpb = 0.00264 tpbsw = 0.00262 tpbswg = 0.00262 
++tcj = 0.00255 tcjsw = 0.00108 tcjswg = 0.00108 
++js = 5.2e-06 jsw = 1.0e-13 n = 1.0651 
++xti = 3 nqsmod = 0 elm = 5 
++cgdo = 1.34e-10+dcgdo_nnt33 cgso = 1.34e-10+dcgso_nnt33 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.45 moin = 24 noff = 2.3177 
+// *
+// ***********************************************************************************
+// *                              1.8v core medium nmos model                        *
+// ***********************************************************************************
+model nmvt18 bsim3v3 type=n
+// *
+// * general parameters
+// *
++lmin = 2.8e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 3.87e-09+dtox_nmvt18 toxm = 3.87e-09 xj = 1.6000000e-07 
++nch = 3.8694000e+17 lln = 1.0229696 lwn = 1.00000 
++wln = 0.9740000 wwn = 0.9751000 lint = 1.0000000e-08 
++ll = 5.4500000e-15 lw = 1.5881868e-22 lwl = 0.00 
++wint = 0.00 wl = -5.0000010e-15 ww = -7.7500000e-15 
++wwl = -9.7315830e-23 mobmod = 1 binunit = 2 
++xl = 8.5e-9+dxl_nmvt18 xw = 0.00+dxw_nmvt18 dwg = -6.2580000e-09 
++dwb = 0.00 
+// * diode parameters
++dskip = no ldif = 7.00e-08 hdif = 2.00e-07 
++rsh = 7.08 rd = 0 rs = 0 
++rsc = 1.9 rdc = 1.9 
+// *
+// * threshold voltage parameters
+// *
++vth0 = 0.2712+dvth_nmvt18 lvth0 = 1.9999997e-09 pvth0 = 3.8420000e-15+dpvth0_nmvt18 
++k1 = 0.5000000 pk1 = 4.4581770e-15 k2 = -6.0074000e-03 
++k3 = -3.2359800 dvt0 = 0.6807000 dvt1 = 0.3976320 
++dvt2 = -0.4000000 dvt0w = 3.8760000 dvt1w = 1.7600000e+06 
++dvt2w = 0.00 nlx = 4.7687720e-08 w0 = 4.5550000e-08 
++k3b = 1.3848000 ngate = 3.5300000e+22 
+// *
+// * mobility parameters
+// *
++vsat = 9.6500000e+04 lvsat = -4.9000000e-03 pvsat = -1.5000000e-10 
++ua = -1.2500000e-09 pua = -2.4300000e-23 ub = 3.0158813e-18 
++uc = 1.4700000e-10 puc = -3.4915000e-24 rdsw = 1.1000000e+02 
++prwb = -0.1000000 prwg = 0.1000000 wr = 1.0000000 
++u0 = 3.4000000e-02 wu0 = -2.6050000e-09 a0 = 0.6905600 
++keta = -3.0000000e-03 lketa = -7.0000000e-09 a1 = 0.00 
++a2 = 0.9900000 ags = 0.4160000 b0 = 9.4605000e-07 
++b1 = 4.3600000e-06 
+// *
+// * subthreshold current parameters
+// *
++voff = -8.7550000e-02 lvoff = -3.3000000e-09 nfactor = 0.9500000 
++lnfactor = 4.5000000e-08 cit = 0.00 cdsc = 0.00 
++cdscb = 0.00 cdscd = 1.0000000e-04 eta0 = 2.8000001e-02 
++etab = -2.7000001e-02 dsub = 0.5600000 
+// *
+// * rout parameters
+// *
++pclm = 1.3000000 ppclm = 2.9999999e-15 pdiblc1 = 8.5000000e-02 
++pdiblc2 = 9.8000000e-03 ppdiblc2 = 2.7000001e-16 pdiblcb = 0.00 
++drout = 0.5600000 pscbe1 = 3.4500000e+08 pscbe2 = 1.0000000e-06 
++pvag = 0.00 delta = 1.0000000e-02 alpha0 = 2.9512000e-07 
++alpha1 = 1.5042400 beta0 = 13.6936000 lbeta0 = 3.2570000e-07
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.2443850 wkt1 = -5.2100000e-09 kt2 = -4.0000000e-02 
++at = 1.8500000e+04 pat = -3.7500000e-10 ute = -1.5500000 
++ua1 = 1.9535999e-09 lua1 = 3.3600000e-17 wua1 = -8.6240000e-17 
++pua1 = -5.0000000e-25 ub1 = -2.4000000e-18 uc1 = -1.4923699e-11 
++luc1 = 1.6574999e-17 puc1 = -1.0000000e-24 kt1l = -1.0000000e-09 
++prt = -97.2500000 
+// *
+// * capacitance parameters
+// *
++cj = 9.34e-04+dcj_nmvt18 mj = 0.328 pb = 0.689 
++cjsw = 7.82e-11+dcjsw_nmvt18 mjsw = 0.23 pbsw = 1 
++cjswg = 4.25e-10+dcjswg_nmvt18 mjswg = 0.23 pbswg = 1 
++tcj = 8.50e-04 tcjsw = 6.69e-04 tcjswg = 6.69e-04 
++tpb = 1.55e-03 tpbsw = 8.68e-04 tpbswg = 8.68e-04 
++js = 3.74e-07 jsw = 5.0e-12 n = 1.0097 
++xti = 3.8 nqsmod = 0 elm = 5 
++cgdo = 4.18e-10+dcgdo_nmvt18 cgso = 4.18e-10+dcgso_nmvt18 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.64 moin = 24 noff = 1.2025 
+// *
+// ***********************************************************************************
+// *                              1.8v core medium pmos model                        *
+// ***********************************************************************************
+// *
+model pmvt18 bsim3v3 type=p
+// *
+// * general parameters
+// *
++lmin = 2.3e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 3.74e-09+dtox_pmvt18 toxm = 3.74e-09 xj = 1.7000001e-07 
++nch = 7.6541000e+17 lln = 1.0611141 lwn = 1.0000000 
++wln = 0.9504572 wwn = 0.9600000 lint = -1.6999999e-08 
++ll = 1.3226693e-15 lw = 0.00 lwl = 0.00 
++wint = 8.0000010e-09 wl = 0.00 ww = 2.3095035e-15 
++wwl = -1.1186409e-20 mobmod = 1 binunit = 2 
++xl = 2.0e-9+dxl_pmvt18 xw = 0.00+dxw_pmvt18 dwg = -1.7423201e-08 
++dwb = 5.3792000e-09 
+// *
+// * diode parameters
+// *
++dskip = no ldif = 7.00e-08 hdif = 2.00e-07 
++rsh = 7.83 rd = 0 rs = 0 
++rsc = 2.5 rdc = 2.5 
+// *
+// * threshold voltage parameters
+// *
++vth0 = -0.03+dvth_pmvt18 lvth0 = 1.2904501e-07 wvth0 = 2.0545981e-08 
++k1 = 0.5649000 lk1 = 1.7071311e-08 pk1 = 5.0187070e-15 
++k2 = -0.1289752 k3 = 10.0000000 dvt0 = 0.00 
++dvt1 = 0.00 dvt2 = 0.00 dvt0w = 0.9200000 
++dvt1w = 5.0422970e+05 dvt2w = 0.00 nlx = 9.0188510e-07 
++lnlx = 4.7946150e-15 w0 = 5.3400000e-08 k3b = 0.4355000 
++ngate = 3.1680000e+20 pvth0 = 0+dpvth0_pmvt18 
+// *
+// * mobility parameters
+// *
++vsat = 2.2000000e+05 pvsat = -1.0000000e-09 ua = 1.6580195e-09 
++ub = 7.3937090e-19 uc = 8.0000000e-11 luc = -1.0000000e-17 
++rdsw = 32.1790800 prwb = 0.00 prwg = 0.00 
++wr = 1.0000000 u0 = 1.4368100e-02 wu0 = 1.1210001e-09 
++pu0 = -4.1546000e-16 a0 = 0.6000000 keta = -5.0000000e-02 
++a1 = 0.00 a2 = 0.6000000 ags = 0.8200000 
++b0 = 6.5000000e-08 b1 = 1.4999993e-09 
+// *
+// * subthreshold current parameters
+// *
++voff = -3.2000000e-02 lvoff = -1.2800000e-08 nfactor = 0.8000000 
++cit = 0.00 cdsc = 0.00 cdscb = 0.00 
++cdscd = 1.0000000e-05 eta0 = 1.6000001e-02 etab = -6.4615000e-03 
++dsub = 0.1500000 
+// *
+// * rout parameters
+// *
++pclm = 3.0000000 pdiblc1 = 2.0000000e-02 pdiblc2 = 1.7999999e-02 
++pdiblcb = 0.5277778 drout = 0.6000000 pscbe1 = 6.8691080e+08 
++pscbe2 = 1.0000000e-07 pvag = 0.00 delta = 1.0000000e-02 
++alpha0 = -2.2018899e-07 alpha1 = 4.6386700 beta0 = 20.9067000 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.3556760 wkt1 = 3.2000000e-09 kt2 = -7.8930010e-03 
++lkt2 = -8.0000010e-09 at = 1.2500000e+04 pat = -2.0000000e-08 
++ute = -1.8038800 lute = 7.0000000e-08 ua1 = 5.3577010e-10 
++lua1 = -2.0500000e-16 wua1 = 4.0000000e-17 ub1 = -4.2553000e-18 
++uc1 = -1.8127999e-10 kt1l = 2.3759998e-08 prt = 146 
+// *
+// * capacitance parameters
+// *
++cj = 0.000734+dcj_pmvt18 mj = 0.308 pb = 0.682 
++cjsw = 6.14e-11+dcjsw_pmvt18 mjsw = 0.2 pbsw = 0.98 
++cjswg = 6.15e-10+dcjswg_pmvt18 mjswg = 0.2 pbswg = 0.98 
++tpb = 0.00173 tpbsw = 0.00217 tpbswg = 0.00217 
++tcj = 0.000946 tcjsw = 0.000745 tcjswg = 0.000745 
++js = 2.95e-07 jsw = 1.0e-12 n = 1.0184 
++xti = 3.9 nqsmod = 0 elm = 5 
++cgdo = 4.86e-10+dcgdo_pmvt18 cgso = 4.86e-10+dcgso_pmvt18 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.8505076 moin = 14.95341 noff = 1.431824 
+// *
+// ***********************************************************************************
+// *                               3.3v io medium nmos model                         *
+// ***********************************************************************************
+// *
+model nmvt33 bsim3v3 type=n
+// *
+// * general parameters
+// *
++lmin = 5.8e-7 lmax = 1.0e-5 wmin = 1.9e-7 
++wmax = 1.0e-4 tnom = 25.0 version = 3.24 
++tox = 6.65e-09+dtox_nmvt33 toxm = 6.65e-09 xj = 1.6000000e-07 
++nch = 4.5515000e+17 lln = 0.9900000 lwn = 1.0000000 
++wln = 0.9849766 wwn = 1.0000000 lint = 7.0000000e-09 
++ll = 7.2242020e-15 lw = 0.00 lwl = -1.9999999e-21 
++wint = 5.0000000e-09 wl = 0.00 ww = 1.7257697e-15 
++wwl = -4.5391030e-21 mobmod = 1 binunit = 2 
++xl = -4.0e-8+dxl_nmvt33 xw = 0.00+dxw_nmvt33 dwg = -5.5000000e-09 
++dwb = 0.00 
+// * diode parameters
++dskip = no ldif = 7.00e-08 hdif = 2.00e-07 
++rsh = 7.08 rd = 0 rs = 0 
++rsc = 1.6 rdc = 1.6 
+// *
+// * threshold voltage parameters
+// *
++vth0 = 0.4873+dvth_nmvt33 k1 = 0.8017062 k2 = -2.6515324e-03 
++k3 = -1.2716755 dvt0 = 5.6580000 dvt1 = 0.3611320 
++dvt2 = -5.0000000e-02 dvt0w = 0.5743000 dvt1w = 1.0600000e+06 
++dvt2w = -5.0000000e-02 nlx = 6.2848200e-08 w0 = 0.00 
++k3b = 0.6987855 ngate = 1.0000000e+21 pvth0 = 0+dpvth0_nmvt33 
+// *
+// * mobility parameters
+// *
++vsat = 9.3000000e+04 lvsat = -9.2500000e-03 pvsat = -7.0000000e-10 
++ua = 2.9999999e-11 ub = 2.0480243e-18 uc = 1.1306595e-10 
++luc = 4.5556690e-17 rdsw = 3.7500000e+02 prwb = 2.0000000e-01 
++prwg = 0.00 wr = 1.0000000 u0 = 4.5500000e-02 
++lu0 = 8.2078530e-09 wu0 = -8.5760000e-10 pu0 = -4.4000000e-16 
++a0 = 0.8300000 keta = -1.0000000e-02 lketa = -1.4999999e-08 
++pketa = 1.8000001e-15 a1 = 0.00 a2 = 0.9800000 
++ags = 0.2000000 b0 = 0.00 b1 = 0.00 
+// *
+// * subthreshold current parameters
+// *
++voff = -8.5000000e-02 pvoff = -5.0000000e-15 nfactor = 1.1000000 
++cit = 1.0015600e-04 cdsc = 1.2133600e-04 cdscb = 0.00 
++cdscd = 1.0000000e-03 eta0 = 0.3200000 peta0 = 5.0000000e-14 
++etab = -0.3600000 dsub = 0.5600000 
+// *
+// * rout parameters
+// *
++pclm = 1.8000000 pdiblc1 = 0.1100000 pdiblc2 = 1.0292900e-04 
++pdiblcb = -1.4468600e-04 drout = 0.5600000 pscbe1 = 3.1000000e+08 
++pscbe2 = 1.0000000e-06 pvag = 0.00 delta = 1.0000000e-02 
++alpha0 = 8.4509830e-06 alpha1 = 12.9302010 beta0 = 26.1692410 
++lbeta0 = 1.9876900e-06 
+// *
+// * temperature effects parameters
+// *
++kt1 = -0.2447756 kt2 = 0.00 at = 1.3000000e+05 
++lat = -7.5000000e-02 ute = -1.6101600 lute = -5.0000000e-08 
++pute = -1.6000000e-14 ua1 = 1.7575861e-09 wua1 = -1.0000000e-16 
++ub1 = -2.7649999e-18 uc1 = -1.5970168e-10 kt1l = -9.4999000e-09 
++prt = 0.00 
+// *
+// *
+// * capacitance parameters
+// *
++cj = 0.000857+dcj_nmvt33 mj = 0.317 pb = 0.698 
++cjsw = 1.1e-10+dcjsw_nmvt33 mjsw = 0.27 pbsw = 0.95 
++cjswg = 3.45e-10+dcjswg_nmvt33 mjswg = 0.27 pbswg = 0.95 
++tpb = 0.0019 tpbsw = 0.000868 tpbswg = 0.000868 
++tcj = 0.00087 tcjsw = 0.000669 tcjswg = 0.000669 
++js = 4.58e-07 jsw = 5.0e-12 n = 1.04 
++xti = 3.8 nqsmod = 0 elm = 5 
++cgdo = 4.99e-10+dcgdo_nmvt33 cgso = 4.99e-10+dcgso_nmvt33 tlevc = 1 
++capmod = 3 xpart = 1 cf = 0.00 
++acde = 0.45 moin = 24 noff = 2.3177  
+// *
+// ***********************************************************************************
+// *                            1.8v n+/pwell diode model                            *
+// ***********************************************************************************
+// *
+model ndio18 diode
++level = 1 is = 3.52e-07 allow_scaling = yes dskip = no imax=1e20 isw = 1e-15 
++n = 1.0233 ns = 1.0233 rs = 8.89e-09 ik = 1.52e+05 ikp = 4.32E-04 
++bv = 11.0 ibv = 277.78 
++trs = 1.51e-03 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0.000968 mj = 0.346 
++vj = 0.7 cjsw = 7.95e-11 mjsw = 0.538 
++vjsw = 1 cta = 0.000842 ctp = 0.000669 
++pta = 0.00147 ptp = 0.000868 tlev = 1 
++tlevc = 1 area = 3.60e-09 perim = 2.4e-04 
++fc = 0 
+// *
+// ***********************************************************************************
+// *                            1.8v p+/nwell diode model                            *
+// ***********************************************************************************
+// *
+model pdio18 diode
++level = 1 is = 1.66e-07 allow_scaling = yes dskip = no imax=1e20 isw = 1e-15 
++n = 1.0135 ns = 1.0135 rs = 8.77e-09 ik = 4.03e+05 ikp = 2.43E-03 
++bv = 11.0 ibv = 277.78 
++trs = 1.78e-03 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0.00107 mj = 0.415 
++vj = 0.817 cjsw = 9.89e-11 mjsw = 0.489 
++vjsw = 0.95 cta = 0.000876 ctp = 0.000745 
++pta = 0.00153 ptp = 0.00117 tlev = 1 
++tlevc = 1 area = 3.60e-09 perim = 2.4e-04 
++fc = 0 
+// *
+// ***********************************************************************************
+// *                            3.3v n+/pwell diode model                            *
+// ***********************************************************************************
+// *
+model ndio33 diode
++level = 1 is = 3.65e-07 allow_scaling = yes dskip = no imax=1e20 isw = 1e-15 
++n = 1.0203 ns = 1.0203 rs = 8.84e-09 ik = 1.33e+05 ikp = 3.64E-04 
++bv = 11.0 ibv = 277.78 
++trs = 1.07e-03 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0.000845 mj = 0.321 
++vj = 0.708 cjsw = 9.15e-11 mjsw = 0.447 
++vjsw = 1 cta = 0.000897 ctp = 0.000695 
++pta = 0.00166 ptp = 0.00162 tlev = 1 
++tlevc = 1 area = 3.60e-09 perim = 2.4e-04 
++fc = 0 
+// *
+// ***********************************************************************************
+// *                            3.3v p+/nwell diode model                            *
+// ***********************************************************************************
+// *
+model pdio33 diode
++level = 1 is = 1.68e-07 allow_scaling = yes dskip = no imax=1e20 isw = 1e-15 
++n = 1.0143 ns = 1.0143 rs = 9.23e-09 ik = 4.07e+05 ikp = 2.42E-03 
++bv = 11.0 ibv = 277.78 
++trs = 1.24e-03 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0.00101 mj = 0.401 
++vj = 0.807 cjsw = 8.96e-11 mjsw = 0.45 
++vjsw = 1 cta = 0.000883 ctp = 0.000709 
++pta = 0.00157 ptp = 0.00137 tlev = 1 
++tlevc = 1 area = 3.60e-09 perim = 2.4e-04 
++fc = 0 
+// *
+// ***********************************************************************************
+// *                              nwell/psub diode model                             *
+// ***********************************************************************************
+// *
+model nwdio diode
++level = 1 is = 1.42e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0128 ns = 1.0128 rs = 2.44e-08 ik = 1.1e+04 ikp = 7.75E-06 
++bv = 15.0 ibv = 104.2 
++trs = 9.47e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 cjo = 0.000145 mj = 0.317 
++vj = 0.494 cjsw = 5e-10 mjsw = 0.383 
++vjsw = 0.9 cta = 0.002 ctp = 0.00121 
++pta = 0.00253 ptp = 0.00217 tlev = 1 
++tlevc = 1 area = 9.60e-09 perim = 4.0e-04 
++fc = 0 
+// *
+// **********************************************************************************
+// *                           1.8v native n+/pwell diode                           *
+// **********************************************************************************
+// *
+model nndio18 diode
++level = 1 is = 5.20e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0651 ns = 1.0651 rs = 1.00e-08 ik = 6.30e+04 ikp = 1.21E-05 
++bv = 17.0 ibv = 1.00e-03 
++trs = 9.34e-04 eg = 1.16 tnom = 25.0 
++xti = 3.0 tlev = 1 tlevc = 1 
++cjo = 0.000145 mj = 0.334 vj = 0.538 
++cjsw = 1.63e-10 mjsw = 0.0689 vjsw = 0.263 
++cta = 0.00246 ctp = 0.00122 pta = 0.00277 
++ptp = 0.00204 area = 3.6e-9 perim = 2.4e-4 
++fc = 0 
+// *			
+// *********************************************************************************
+// *                           3.3v native n+/pwell diode                          *
+// *********************************************************************************
+// *
+model nndio33 diode
++level = 1 is = 5.20e-06 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0651 ns = 1.0651 rs = 9.00e-09 ik = 6.30e+04 ikp = 1.21E-05 
++bv = 17.0 ibv = 1.00e-03 
++trs = 9.34e-04 eg = 1.16 tnom = 25.0 
++xti = 3 tlev = 1 tlevc = 1 
++cjo = 0.000148 mj = 0.344 vj = 0.542 
++cjsw = 2.16e-10 mjsw = 0.149 vjsw = 0.536 
++cta = 0.00255 ctp = 0.00108 pta = 0.00264 
++ptp = 0.00262 area = 3.6e-9 perim = 2.4e-4 
++fc = 0 
+// *	
+// ***********************************************************************************
+// *                        buried pwell/deep nwell diode model                      *
+// ***********************************************************************************
+// *
+model diobpw diode
++level = 1 is = 1.50e-07 allow_scaling = yes dskip = no imax=1e20 isw = 1.00e-15 
++n = 1.0213 ns = 1.0213 rs = 2.51e-08 ik = 2.40e+05 ikp = 1.60E-03 
++bv = 15.0 ibv = 1.04e+02 
++trs = 1.77e-03 cta = 0.0012 ctp = 0.00107 
++eg = 1.16 tnom = 25.0 pta = 0.0019 
++ptp = 0.00193 xti = 3.0 cjo = 0.000536 
++mj = 0.343 vj = 0.693 cjsw = 3.22e-10 
++mjsw = 0.361 vjsw = 0.715 tlev = 1 
++tlevc = 1 area = 9.6e-9 perim = 4e-4 
++fc = 0 
+// *

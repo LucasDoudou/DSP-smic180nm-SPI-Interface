@@ -1,0 +1,9 @@
+6_FA_v2 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 15 17:20:48 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 15 17:20:48 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 15 17:20:48 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 15 17:20:48 2024                                      

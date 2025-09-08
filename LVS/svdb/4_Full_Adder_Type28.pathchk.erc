@@ -1,0 +1,9 @@
+4_Full_Adder_Type28 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 15 16:00:05 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 15 16:00:05 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 15 16:00:05 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 15 16:00:05 2024                                      

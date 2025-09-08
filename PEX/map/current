@@ -1,0 +1,50 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "DSP_final_v2"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/student/Desktop/Workspace/PEX"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "EE113_DSP/4_flip_flop_1x4/schematic" "4_flip_flop_1x4" )
+( "EE113_DSP/DSP_final_v2/schematic" "DSP_final_v2" )
+( "EE113_DSP/Full_Adder_Sum/schematic" "Full_Adder_Sum" )
+( "EE113_DSP/5_6_Multiplier/schematic" "5_6_Multiplier" )
+( "EE113_DSP/12_bit_Register/schematic" "12_bit_Register" )
+( "EE113_DSP/D_Flip_Flop/schematic" "D_Flip_Flop" )
+( "EE113_DSP/6_FA_v3/schematic" "6_FA_v3" )
+( "EE113_DSP/4_Full_Adder_Type28/schematic" "4_Full_Adder_Type28" )
+( "EE113Lab2/And_Gate/schematic" "And_Gate" )
+( "EE113_DSP/11FA/schematic" "11FA" )
+( "EE113_DSP/6_FA_v2/schematic" "6_FA_v2" )
+( "EE113Lab2/inv/schematic" "inv" )
+( "EE113_DSP/TG/schematic" "TG" )
+( "EE113_DSP/6_FA_vhalf/schematic" "6_FA_vhalf" )
+ )
+( term
+ )
+( param
+ )
+( "TG" "ihnl/cds1/map" )
+( "5_6_Multiplier" "ihnl/cds11/map" )
+( "6_FA_v3" "ihnl/cds8/map" )
+( "DSP_final_v2" "ihnl/cds13/map" )
+( "4_Full_Adder_Type28" "ihnl/cds6/map" )
+( "6_FA_vhalf" "ihnl/cds10/map" )
+( "12_bit_Register" "ihnl/cds4/map" )
+( "inv" "ihnl/cds0/map" )
+( "D_Flip_Flop" "ihnl/cds2/map" )
+( "Full_Adder_Sum" "ihnl/cds5/map" )
+( "And_Gate" "ihnl/cds7/map" )
+( "6_FA_v2" "ihnl/cds9/map" )
+( "4_flip_flop_1x4" "ihnl/cds3/map" )
+( "11FA" "ihnl/cds12/map" )
+ )

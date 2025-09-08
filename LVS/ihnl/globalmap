@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+EE113_SPI/12_RAM_v1/schematic 12_RAM_v1
+EE113Lab2/inv/schematic inv
+EE113_SPI/RAM_v1/schematic RAM_v1
+$endmodel
+$net
+$endnet
+$param
+$endparam

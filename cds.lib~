@@ -1,0 +1,22 @@
+# File Created by student at Thu Jan 19 23:22:20 2017
+# assisted by CdsLibEditor
+SOFTINCLUDE /usr/cadence/IC615/share/cdssetup/cds.lib
+#UNDEFINE smic18mmrf
+#DEFINE smic18new /home/student/Desktop/Workspace/TECH/SPICEMODEL
+DEFINE smic18mmrf /home/student/Desktop/Workspace/smic18mmrf/smic18mmrf
+#Removed by ddDeleteObj: DEFINE lab1 /home/student/Desktop/Workspace/lab1
+#Removed by ddDeleteObj: DEFINE lab1 /home/student/Desktop/Workspace/lab1
+#Removed by ddDeleteObj: DEFINE 123466 /home/student/Desktop/Workspace/123466
+#Removed by ddDeleteObj: DEFINE inv /home/student/Desktop/Workspace/inv
+#Removed by ddDeleteObj: DEFINE lab1 /home/student/Desktop/Workspace/lab1
+#Removed by ddDeleteObj: DEFINE lab2_dingtj lab2_dingtj
+DEFINE lx_project lx_project
+DEFINE lx_xyl_project lx_xyl_project
+DEFINE lab2_dingtj lab2_dingtj
+#Removed by ddDeleteObj: DEFINE EE113 /home/student/Desktop/Workspace/EE113
+#Removed by ddDeleteObj: DEFINE EE113Lab3 /home/student/Desktop/Workspace/EE113Lab3
+#Removed by ddDeleteObj: DEFINE Sizing /home/student/Desktop/Workspace/Sizing
+#Removed by ddDeleteObj: DEFINE Lab3_hxy /home/student/Desktop/Workspace/Lab3_hxy
+#Removed by ddDeleteObj: DEFINE EE113_Lab4 /home/student/Desktop/Workspace/EE113_Lab4
+#Removed by ddDeleteObj: DEFINE EE113lab5 /home/student/Desktop/Workspace/EE113lab5
+#Removed by ddDeleteObj: DEFINE EE113Lab6 /home/student/Desktop/Workspace/EE113Lab6

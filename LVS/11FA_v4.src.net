@@ -1,0 +1,110 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113_DSP
+* Top Cell Name: 11FA_v4
+* View Name:     schematic
+* Netlisted on:  Dec 16 00:05:23 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    Full_Adder_Sum
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Full_Adder_Sum A B CI CO_ GND S_ VDD
+*.PININFO A:I B:I CI:I CO_:O S_:O GND:B VDD:B
+MPM11 CO_ CI net93 VDD p18 W=880n L=180n m=1
+MPM10 CO_ A net124 VDD p18 W=880n L=180n m=1
+MPM9 net124 B VDD VDD p18 W=880n L=180n m=1
+MPM8 net93 B VDD VDD p18 W=880n L=180n m=1
+MPM4 net93 A VDD VDD p18 W=880n L=180n m=1
+MPM7 S_ CI net127 VDD p18 W=880n L=180n m=1
+MPM6 net127 B net128 VDD p18 W=880n L=180n m=1
+MPM5 net128 A VDD VDD p18 W=880n L=180n m=1
+MPM3 S_ CO_ net104 VDD p18 W=880n L=180n m=1
+MPM2 net104 CI VDD VDD p18 W=880n L=180n m=1
+MPM1 net104 B VDD VDD p18 W=880n L=180n m=1
+MPM0 net104 A VDD VDD p18 W=880n L=180n m=1
+MNM11 net90 A GND GND n18 W=440n L=180n m=1
+MNM10 net90 B GND GND n18 W=440n L=180n m=1
+MNM9 net123 B GND GND n18 W=440n L=180n m=1
+MNM8 CO_ CI net90 GND n18 W=440n L=180n m=1
+MNM7 CO_ A net123 GND n18 W=440n L=180n m=1
+MNM6 net129 B GND GND n18 W=440n L=180n m=1
+MNM5 net130 A net129 GND n18 W=440n L=180n m=1
+MNM4 S_ CI net130 GND n18 W=440n L=180n m=1
+MNM3 net102 CI GND GND n18 W=440n L=180n m=1
+MNM2 net102 A GND GND n18 W=440n L=180n m=1
+MNM1 net102 B GND GND n18 W=440n L=180n m=1
+MNM0 S_ CO_ net102 GND n18 W=440n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv GND VDD VI VO
+*.PININFO VI:I VO:O GND:B VDD:B
+MNM0 VO VI GND GND n18 W=220n L=180n m=1
+MPM0 VO VI VDD VDD p18 W=660n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    11FA_v4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT 11FA_v4 A<10> A<9> A<8> A<7> A<6> A<5> A<4> A<3> A<2> A<1> A<0> B<10> 
++ B<9> B<8> B<7> B<6> B<5> B<4> B<3> B<2> B<1> B<0> COUT GND S<10> S<9> S<8> 
++ S<7> S<6> S<5> S<4> S<3> S<2> S<1> S<0> VDD
+*.PININFO A<10>:I A<9>:I A<8>:I A<7>:I A<6>:I A<5>:I A<4>:I A<3>:I A<2>:I 
+*.PININFO A<1>:I A<0>:I B<10>:I B<9>:I B<8>:I B<7>:I B<6>:I B<5>:I B<4>:I 
+*.PININFO B<3>:I B<2>:I B<1>:I B<0>:I COUT:O S<10>:O S<9>:O S<8>:O S<7>:O 
+*.PININFO S<6>:O S<5>:O S<4>:O S<3>:O S<2>:O S<1>:O S<0>:O GND:B VDD:B
+XI62 A<8> B<8> net0170 net0188 GND net0179 VDD / Full_Adder_Sum
+XI61 A<9> B<9> net0168 net0189 GND net0178 VDD / Full_Adder_Sum
+XI60 A<10> B<10> net0169 net0190 GND net0177 VDD / Full_Adder_Sum
+XI41 A<4> B<4> net0167 net0194 GND net0182 VDD / Full_Adder_Sum
+XI5 A<1> B<1> net0174 net0196 GND net0184 VDD / Full_Adder_Sum
+XI4 A<0> B<0> GND net0195 GND net0185 VDD / Full_Adder_Sum
+XI7 A<3> B<3> net0172 net0198 GND net0187 VDD / Full_Adder_Sum
+XI42 A<5> B<5> net0173 net0193 GND net0181 VDD / Full_Adder_Sum
+XI43 A<6> B<6> net0175 net0192 GND net0180 VDD / Full_Adder_Sum
+XI40 A<7> B<7> net0171 net0191 GND net0186 VDD / Full_Adder_Sum
+XI6 A<2> B<2> net0176 net0197 GND net0183 VDD / Full_Adder_Sum
+XI59 GND VDD net0188 net0168 / inv
+XI58 GND VDD net0190 COUT / inv
+XI57 GND VDD net0189 net0169 / inv
+XI9 GND VDD net0197 net0172 / inv
+XI8 GND VDD net0195 net0174 / inv
+XI49 GND VDD net0181 S<5> / inv
+XI50 GND VDD net0180 S<6> / inv
+XI51 GND VDD net0186 S<7> / inv
+XI53 GND VDD net0177 S<10> / inv
+XI54 GND VDD net0178 S<9> / inv
+XI55 GND VDD net0179 S<8> / inv
+XI11 GND VDD net0198 net0167 / inv
+XI10 GND VDD net0196 net0176 / inv
+XI15 GND VDD net0187 S<3> / inv
+XI14 GND VDD net0183 S<2> / inv
+XI13 GND VDD net0184 S<1> / inv
+XI12 GND VDD net0185 S<0> / inv
+XI47 GND VDD net0191 net0170 / inv
+XI45 GND VDD net0192 net0171 / inv
+XI48 GND VDD net0182 S<4> / inv
+XI46 GND VDD net0193 net0175 / inv
+XI44 GND VDD net0194 net0173 / inv
+.ENDS
+

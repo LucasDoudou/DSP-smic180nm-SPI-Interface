@@ -1,0 +1,24 @@
+*lvsRulesFile: /home/student/Desktop/Workspace/rule_file_smic180/calibre/lvs/SmicSP6.1P_cal018_log_p1mtx_sali.lvs
+*lvsRunDir: /home/student/Desktop/Workspace/LVS
+*lvsLayoutPaths: 12_RAM_v1.calibre.db
+*lvsLayoutPrimary: 12_RAM_v1
+*lvsLayoutLibrary: EE113_SPI
+*lvsLayoutView: layout
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: 12_RAM_v1.src.net
+*lvsSourcePrimary: 12_RAM_v1
+*lvsSourceLibrary: EE113_SPI
+*lvsSourceGetFromViewer: 1
+*lvsSpiceFile: 12_RAM_v1.sp
+*lvsERCDatabase: 12_RAM_v1.erc.results
+*lvsERCSummaryFile: 12_RAM_v1.erc.summary
+*lvsReportFile: 12_RAM_v1.lvs.report
+*lvsMaskDBFile: 12_RAM_v1.maskdb
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: EE113_SPI
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: 12_RAM_v1.def

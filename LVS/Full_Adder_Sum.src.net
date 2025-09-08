@@ -1,0 +1,50 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113_DSP
+* Top Cell Name: Full_Adder_Sum
+* View Name:     schematic
+* Netlisted on:  Dec 14 17:02:15 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    Full_Adder_Sum
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Full_Adder_Sum A B CI CO_ GND S_ VDD
+*.PININFO A:I B:I CI:I CO_:O S_:O GND:B VDD:B
+MPM11 CO_ CI net93 VDD p18 W=880n L=180n m=1
+MPM10 CO_ A net124 VDD p18 W=880n L=180n m=1
+MPM9 net124 B VDD VDD p18 W=880n L=180n m=1
+MPM8 net93 B VDD VDD p18 W=880n L=180n m=1
+MPM4 net93 A VDD VDD p18 W=880n L=180n m=1
+MPM7 S_ CI net127 VDD p18 W=880n L=180n m=1
+MPM6 net127 B net128 VDD p18 W=880n L=180n m=1
+MPM5 net128 A VDD VDD p18 W=880n L=180n m=1
+MPM3 S_ CO_ net104 VDD p18 W=880n L=180n m=1
+MPM2 net104 CI VDD VDD p18 W=880n L=180n m=1
+MPM1 net104 B VDD VDD p18 W=880n L=180n m=1
+MPM0 net104 A VDD VDD p18 W=880n L=180n m=1
+MNM11 net90 A GND GND n18 W=440n L=180n m=1
+MNM10 net90 B GND GND n18 W=440n L=180n m=1
+MNM9 net123 B GND GND n18 W=440n L=180n m=1
+MNM8 CO_ CI net90 GND n18 W=440n L=180n m=1
+MNM7 CO_ A net123 GND n18 W=440n L=180n m=1
+MNM6 net129 B GND GND n18 W=440n L=180n m=1
+MNM5 net130 A net129 GND n18 W=440n L=180n m=1
+MNM4 S_ CI net130 GND n18 W=440n L=180n m=1
+MNM3 net102 CI GND GND n18 W=440n L=180n m=1
+MNM2 net102 A GND GND n18 W=440n L=180n m=1
+MNM1 net102 B GND GND n18 W=440n L=180n m=1
+MNM0 S_ CO_ net102 GND n18 W=440n L=180n m=1
+.ENDS
+

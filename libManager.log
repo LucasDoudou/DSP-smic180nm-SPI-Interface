@@ -1,0 +1,1204 @@
+\o Program:		@(#)$CDS: libManager version 32.10 11/11/2011 13:43 (cat91amd) $
+\o Sub version:		sub-version  s008 
+\o Arguments:		-unmapped -mpssession virtuoso3263 -mpshost Student 
+\o Working Directory:	Student:/home/student/Desktop/Workspace
+\o Qt version: 		4.5.3
+\o changeWorkingDir("/home/student/Desktop/Workspace") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o Log file is "/home/student/Desktop/Workspace/libManager.log".
+\o Opening libManager window.
+\a nrSetWindowVisibility(cdsLibManager "show")
+\o MPS service: map window
+\a nrSetCurrentWindow(cdsLibManager)
+\o Library Manager customization server connected.
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a nrResizeWindow(cdsLibManager list(786 304 600 448))
+\a cdsLibManager->libListBox->value = "smic18mmrf"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellListBox->value = "4_flip_flop_1x4"
+\a cdsLibManager->cellListBox->value = "5_6_Mul_final_test2"
+\a cdsLibManager->cellListBox->value = "5_6_Multiplier"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellListBox->value = "4_flip_flop_1x4"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellLineEdit->value = "4_Full_Adder_Type28"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "US_8ths"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libLineEdit->value = "EE113_SPI"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder"
+\a cdsLibManager->cellListBox->value = "3AND"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_vspi"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder"
+\a cdsLibManager->cellListBox->value = "12_RAM_TG_v1"
+\a cdsLibManager->cellLineEdit->value = "12_RAM_TG_v1"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "12_bit_Register"
+\a cdsLibManager->cellLineEdit->value = "12_bit_Register"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "11_Adder_Tree"
+\a cdsLibManager->cellListBox->value = "12_bit_Register"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellListBox->value = "DSP_final_v2"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellListBox->value = "12_bit_Register"
+\a cdsLibManager->cellListBox->value = "PG_n"
+\a cdsLibManager->cellListBox->value = "test_v1"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellListBox->value = "4_flip_flop_1x4"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellListBox->value = "6_Full_Adder_Type28"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "11FA"
+\a cdsLibManager->cellLineEdit->value = "11FA"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellLineEdit->value = "4_Full_Adder_Type28"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 1)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->cellLineEdit->value = "4_Full_Adder_Type28"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "Full_Adder_Cobar"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "Full_Adder_Sum"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "Full_Adder_Sum"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "6_AND_test"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_vhalf"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_AND_test"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "5_6_Mul_final_test2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_AND_test"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v3"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_vhalf"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v3"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "5_6_Multiplier"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "5_6_Multiplier"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "6_FA_vhalf"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v3"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "6_FA_v2"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->cellLineEdit->value = "6_FA_v2"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->cellLineEdit->value = "6_FA_v2"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "6_FA_v2"
+\a cdsLibManager->cellLineEdit->value = "6_FA_v2"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libListBox->value = "EECS151T_v1"
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libListBox->value = "US_8ths"
+\a cdsLibManager->libListBox->value = "analogLib"
+\a cdsLibManager->libListBox->value = "US_8ths"
+\a cdsLibManager->libListBox->value = "EECS151T_v1"
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libListBox->value = "EE113_DSP_bonus"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "TG"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "TG"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellListBox->value = "P_G"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "TG"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "TG"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = "inv"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "inv"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 4 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "And_Gate_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "And_Gate"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "And_Gate"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->cellListBox->value = "NAND"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "NAND"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113_SPI"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113_SPI"
+\a cdsLibManager->cellListBox->value = "SPI_v1_tb"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "SPI_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "SPI_v1"
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "DSP_final_v2"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v2"
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "12_bit_Register"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = "DSP_final_v1"
+\a cdsLibManager->cellLineEdit->value = "DSP_final_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a cdsLibManager->cellListBox->value = "testbench_6bit_FA"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 81 84 2 "testbench_6bit_FA")
+\a cdsLibManager->cellLineEdit->value = "testbench_6bit_FA"
+\a cdsLibManager->editDeleteButton->value = t
+\a deleteForm->deleteBothRadioButton->value = t
+\a deleteForm->deleteFilterEdit->value = "*"
+\a deleteForm->notDeleteFilterEdit->value = "*"
+\a nrSetWindowVisibility(deleteForm "show")
+\a nrSetCurrentWindow(deleteForm)
+\a nrResizeWindow(deleteForm list(773 316 627 425))
+\a deleteForm->OK->value = t
+\o QUESTION (CLM-199): The following 1 items are marked for deletion.  Are you sure?
+\a nrSetWindowVisibility(mcMBXDLG "show")
+\a nrSetCurrentWindow(mcMBXDLG)
+\a nrResizeWindow(mcMBXDLG list(905 381 362 308))
+\a mcMBXDLG->pushButton1->value = t
+\o Deleting cell "testbench_6bit_FA" from library "EE113".
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(workingDialogForm)
+\o Deleted cell 'EE113/testbench_6bit_FA'.
+\o Deletion of 1 cell done.
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(workingDialogForm list(2 26 281 131))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113"
+\a cdsLibManager->libLineEdit->value = "EE113"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "P_G"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "PG_n"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "P_G"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "TG"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_all"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "testbench_dsp_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_all"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_all"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "testbench_dsp_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_v2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_all"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench_all"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "test_bench"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellListBox->value = "test_bench_all"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "testbench_dsp_v1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 90 147 2 "testbench_dsp_v1")
+\a cdsLibManager->cellLineEdit->value = "testbench_dsp_v1"
+\a cdsLibManager->copySimpleButton->value = t
+\a basicCopyForm->CategoryCellsEdit->value = "*"
+\a basicCopyForm->CellsSkipLibraries->value = t
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->ViewsSkipLibraries->value = t
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CopyFromLibrary->value = "EE113"
+\a basicCopyForm->CopyToLibrary->value = "EE113"
+\a basicCopyForm->CopyFromLibrary->value = "EE113_DSP"
+\a basicCopyForm->CopyFromCell->value = "testbench_dsp_v1"
+\a basicCopyForm->CopyToLibrary->value = "EE113_DSP"
+\a basicCopyForm->CopyToCell->value = "testbench_dsp_v1"
+\a basicCopyForm->CellsViewsToCopy->value = "schematic spectre_state1"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = ""
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a nrSetWindowVisibility(basicCopyForm "show")
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrResizeWindow(basicCopyForm list(864 252 444 652))
+\a basicCopyForm->CopyFromCell->value = "testbench_dsp_vtest"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\o ERROR (CLM-194): The library cell "testbench_dsp_vtest" doesn't exist.
+\a nrSetWindowVisibility(errorDialog "show")
+\a nrSetCurrentWindow(errorDialog)
+\a basicCopyForm->CopyFromCell->value = "testbench_dsp_vtest"
+\a nrResizeWindow(errorDialog list(906 439 361 120))
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(basicCopyForm)
+\a basicCopyForm->CopyFromCell->value = "testbench_dsp_v1"
+\a basicCopyForm->CopyToCell->value = "testbench_dsp_vtest"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\o Beginning simple copy to library "EE113_DSP".
+\o Processing files to be copied...
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(workingDialogForm)
+\a basicCopyForm->CopyToCell->value = "testbench_dsp_vtest"
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrResizeWindow(workingDialogForm list(0 25 288 131))
+\a workingDialogForm->Close->value = t
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "testbench_dsp_v1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a cdsLibManager->cellListBox->value = "testbench_dsp_vtest"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "testbench_dsp_vtest"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "test_bench"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 36 66 2 "test_bench")
+\a cdsLibManager->cellLineEdit->value = "test_bench"
+\a cdsLibManager->copySimpleButton->value = t
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsViewsToCopy->value = ""
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CopyFromCell->value = ""
+\a basicCopyForm->CopyToCell->value = ""
+\a basicCopyForm->CopyFromLibrary->value = ""
+\a basicCopyForm->CopyToLibrary->value = ""
+\a basicCopyForm->CopyFromLibrary->value = "EE113"
+\a basicCopyForm->CopyToLibrary->value = "EE113"
+\a basicCopyForm->CopyFromLibrary->value = "EE113_DSP"
+\a basicCopyForm->CopyFromCell->value = "test_bench"
+\a basicCopyForm->CopyToLibrary->value = "EE113_DSP"
+\a basicCopyForm->CopyToCell->value = "test_bench"
+\a basicCopyForm->CellsViewsToCopy->value = "schematic spectre_state1"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = ""
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a nrSetWindowVisibility(basicCopyForm "show")
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrResizeWindow(basicCopyForm list(864 252 444 652))
+\a basicCopyForm->CopyToCell->value = "test_bench_v2"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\o Beginning simple copy to library "EE113_DSP".
+\o Processing files to be copied...
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(workingDialogForm)
+\a basicCopyForm->CopyToCell->value = "test_bench_v2"
+\o ERROR (CLM-173): One or more of the following problems have occurred:\n      1. The source file doesn't exist.\n      2. A destination file will be overwritten.\n      3. A destination file is checked out.\n      4. A destination file is opened for edit.\n      5. A destination file conflicts with another.
+\a nrSetWindowVisibility(copyProblemsDialog "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(workingDialogForm list(0 0 288 131))
+\a nrSetCurrentWindow(copyProblemsDialog)
+\a nrResizeWindow(copyProblemsDialog list(674 348 825 441))
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a nrSetCurrentWindow(basicCopyForm)
+\a basicCopyForm->CopyToCell->value = "test_bench_vtest"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\o Beginning simple copy to library "EE113_DSP".
+\o Processing files to be copied...
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(workingDialogForm)
+\a basicCopyForm->CopyToCell->value = "test_bench_vtest"
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrResizeWindow(workingDialogForm list(0 25 288 131))
+\a workingDialogForm->Close->value = t
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "test_bench"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "EE113 EE113Lab2 EE113_DSP_bonus EE113_SPI EECS151T_v1 US_8ths ahdlLib analogLib basic cdsDefTechLib functional rfExamples rfLib sky130_fd_pr_main smic18mmrf"
+\a cdsLibManager->cellListBox->value = "test_bench_vtest"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "test_bench_vtest"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "testbench_dsp_vtest"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "testbench_dsp_vtest"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "11FA_v3"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "4_Full_Adder_Type28"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "5_6_Mul_final_test2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "5_6_Mul_final_test2"
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = "And_Gate"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "And_Gate"
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "Or_Gate"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellLineEdit->value = "Or_Gate"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "inv"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellLineEdit->value = "inv"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 3 1)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "Or_Gate"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellLineEdit->value = "Or_Gate"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "11_Adder_Tree"
+\a cdsLibManager->cellListBox->value = "11FA_v4"
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellLineEdit->value = "11FA_v4"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "11FA_v4"
+\a cdsLibManager->cellLineEdit->value = "11FA_v4"
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "11FA_v4"
+\a cdsLibManager->cellLineEdit->value = "11FA_v4"
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "11FA_v4"
+\a cdsLibManager->cellLineEdit->value = "11FA_v4"
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "layout"
+\a cdsLibManager->viewLineEdit->value = "layout"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113Lab2"
+\a cdsLibManager->cellListBox->value = "NAND"
+\a cdsLibManager->cellLineEdit->value = "NAND"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "RO"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "NAND"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "inv"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "inv"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 4 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "EE113_DSP"
+\a cdsLibManager->cellListBox->value = "TG"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "TG"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 2 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\o libManager is exiting.
+\a exit(0)

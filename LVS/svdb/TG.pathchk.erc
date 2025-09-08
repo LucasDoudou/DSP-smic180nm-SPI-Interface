@@ -1,0 +1,9 @@
+TG 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 14 21:04:39 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 14 21:04:39 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 14 21:04:39 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 14 21:04:39 2024                                      

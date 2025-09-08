@@ -1,0 +1,10 @@
+Full_Adder_Sum 1000
+SOFTCHK nwell CONTACT.
+0 0 0 Dec 14 17:01:27 2024                                      
+SOFTCHK pwell CONTACT.
+1 1 0 Dec 14 17:01:27 2024                                      
+p 1 4
+21245 -19385
+23825 -19385
+23825 -18965
+21245 -18965

@@ -1,0 +1,5 @@
+TDMCHECKPOINT="1.0"
+smic18mmrf/rnwaa type="cell"
+smic18mmrf/rnwaa_ckt type="cell"
+smic18mmrf/rnwsti type="cell"
+smic18mmrf/rnwsti_ckt type="cell"

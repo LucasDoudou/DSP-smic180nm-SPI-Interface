@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/12_RAM_v1.dv
+dv_start matched
+dv_cell {12_RAM_v1} {12_RAM_v1} matched
+dv_obj_count -transformed_nets {51 51} -transformed_inst {48 48} -transformed_port {27 27}
+dv_end

@@ -1,0 +1,68 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113_SPI
+* Top Cell Name: 12_RAM_v1
+* View Name:     schematic
+* Netlisted on:  Jan 18 17:22:39 2025
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv GND VDD VI VO
+*.PININFO VI:I VO:O GND:B VDD:B
+MNM0 VO VI GND GND n18 W=220n L=180n m=1
+MPM0 VO VI VDD VDD p18 W=660n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113_SPI
+* Cell Name:    RAM_v1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT RAM_v1 BL GND Q VDD WL
+*.PININFO BL:I WL:I Q:O GND:B VDD:B
+XI2 GND VDD BL net16 / inv
+XI1 GND VDD Q net17 / inv
+XI0 GND VDD net17 Q / inv
+MNM0 net17 WL net16 GND n18 W=1.76u L=180n m=1
+MNM1 BL WL Q GND n18 W=1.76u L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113_SPI
+* Cell Name:    12_RAM_v1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT 12_RAM_v1 B<11> B<10> B<9> B<8> B<7> B<6> B<5> B<4> B<3> B<2> B<1> 
++ B<0> GND Q<11> Q<10> Q<9> Q<8> Q<7> Q<6> Q<5> Q<4> Q<3> Q<2> Q<1> Q<0> VDD WL
+*.PININFO B<11>:I B<10>:I B<9>:I B<8>:I B<7>:I B<6>:I B<5>:I B<4>:I B<3>:I 
+*.PININFO B<2>:I B<1>:I B<0>:I WL:I Q<11>:O Q<10>:O Q<9>:O Q<8>:O Q<7>:O 
+*.PININFO Q<6>:O Q<5>:O Q<4>:O Q<3>:O Q<2>:O Q<1>:O Q<0>:O GND:B VDD:B
+XI11 B<8> GND Q<8> VDD WL / RAM_v1
+XI10 B<10> GND Q<10> VDD WL / RAM_v1
+XI9 B<11> GND Q<11> VDD WL / RAM_v1
+XI8 B<9> GND Q<9> VDD WL / RAM_v1
+XI7 B<4> GND Q<4> VDD WL / RAM_v1
+XI6 B<6> GND Q<6> VDD WL / RAM_v1
+XI5 B<7> GND Q<7> VDD WL / RAM_v1
+XI4 B<5> GND Q<5> VDD WL / RAM_v1
+XI3 B<2> GND Q<2> VDD WL / RAM_v1
+XI2 B<3> GND Q<3> VDD WL / RAM_v1
+XI1 B<1> GND Q<1> VDD WL / RAM_v1
+XI0 B<0> GND Q<0> VDD WL / RAM_v1
+.ENDS
+

@@ -1,0 +1,43 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113_SPI
+* Top Cell Name: RAM_v1
+* View Name:     schematic
+* Netlisted on:  Jan 18 16:43:18 2025
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv GND VDD VI VO
+*.PININFO VI:I VO:O GND:B VDD:B
+MNM0 VO VI GND GND n18 W=220n L=180n m=1
+MPM0 VO VI VDD VDD p18 W=660n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113_SPI
+* Cell Name:    RAM_v1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT RAM_v1 BL GND Q VDD WL
+*.PININFO BL:I WL:I Q:O GND:B VDD:B
+XI2 GND VDD BL net16 / inv
+XI1 GND VDD Q net17 / inv
+XI0 GND VDD net17 Q / inv
+MNM0 net17 WL net16 GND n18 W=1.76u L=180n m=1
+MNM1 BL WL Q GND n18 W=1.76u L=180n m=1
+.ENDS
+

@@ -1,0 +1,56 @@
+OK
+VERSION          2
+TIME_NUMBER 1637265623
+LAYER_COUNT         41
+VIACOR_COUNT          8
+FIELD_NAMES drc_layer_nb layer_name
+         9 pwell
+        56 nwell
+        58 ptd
+        66 poly
+        69 ntd
+        75 ndio18
+        76 ndio33
+        77 nsd
+        79 pdio18
+        80 pdio33
+        86 pnpemit
+        91 psd
+        92 ngate33
+        93 ngate18
+        94 pgate33
+        95 pgate18
+        96 cngate18
+        97 cngate33
+       100 polycont
+       101 dfcont
+       102 nplug
+       103 pplug
+       124 M1
+       130 M2
+       140 M3
+       146 M4
+       152 M5
+       158 M6
+       172 V5
+       176 V4
+       180 V3
+       184 V2
+       188 V1
+       669 temporary_layer669
+       670 temporary_layer670
+       671 temporary_layer671
+       672 temporary_layer672
+       673 temporary_layer673
+       674 temporary_layer674
+       675 temporary_layer675
+       676 temporary_layer676
+VIACOR_FIELD_NAMES VIA_drc_layer_nb LAYER1_drc_layer_nb LAYER2_drc_layer_nb
+172  152  158
+176  146  152
+180  140  146
+184  130  140
+188  124  130
+100  66  124
+101  77  124
+676  91  124

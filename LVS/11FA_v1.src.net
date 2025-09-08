@@ -1,0 +1,227 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113_DSP
+* Top Cell Name: 11FA_v1
+* View Name:     schematic
+* Netlisted on:  Dec 15 23:14:10 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    NAND
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND A B GND VDD VOUT
+*.PININFO A:I B:I VOUT:O GND:B VDD:B
+MPM1 VOUT B VDD VDD p18 W=440n L=180n m=1
+MPM0 VOUT A VDD VDD p18 W=440n L=180n m=1
+MNM1 net17 B GND GND n18 W=220n L=180n m=1
+MNM0 VOUT A net17 GND n18 W=220n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    XOR
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT XOR A B GND VDD Y
+*.PININFO A:I B:I Y:O GND:B VDD:B
+XI3 net16 net9 GND VDD Y / NAND
+XI2 A B GND VDD net14 / NAND
+XI1 net14 B GND VDD net9 / NAND
+XI0 A net14 GND VDD net16 / NAND
+.ENDS
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv GND VDD VI VO
+*.PININFO VI:I VO:O GND:B VDD:B
+MNM0 VO VI GND GND n18 W=220n L=180n m=1
+MPM0 VO VI VDD VDD p18 W=660n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    And_Gate
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT And_Gate GND VDD VIN_A VIN_B VOUT
+*.PININFO VIN_A:I VIN_B:I VOUT:O GND:B VDD:B
+MPM1 net16 VIN_B VDD VDD p18 W=440n L=180n m=1
+MPM0 net16 VIN_A VDD VDD p18 W=440n L=180n m=1
+MNM1 net15 VIN_B GND GND n18 W=220n L=180n m=1
+MNM0 net16 VIN_A net15 GND n18 W=220n L=180n m=1
+XI0 GND VDD net16 VOUT / inv
+.ENDS
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    P_G
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT P_G A B G GND P VDD
+*.PININFO A:I B:I G:O P:O GND:B VDD:B
+XI4 A B GND VDD P / XOR
+XI1 GND VDD A B G / And_Gate
+.ENDS
+
+************************************************************************
+* Library Name: EE113Lab2
+* Cell Name:    Or_Gate
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Or_Gate GND VDD VIN_A VIN_B VOUT
+*.PININFO VIN_A:I VIN_B:I VOUT:O GND:B VDD:B
+MPM1 net15 VIN_A net016 VDD p18 W=440n L=180n m=1
+MPM0 net016 VIN_B VDD VDD p18 W=440n L=180n m=1
+MNM1 net15 VIN_B GND GND n18 W=220n L=180n m=1
+MNM0 net15 VIN_A GND GND n18 W=220n L=180n m=1
+XI1 GND VDD net15 VOUT / inv
+.ENDS
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    PG_n
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PG_n G0 G1 GND GOUT P0 P1 POUT VDD
+*.PININFO G0:I G1:I P0:I P1:I GOUT:O POUT:O GND:B VDD:B
+XI1 GND VDD P1 G0 net18 / And_Gate
+XI0 GND VDD P0 P1 POUT / And_Gate
+XI2 GND VDD net18 G1 GOUT / Or_Gate
+.ENDS
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    11_Adder_Tree
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT 11_Adder_Tree A<10> A<9> A<8> A<7> A<6> A<5> A<4> A<3> A<2> A<1> A<0> 
++ B<10> B<9> B<8> B<7> B<6> B<5> B<4> B<3> B<2> B<1> B<0> CO<10> CO<9> CO<8> 
++ CO<7> CO<6> CO<5> CO<4> CO<3> CO<2> CO<1> CO<0> GND VDD
+*.PININFO A<10>:I A<9>:I A<8>:I A<7>:I A<6>:I A<5>:I A<4>:I A<3>:I A<2>:I 
+*.PININFO A<1>:I A<0>:I B<10>:I B<9>:I B<8>:I B<7>:I B<6>:I B<5>:I B<4>:I 
+*.PININFO B<3>:I B<2>:I B<1>:I B<0>:I CO<10>:O CO<9>:O CO<8>:O CO<7>:O CO<6>:O 
+*.PININFO CO<5>:O CO<4>:O CO<3>:O CO<2>:O CO<1>:O CO<0>:O GND:B VDD:B
+XI11 A<9> B<9> net26 GND net27 VDD / P_G
+XI10 A<10> B<10> net28 GND net29 VDD / P_G
+XI9 A<0> B<0> CO<0> GND net31 VDD / P_G
+XI8 A<1> B<1> net51 GND net33 VDD / P_G
+XI7 A<2> B<2> net34 GND net35 VDD / P_G
+XI6 A<3> B<3> net36 GND net37 VDD / P_G
+XI5 A<4> B<4> net38 GND net0100 VDD / P_G
+XI4 A<5> B<5> net40 GND net41 VDD / P_G
+XI3 A<6> B<6> net42 GND net43 VDD / P_G
+XI2 A<7> B<7> net44 GND net45 VDD / P_G
+XI0 A<8> B<8> net0137 GND net47 VDD / P_G
+XI29 CO<7> net094 GND CO<10> net0121 net095 net0128 VDD / PG_n
+XI28 CO<7> net068 GND CO<9> net0121 net069 net0130 VDD / PG_n
+XI27 CO<7> net0137 GND CO<8> net0121 net47 net0113 VDD / PG_n
+XI26 CO<5> net096 GND CO<6> net093 net097 net0119 VDD / PG_n
+XI25 CO<3> CO<5> GND CO<7> net0101 net093 net0121 VDD / PG_n
+XI24 CO<3> net0114 GND CO<5> net0101 net0116 net093 VDD / PG_n
+XI23 net068 net28 GND net094 net069 net29 net095 VDD / PG_n
+XI22 net0114 net070 GND net096 net0116 net071 net097 VDD / PG_n
+XI21 CO<3> net38 GND CO<4> net0101 net0100 net0103 VDD / PG_n
+XI20 CO<1> net074 GND CO<3> net49 net075 net0101 VDD / PG_n
+XI18 net0137 net26 GND net068 net47 net27 net069 VDD / PG_n
+XI19 CO<1> net34 GND CO<2> net49 net35 net067 VDD / PG_n
+XI16 net42 net44 GND net070 net43 net45 net071 VDD / PG_n
+XI15 net38 net40 GND net0114 net0100 net41 net0116 VDD / PG_n
+XI14 net34 net36 GND net074 net35 net37 net075 VDD / PG_n
+XI1 CO<0> net51 GND CO<1> net31 net33 net49 VDD / PG_n
+.ENDS
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    Full_Adder_Sum
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Full_Adder_Sum A B CI CO_ GND S_ VDD
+*.PININFO A:I B:I CI:I CO_:O S_:O GND:B VDD:B
+MPM11 CO_ CI net93 VDD p18 W=880n L=180n m=1
+MPM10 CO_ A net124 VDD p18 W=880n L=180n m=1
+MPM9 net124 B VDD VDD p18 W=880n L=180n m=1
+MPM8 net93 B VDD VDD p18 W=880n L=180n m=1
+MPM4 net93 A VDD VDD p18 W=880n L=180n m=1
+MPM7 S_ CI net127 VDD p18 W=880n L=180n m=1
+MPM6 net127 B net128 VDD p18 W=880n L=180n m=1
+MPM5 net128 A VDD VDD p18 W=880n L=180n m=1
+MPM3 S_ CO_ net104 VDD p18 W=880n L=180n m=1
+MPM2 net104 CI VDD VDD p18 W=880n L=180n m=1
+MPM1 net104 B VDD VDD p18 W=880n L=180n m=1
+MPM0 net104 A VDD VDD p18 W=880n L=180n m=1
+MNM11 net90 A GND GND n18 W=440n L=180n m=1
+MNM10 net90 B GND GND n18 W=440n L=180n m=1
+MNM9 net123 B GND GND n18 W=440n L=180n m=1
+MNM8 CO_ CI net90 GND n18 W=440n L=180n m=1
+MNM7 CO_ A net123 GND n18 W=440n L=180n m=1
+MNM6 net129 B GND GND n18 W=440n L=180n m=1
+MNM5 net130 A net129 GND n18 W=440n L=180n m=1
+MNM4 S_ CI net130 GND n18 W=440n L=180n m=1
+MNM3 net102 CI GND GND n18 W=440n L=180n m=1
+MNM2 net102 A GND GND n18 W=440n L=180n m=1
+MNM1 net102 B GND GND n18 W=440n L=180n m=1
+MNM0 S_ CO_ net102 GND n18 W=440n L=180n m=1
+.ENDS
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    11FA_v1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT 11FA_v1 A<10> A<9> A<8> A<7> A<6> A<5> A<4> A<3> A<2> A<1> A<0> B<10> 
++ B<9> B<8> B<7> B<6> B<5> B<4> B<3> B<2> B<1> B<0> CO<10> GND S<10> S<9> S<8> 
++ S<7> S<6> S<5> S<4> S<3> S<2> S<1> S<0> VDD
+*.PININFO A<10>:I A<9>:I A<8>:I A<7>:I A<6>:I A<5>:I A<4>:I A<3>:I A<2>:I 
+*.PININFO A<1>:I A<0>:I B<10>:I B<9>:I B<8>:I B<7>:I B<6>:I B<5>:I B<4>:I 
+*.PININFO B<3>:I B<2>:I B<1>:I B<0>:I CO<10>:O S<10>:O S<9>:O S<8>:O S<7>:O 
+*.PININFO S<6>:O S<5>:O S<4>:O S<3>:O S<2>:O S<1>:O S<0>:O GND:B VDD:B
+XI0 A<10> A<9> A<8> A<7> A<6> A<5> A<4> A<3> A<2> A<1> A<0> B<10> B<9> B<8> 
++ B<7> B<6> B<5> B<4> B<3> B<2> B<1> B<0> CO<10> CO<9> CO<8> CO<7> CO<6> CO<5> 
++ CO<4> CO<3> CO<2> CO<1> CO<0> GND VDD / 11_Adder_Tree
+XI23 A<5> B<5> CO<4> net52 GND net071 VDD / Full_Adder_Sum
+XI10 A<10> B<10> CO<9> net58 GND net066 VDD / Full_Adder_Sum
+XI9 A<9> B<9> CO<8> net54 GND net067 VDD / Full_Adder_Sum
+XI8 A<8> B<8> CO<7> net53 GND net068 VDD / Full_Adder_Sum
+XI7 A<7> B<7> CO<6> net55 GND net069 VDD / Full_Adder_Sum
+XI6 A<6> B<6> CO<5> net56 GND net070 VDD / Full_Adder_Sum
+XI5 A<4> B<4> CO<3> net50 GND net050 VDD / Full_Adder_Sum
+XI4 A<3> B<3> CO<2> net51 GND net051 VDD / Full_Adder_Sum
+XI3 A<2> B<2> CO<1> net59 GND net049 VDD / Full_Adder_Sum
+XI2 A<1> B<1> CO<0> net49 GND net052 VDD / Full_Adder_Sum
+XI1 A<0> B<0> GND net57 GND net053 VDD / Full_Adder_Sum
+XI35 GND VDD net066 S<10> / inv
+XI34 GND VDD net050 S<4> / inv
+XI33 GND VDD net067 S<9> / inv
+XI32 GND VDD net051 S<3> / inv
+XI31 GND VDD net068 S<8> / inv
+XI30 GND VDD net049 S<2> / inv
+XI29 GND VDD net069 S<7> / inv
+XI28 GND VDD net052 S<1> / inv
+XI27 GND VDD net070 S<6> / inv
+XI26 GND VDD net053 S<0> / inv
+XI24 GND VDD net071 S<5> / inv
+.ENDS
+

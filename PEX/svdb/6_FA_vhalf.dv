@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/6_FA_vhalf.dv
+dv_start matched
+dv_cell {6_FA_vhalf} {6_FA_vhalf} matched
+dv_obj_count -transformed_nets {37 37} -transformed_inst {60 60} -transformed_port {20 20}
+dv_end

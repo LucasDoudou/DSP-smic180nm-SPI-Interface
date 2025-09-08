@@ -1,0 +1,17 @@
+5_6_Mul_draft3 1000
+ptd_to_power
+0 0 2 Dec 17 23:07:29 2024                                      
+Rule File Pathname: /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+Pwell pick-up layer ptd texted with power net.
+ntd_to_ground
+0 0 2 Dec 17 23:07:29 2024                                      
+Rule File Pathname: /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+Nwell pick-up layer ntd texted with ground net.
+mntopg
+0 0 2 Dec 17 23:07:29 2024                                      
+Rule File Pathname: /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+NMOS connect to both Power and Ground.
+mptopg
+0 0 2 Dec 17 23:07:29 2024                                      
+Rule File Pathname: /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+PMOS connect to both Power and Ground.

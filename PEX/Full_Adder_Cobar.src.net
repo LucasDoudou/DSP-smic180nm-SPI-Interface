@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  EE113_DSP
+* Top Cell Name: Full_Adder_Cobar
+* View Name:     schematic
+* Netlisted on:  Dec 14 15:03:16 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: EE113_DSP
+* Cell Name:    Full_Adder_Cobar
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Full_Adder_Cobar A B CI CO_ GND VDD
+*.PININFO A:I B:I CI:I CO_:O GND:B VDD:B
+MNM4 CO_ A net36 GND n18 W=440n L=180n m=1
+MNM3 CO_ CI net18 GND n18 W=440n L=180n m=1
+MNM2 net36 B GND GND n18 W=440n L=180n m=1
+MNM1 net18 B GND GND n18 W=440n L=180n m=1
+MNM0 net18 A GND GND n18 W=440n L=180n m=1
+MPM4 net22 A VDD VDD p18 W=880n L=180n m=1
+MPM3 net22 B VDD VDD p18 W=880n L=180n m=1
+MPM2 net35 B VDD VDD p18 W=880n L=180n m=1
+MPM1 CO_ A net35 VDD p18 W=880n L=180n m=1
+MPM0 CO_ CI net22 VDD p18 W=880n L=180n m=1
+.ENDS
+

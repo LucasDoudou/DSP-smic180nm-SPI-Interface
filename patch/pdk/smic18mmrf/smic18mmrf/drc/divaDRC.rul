@@ -1,0 +1,523 @@
+/************************************************************************
+
+  Title:        Diva DRC rules for GENERIC PDK Process
+                Library Specification No. GPDK, Version 1.8
+
+
+  Notes:        Cadence Design Systems, Inc.
+                PDK TECHNOLOGY CENTER, Melbourne, FL
+                Sep 30, 2002
+
+
+                              LEGAL STUFF
+   _____________________________________________________________________
+  * Cadence Design Systems shall not be liable for the accuracy of      *
+  * this design rule deck or it's ability to capture errors. The user   *
+  * is responsible for thoroughly testing and implementing it's         *
+  * features.                                                           *
+  *---------------------------------------------------------------------*
+
+
+Revision History:
+
+	05/24/02  gscl   Added Nburied rules.
+	05/02/02  gscl   Added min enclosure rule for cont/Nimp,Pimp
+        04/26/02  gscl   sync with PDK factory 2.1 (NWELL rule added)	
+	04/19/02  gscl	 Added check for overlaping NImp and PImp
+        01/10/02  mo     Second Customer Release, Version 2.0
+			 -replaced mutiple size/and commands in latch up
+			  checks with geomSizeInTub command
+			 -excluded diodes and bjt from latch-up checks
+
+        11/05/01         First Customer Release, Version 1.0
+
+
+*************************************************************************/
+
+drcExtractRules(
+
+;*** ERASE ***
+
+   geomErase("marker" "warning")
+   geomErase("marker" "error")
+   geomErase("changedLayer" "tool0")
+
+
+;*** MERGE ***
+
+   Nburied  = geomOr( "Nburied")
+   Nwell    = geomOr( "Nwell" )
+   Pwell    = geomOr( "Pwell" )
+   Oxide    = geomOr( "Oxide" )
+   Poly     = geomOr( "Poly" )
+   Pimp     = geomOr( "Pimp" )
+   Nimp     = geomOr( "Nimp" )
+   Cont     = geomOr( "Cont" )
+   Metal1   = geomOr( "Metal1" )
+   Via1     = geomOr( "Via1" )
+   Metal2   = geomOr( "Metal2" )
+   Via2     = geomOr( "Via2" )
+   Metal3   = geomOr( "Metal3" )
+   Via3     = geomOr( "Via3" )
+   Metal4   = geomOr( "Metal4" )
+   Via4     = geomOr( "Via4" )
+   Metal5   = geomOr( "Metal5" )
+   Via5     = geomOr( "Via5" )
+   Metal6   = geomOr( "Metal6" )
+   CapMetal = geomOr( "CapMetal" )
+   Resdum   = geomOr( "Resdum" )
+   DIOdummy = geomOr( "DIOdummy" )
+   BJTdum   = geomOr( "BJTdum" )
+   PNPdummy = geomOr( "PNPdummy" )
+
+
+;*** OFF-GRID ***
+
+   offGrid( "Nburied" 0.005 1 "Nburied offgrid")
+   offGrid( "Nwell" 0.005 1 "Nwell offGrid")
+   offGrid( "Pwell" 0.005 1 "Pwell offGrid")
+   offGrid( "Oxide" 0.005 1 "Oxide offGrid")
+   offGrid( "Poly" 0.005 1 "Poly offGrid")
+   offGrid( "Pimp" 0.005 1 "PP offGrid")
+   offGrid( "Nimp" 0.005 1 "NP offGrid")
+   offGrid( "Cont" 0.005 1 "Cont offGrid")
+   offGrid( "Metal1" 0.005 1 "Metal1 offGrid")
+   offGrid( "Via1" 0.005 1 "Via1 offGrid")
+   offGrid( "Metal2" 0.005 1 "Metal2 offGrid")
+   offGrid( "Via2" 0.005 1 "Via2 offGrid")
+   offGrid( "Metal3" 0.005 1 "Metal3 offGrid")
+   offGrid( "Via3" 0.005 1 "Via3 offGrid")
+   offGrid( "Metal4" 0.005 1 "Metal4 offGrid")
+   offGrid( "Via4" 0.005 1 "Via4 offGrid")
+   offGrid( "Metal5" 0.005 1 "Metal5 offGrid")
+   offGrid( "Via5" 0.005 1 "Via5 offGrid")
+   offGrid( "Metal6" 0.005 1 "Metal6 offGrid")
+
+;*** CONSTRUCT ***
+
+  bulk     = geomBkgnd(0)		;everything
+  NPOD     = geomAnd(Nimp Oxide)	;N+ OD
+  PPOD     = geomAnd(Pimp Oxide)	;P+ OD
+  gate     = geomAnd(Poly Oxide)	;Gate
+  psd      = geomAndNot(PPOD gate)	;P+ s/d
+  nsd      = geomAndNot(NPOD gate)	;N+ s/d
+  ntap     = geomAnd(NPOD Nwell)	;N+ Nwell tap
+  ptap     = geomAndNot(PPOD Nwell)	;P+ Psub tap
+
+
+;***************
+;*** Nburied ***
+;***************
+
+   drc( Nburied width < 1.0
+	"0A Minimum NBuried width 1.0u" )
+   drc( Nburied 0 < sep < 1
+	"0B Minimum NBuried space 1.0u" )
+   drc( Nburied notch < 1
+	"0B Minimum NBuried space 1.0u" )
+
+
+;*************
+;*** Nwell ***
+;*************
+
+  drc( Nwell width < 1.0
+    "1A Minimum Nwell width 1.0u" )
+
+  drc( Nwell 0 < sep < 1
+    "1B Minimum Nwell space 1.0u" )
+  drc( Nwell notch < 1
+    "1B Minimum Nwell space 1.0u" )
+
+  isoNwell = geomAnd( Nwell Nburied)
+  isoNwell = geomEnclose( Nwell isoNwell)
+  saveDerived(geomAndNot(isoNwell Nburied)
+		"1C minimum Nburied enclosre of Nwell 0.3u")
+  drc( Nburied isoNwell 0 < enc < 0.3
+    "1C Minimum NBuried enclosure of Nwell 0.3u")
+
+;*************
+;*** Pwell ***
+;*************
+
+  drc( Pwell width < 1.0
+    "1D Minimum Pwell width 1.0u" )
+
+  drc( Pwell 0 < sep < 1
+    "1E Minimum Pwell space 1.0u" )
+  drc( Pwell notch < 1
+    "1E Minimum Pwell space 1.0u" )
+
+  drc( Nburied Pwell enc < 0.3
+    "1F Minimum NBuried enclosure of Pwell 0.3u")
+
+
+
+;*************
+;*** Oxide ***
+;*************
+
+  drc( Oxide width < .4
+    "2A Minimum Oxide width 0.4u" )
+
+  drc( Oxide 0 < sep < .3
+    "2B Minimum Oxide space 0.3u" )
+  drc( Oxide notch < .3
+    "2B Minimum Oxide space 0.3u" )
+
+  drc( Nwell Oxide enc < .5 
+    "2C Minimum Nwell enclosure of Oxide 0.5u" )
+
+  drc( Nwell Oxide sep < .5 
+    "2D Minimum Nwell to Oxide space 0.5u" )
+
+
+;************
+;*** Nimp ***
+;************
+
+  drc( Nimp width < .4
+    "3A Minimum Nimp width 0.4u" )
+
+  drc( Nimp 0 < sep < 0.4
+    "3B Minimum Nimp space 0.4u" )
+  drc( Nimp notch < 0.4
+    "3B Minimum Nimp space 0.4u" )
+
+  drc( Nimp Oxide enc < .2 
+    "3C Minimum Nimp enclosure of Oxide 0.2u" )
+
+  drc( Nburied Nimp enc < 0.6
+    "3D Minimum Nburied enclosure of Nimp 0.6u")
+
+
+
+;************
+;*** Pimp ***
+;************
+
+  drc( Pimp width < .4
+    "4A Minimum Pimp width 0.4u" )
+
+  drc( Pimp 0 < sep < 0.4
+    "4B Minimum Pimp space 0.4u" )
+  drc( Pimp notch < 0.4
+    "4B Minimum Pimp space 0.4u" )
+
+  drc( Pimp Oxide enc < .2 
+    "4C Minimum Pimp enclosure of Oxide 0.2u" )
+
+  drc( Nburied Pimp enc < 0.6
+    "4D Minimum Nburied enclosure of Pimp 0.6u")
+
+
+  badImp = geomAnd(Pimp Nimp)
+  saveDerived( badImp
+	"4E Pimp and Nimp should not overlap")
+
+;************
+;*** Poly ***
+;************
+
+  drc( Poly width < .18
+    "5A Minimum Poly width 0.18" )
+
+  drc( Poly 0 < sep < .3
+    "5B Minimum Poly space 0.3u" )
+  drc( Poly notch < .3
+    "5B Minimum Poly space 0.3u" )
+
+  drc( Poly Oxide enc < .2 
+    "5C Minimum Poly extension beyond Oxide (poly endcap) 0.2u" )
+
+  drc( Oxide Poly enc < .4
+    "5D Minimum Oxide extension beyond gate Poly 0.4u" )
+
+  drc( Poly Oxide sep < .2
+    "5E Minimum Poly to Oxide space 0.2u" )
+
+
+;***************
+;*** Contact ***
+;***************
+
+  drc( Cont width < .2
+    "6A Minimum and maximum width of Cont 0.2u" )
+  okCont = drc( Cont 0.0399 < area < 0.0401 )
+  saveDerived( geomAndNot( Cont okCont )
+    "6A Minimum and maximum width of Cont 0.2u" )
+  saveDerived( geomGetNon90( Cont )
+    "Implied Rule that contacts cannot be rotated" )
+  saveDerived( geomGetPolygon( Cont )
+    "Implied Rule that contacts must be rectangles" )
+
+  drc( Cont sep < .2
+    "6B Minimum Cont space 0.2u" )
+
+  drc( Oxide Cont enc < .2
+    "6C Minimum Oxide enclosure of Cont 0.2u" )
+
+  drc( Poly Cont enc < .2
+    "6D Minimum Poly enclsoure of Cont 0.2u" )
+
+  drc( Poly Cont sep < .2
+    "6E Minimum Poly to Cont space 0.2u" )
+
+	NimpCont = geomAnd(Cont Nimp)
+  drc( Nimp NimpCont enc < .2 figb
+	"6F Minimum Nimp enclosure of Cont 0.2u")
+	PimpCont = geomAnd(Cont Pimp)
+  drc( Pimp PimpCont enc < .2 figb
+	"6G Minimum Pimp enclosure of Cont 0.2u")
+
+;***************
+;*** Metal 1 ***
+;***************
+
+  drc( Metal1 width < .3
+    "7A Minimum Metal1 width 0.3u" )
+
+  drc( Metal1 sep < .3
+    "7B Minimum Metal1 space 0.3u" )
+  drc( Metal1 notch < .3
+    "7B Minimum Metal1 space 0.3u" )
+
+  drc( Metal1 Cont enc < .1
+    "7C Minimum Metal1 enclosure of Cont 0.1u" )
+
+
+;*************
+;*** Via 1 ***
+;*************
+
+  drc( Via1 width < .2
+    "8A Minimum and maximum width of Via1 0.2u" )
+  okCont = drc( Via1 0.0399 < area < 0.0401 )
+  saveDerived( geomAndNot( Via1 okCont )
+    "8A Minimum and maximum width of Via1 0.2u" )
+  saveDerived( geomGetNon90( Via1 )
+    "Implied Rule that contacts cannot be rotated" )
+  saveDerived( geomGetPolygon( Via1 )
+    "Implied Rule that contacts must be rectangles" )
+
+  drc( Via1 sep < .3
+    "8B Minimum Via1 space 0.3u" )
+
+  drc( Metal1 Via1 enc < .1
+    "8C Minimum Metal1 enclosure of Via1 0.1u" )
+
+
+;***************
+;*** Metal 2 ***
+;***************
+
+  drc( Metal2 width < .3
+    "9A Minimum Metal2 width 0.3u" )
+
+  drc( Metal2 sep < 0.3
+    "9B Minimum Metal2 space 0.3u" )
+  drc( Metal2 notch < 0.3
+    "9B Minimum Metal2 space 0.3u" )
+
+  drc( Metal2 Via1 enc < .1
+    "9C Minimum Metal2 enclosure of Via1 0.1u" )
+
+
+;*************
+;*** Via 2 ***
+;*************
+
+  drc( Via2 width < .2
+    "10A Minimum and maximum width of Via2 0.2u" )
+  okCont = drc( Via2 0.0399 < area < 0.0401 )
+  saveDerived( geomAndNot( Via2 okCont )
+    "10A Minimum and maximum width of Via2 0.2u" )
+  saveDerived( geomGetNon90( Via2 )
+    "Implied Rule that contacts cannot be rotated" )
+  saveDerived( geomGetPolygon( Via2 )
+    "Implied Rule that contacts must be rectangles" )
+
+  drc( Via2 sep < .3
+    "10B Minimum Via2 space 0.3u" )
+
+  drc( Metal2 Via2 enc < .1
+    "10C Minimum Metal2 enclosure of Via2 0.1u" )
+
+
+;***************
+;*** Metal 3 ***
+;***************
+
+  drc( Metal3 width < .3
+    "11A Minimum Metal3 width 0.3u" )
+
+  drc( Metal3 sep < .3
+    "11B Minimum Metal3 space 0.3u" )
+  drc( Metal3 notch < .3
+    "11B Minimum Metal3 space 0.3u" )
+
+  capMetal3 = geomOverlap( Metal3 CapMetal )
+  Metal3NoCap = geomAndNot( Metal3 capMetal3 )
+  drc( Metal3NoCap Via2 enc < .1
+    "11C Minimum Metal3 enclosure of Via2 0.1u" )
+
+  drc( capMetal3 Via2 enc < .1
+    "11D Minimum Metal3 enclosure of Via2 for metal capacitor 0.1u" )
+
+
+;****************
+;*** CapMetal ***
+;****************
+
+  drc( CapMetal width < .5
+    "12A Minimum CapMetal width .5u" )
+
+  drc( Metal2 CapMetal enc < .4
+    "12B Minimum Metal2 enclosure of CapMetal 0.4u" )
+
+  drc( CapMetal Via2 enc < .2
+    "12C Minimum CapMetal enclosure of Via2 0.2u" )
+
+  drc( CapMetal Metal3 enc < .3
+    "12D Minimum CapMetal enclosure of Metal3 0.3u" )
+
+
+;****************
+;*** Latch-Up ***
+;****************
+
+ivIf( !switch("Skip_Latch-Up_Checks") then
+
+;Exclude diffusion resistor, diodes and bjt's from the latch-up checks
+  nplusres = geomStraddle( nsd Resdum )
+  ndio = geomAnd( nsd DIOdummy )
+  nsd = geomAndNot( nsd geomOr( nplusres ndio ) )
+
+  pnp = geomAnd( psd PNPdummy )
+  vpnp = geomAnd( psd BJTdum )
+  psd = geomAndNot( psd geomOr( pnp vpnp ) )
+
+  psub = geomAndNot( bulk Nwell )
+
+  saveDerived( geomAndNot( geomAndNot( nsd geomSizeInTub( ptap psub 10 edge) ) ntap )
+    "13A N-LATCHUP N+ s/d > 10u from nearest ptie" )
+
+  saveDerived( geomAndNot( geomAndNot( psd geomSizeInTub( ntap Nwell 10 edge) ) ptap )
+    "13A P-LATCHUP P+ s/d > 10u from nearest ntie")
+
+   ) ;endif
+
+
+;*************
+;*** Via 3 ***
+;*************
+
+  drc( Via3 width < .2
+    "14A Minimum and maximum width of Via3 0.2u" )
+  okCont = drc( Via3 0.0399 < area < 0.0401 )
+  saveDerived( geomAndNot( Via3 okCont )
+    "14A Minimum and maximum width of Via3 0.2u" )
+  saveDerived( geomGetNon90( Via3 )
+    "Implied Rule that contacts cannot be rotated" )
+  saveDerived( geomGetPolygon( Via3 )
+    "Implied Rule that contacts must be rectangles" )
+
+  drc( Via3 sep < .3
+    "14B Minimum Via3 space 0.3u" )
+
+  drc( Metal3 Via3 enc < .1
+    "14C Minimum Metal3 enclosure of Via3 0.1u" )
+
+
+;***************
+;*** Metal 4 ***
+;***************
+
+  drc( Metal4 width < .3
+    "15A Minimum Metal4 width 0.3u" )
+
+  drc( Metal4 sep < .3
+    "15B Minimum Metal4 space 0.3u" )
+  drc( Metal4 notch < .3
+    "15B Minimum Metal4 space 0.3u" )
+
+  drc( Metal4 Via3 enc < .1
+    "15C Minimum Metal4 enclosure of Via3 0.1u" )
+
+
+;*************
+;*** Via 4 ***
+;*************
+
+  drc( Via4 width < .2
+    "16A Minimum and maximum width of Via4 0.2u" )
+  okCont = drc( Via4 0.0399 < area < 0.0401 )
+  saveDerived( geomAndNot( Via4 okCont )
+    "16A Minimum and maximum width of Via4 0.2u" )
+  saveDerived( geomGetNon90( Via4 )
+    "Implied Rule that contacts cannot be rotated" )
+  saveDerived( geomGetPolygon( Via4 )
+    "Implied Rule that contacts must be rectangles" )
+
+  drc( Via4 sep < .3
+    "16B Minimum Via4 space 0.3u" )
+
+  drc( Metal4 Via4 enc < .1
+    "16C Minimum Metal4 enclosure of Via4 0.1u" )
+
+
+;***************
+;*** Metal 5 ***
+;***************
+
+  drc( Metal5 width < .3
+    "17A Minimum Metal5 width 0.3u" )
+
+  drc( Metal5 sep < .3
+    "17B Minimum Metal5 space 0.3u" )
+  drc( Metal5 notch < .3
+    "17B Minimum Metal5 space 0.3u" )
+
+  drc( Metal5 Via4 enc < .1
+    "17C Minimum Metal5 enclosure of Via4 0.1u" )
+
+
+;*************
+;*** Via 5 ***
+;*************
+
+  drc( Via5 width < .2
+    "18A Minimum and maximum width of Via5 0.2u" )
+  okCont = drc( Via5 0.0399 < area < 0.0401 )
+  saveDerived( geomAndNot( Via5 okCont )
+    "18A Minimum and maximum width of Via5 0.2u" )
+  saveDerived( geomGetNon90( Via5 )
+    "Implied Rule that contacts cannot be rotated" )
+  saveDerived( geomGetPolygon( Via5 )
+    "Implied Rule that contacts must be rectangles" )
+
+  drc( Via5 sep < .3
+    "18B Minimum Via5 space 0.3u" )
+
+  drc( Metal5 Via5 enc < .1
+    "18C Minimum Metal5 enclosure of Via5 0.1u" )
+
+
+;***************
+;*** Metal 6 ***
+;***************
+
+  drc( Metal6 width < .3
+    "19A Minimum Metal6 width 0.3u" )
+
+  drc( Metal6 sep < .3
+    "19B Minimum Metal6 space 0.3u" )
+  drc( Metal6 notch < .3
+    "19B Minimum Metal6 space 0.3u" )
+
+  drc( Metal6 Via5 enc < .1
+    "19C Minimum Metal6 enclosure of Via5 0.1u" )
+
+
+)  ;end drcExtractRules
+

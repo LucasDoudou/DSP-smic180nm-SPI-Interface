@@ -1,0 +1,73 @@
+\# Program start time UTC 2024.10.17 14:16:01.216
+\# Local time Thursday 17 October 2024, 10:16 pm
+\o Program:		@(#)$CDS: virtuoso version 6.1.5 05/04/2012 23:37 (sjfdl054) $
+\o Hierarchy:		/usr/cadence/IC615/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.5.500.11  (32-bit addresses)
+\# Host name (type):	Student (x86_64)
+\# Operating system:	Linux 2.6.32-431.el6.x86_64 #1 SMP Fri Nov 22 03:15:09 UTC 2013
+\# X display name (WxH):	Student:80 (1024x868)
+\# Available geometry:			TL(0:0) BR(1023:867)
+\# X server:			RealVNC Ltd (VNC nograph server)
+\# Depth of Visual (Root):	16 (16)
+\# Number of Planes Used:	16
+\# X version:		11.0 (vendor release 3370)
+\# X resource pool:	base 0x800000, mask 0x3fffff (4194303), shift 0
+\# 			current id 0x0, current max 0x3ffffa (4194298)
+\# Memory report:	maximum data size 4294967295 (0xffffffff) bytes
+\# Memory report:	maximum process size 4294967295 (0xffffffff) bytes
+\# Initial sbrk value:	373874688 (0x1648e000) bytes
+\# Available memory:	4757692 (0x4898bc) kilobytes
+\# System memory:	6006008 (0x5ba4f8) kilobytes
+\# Maximum memory size:	3964309503 (0xec4a8fff) bytes
+\# Max mem available:	3964309503 (0xec4a8fff) bytes
+\# Initial memory used:	43216896 (0x2937000) bytes
+\# Qt version:		4.5.3
+\# Window Manager:	other
+\# User Name:		student
+\o Working Directory:	Student:/home/student/Desktop/Workspace
+\# Process Id:		14716
+\o 
+\o COPYRIGHT © 1992-2012  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           © 1992-2012  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\# Available memory:	4749100 (0x48772c) kilobytes UTC 2024.10.17 14:16:01.457
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading LVS.cxt 
+\o Loading layerProc.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexl.cxt 
+\o Loading oasis.cxt 
+\o Loading asimenv.cxt 
+\o Loading analog.cxt 
+\o Loading par.cxt 
+\o Loading socket.cxt 
+\o Loading alvs.cxt 
+\o *Info*    Exporting services from client ... 
+\o 
+\w *WARNING* LIB smic18mmrf from File /home/student/Desktop/Workspace/cds.lib Line 6 redefines
+\w LIB smic18mmrf from File /usr/cadence/IC615/share/cdssetup/cds.lib
+\w Insert UNDEFINE smic18mmrf
+\w before DEFINE smic18mmrf
+\w     in /home/student/Desktop/Workspace/cds.lib
+\w Or remove or comment out DEFINE smic18mmrf
+\w     in /usr/cadence/IC615/share/cdssetup/cds.lib
+\w to suppress this warning message.
+\o 
+\o *Info*    Received signal SIGINT.
+\o 

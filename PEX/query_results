@@ -1,0 +1,2 @@
+mgc_rve_context "DSP_final_v2" 1000
+mgc_rve_ipc_send_cmd(sprintf(nil "skill_cmd_done %L" length(evalstring("arglist('mgc_rve_export_layout)"))))

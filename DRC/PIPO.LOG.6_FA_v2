@@ -1,0 +1,70 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.5 05/04/2012 23:33 (sjfdl077) $
+          : sub-version  IC6.1.5.500.11 
+Started at: 15-Dec-2024  17:16:05
+User Name : student
+Host Name : Student
+Directory : /home/student/Desktop/Workspace
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+INFO (XSTRM-217): Reading the layer map file, /home/student/Desktop/Workspace/smic18mmrf/smic18mmrf/smic18mmrf.layermap
+INFO (XSTRM-162): You have not used the viaMap option. If the OpenAccess design has native oaVia instances, use the -viaMap option for preserving oaVia instances in a Stream Out - Stream In round trip. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design.  For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options :
+library                                 EE113_DSP
+strmFile                                /home/student/Desktop/Workspace/DRC/6_FA_v2.calibre.db
+topCell                                 6_FA_v2
+view                                    layout
+runDir                                  /home/student/Desktop/Workspace/DRC/
+logFile                                 PIPO.LOG.6_FA_v2
+layerMap                                /home/student/Desktop/Workspace/smic18mmrf/smic18mmrf/smic18mmrf.layermap
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView smic18mmrf/M2_M1/layout as STRUCTURE M2_M1_0
+INFO (XSTRM-223): 2. Translating cellView smic18mmrf/M1_GT/layout as STRUCTURE M1_GT_1
+INFO (XSTRM-223): 3. Translating cellView EE113_DSP/Full_Adder_Sum/layout as STRUCTURE Full_Adder_Sum
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+INFO (XSTRM-236): A path with a rounded extension, an acute angle or a length segment less than half width is encountered at (12935, -15830). This path will be written as a boundary record in the GDS file.
+INFO (XSTRM-236): A path with a rounded extension, an acute angle or a length segment less than half width is encountered at (15155, -15830). This path will be written as a boundary record in the GDS file.
+INFO (XSTRM-223): 4. Translating cellView EE113Lab2/inv/layout as STRUCTURE inv
+INFO (XSTRM-223): 5. Translating cellView EE113_DSP/6_FA_v2/layout as STRUCTURE 6_FA_v2
+INFO (XSTRM-223): 6. Translating cellView smic18mmrf/p18/layout as STRUCTURE p18_0
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'text:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'instance:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 7. Translating cellView smic18mmrf/p18/layout as STRUCTURE p18_1
+INFO (XSTRM-223): 8. Translating cellView smic18mmrf/n18/layout as STRUCTURE n18_2
+INFO (XSTRM-223): 9. Translating cellView smic18mmrf/n18/layout as STRUCTURE n18_3
+INFO (XSTRM-223): 10. Translating cellView smic18mmrf/n18/layout as STRUCTURE n18_4
+INFO (XSTRM-223): 11. Translating cellView smic18mmrf/p18/layout as STRUCTURE p18_5
+INFO (XSTRM-223): 12. Translating cellView smic18mmrf/n18/layout as STRUCTURE n18_6
+INFO (XSTRM-223): 13. Translating cellView smic18mmrf/p18/layout as STRUCTURE p18_7
+
+Summary of Objects Translated:
+	Scalar Instances:                       32
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  141
+	Rectangles:                             258
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           53
+	Custom Vias:                            0
+	Pathsegs:                               0
+	Text:                                   33
+	Cells:                                  13
+
+Elapsed Time: 0.6s   User Time: 0.6s   CPU Time: 0.1s   Peak VM: 1052KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.

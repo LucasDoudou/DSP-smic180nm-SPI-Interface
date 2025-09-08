@@ -1,0 +1,9 @@
+RAM_v1 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Jan 18 16:43:19 2025                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Jan 18 16:43:19 2025                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Jan 18 16:43:19 2025                                      
+ERC PATHCHK ! LABELED
+0 0 0 Jan 18 16:43:19 2025                                      

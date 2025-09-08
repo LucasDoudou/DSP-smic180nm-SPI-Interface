@@ -1,0 +1,59 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 32.10 11/11/2011 13:45 (cat91amd) $
+\o Sub version:		sub-version  s008 
+\o Arguments:		-cdslib /home/student/Desktop/Workspace/cds.lib -mpssession virtuoso67752 -mpshost Student 
+\o Working Directory:	Student:/home/student/Desktop/Workspace
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.5.3
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrResizeWindow(cdsLibEditor list(202 81 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 ""
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 ""
+\a nrResizeWindow(cdsLibEditor list(305 91 500 400))
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrSetWindowVisibility(needCreateDialog "show")
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 ""
+\a nrSetCurrentWindow(needCreateDialog)
+\a nrResizeWindow(needCreateDialog list(247 190 616 180))
+\a needCreateDialog->noButton->value = t
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 15 1)
+\o Active cell: 15 1 ""
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 ""
+\a nrListItemAction(cdsLibEditor->mainTable 15 1)
+\o Active cell: 15 1 ""
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 "EECS151T_cadence"
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 "/home/student/Desktop/EECS151T_cadence"
+\a cdsLibEditor->editDeletePopupButton->value = t
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 ""
+\a nrResizeWindow(cdsLibEditor list(731 342 500 400))
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 ""
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 ""
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 "/home/student/Desktop/EECS151T_cadence/sky130_release_0.0.4/libs/sky130_fd_pr_main"
+\a cdsLibEditor->fileExitButton->value = t
+\o QUESTION (CLE-205): You have made changes which have not been saved. \n\nWould you like to save your changes? 
+\a nrSetWindowVisibility(needSaveDialog "show")
+\a nrResizeWindow(needSaveDialog list(797 458 369 130))
+\a nrSetCurrentWindow(needSaveDialog)
+\a needSaveDialog->yesButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

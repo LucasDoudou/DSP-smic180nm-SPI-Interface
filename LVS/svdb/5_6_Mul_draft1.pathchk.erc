@@ -1,0 +1,9 @@
+5_6_Mul_draft1 1000
+ERC PATHCHK GROUND && ! POWER
+0 0 0 Dec 18 21:25:27 2024                                      
+ERC PATHCHK POWER && ! GROUND
+0 0 0 Dec 18 21:25:27 2024                                      
+ERC PATHCHK ! POWER && ! GROUND
+0 0 0 Dec 18 21:25:27 2024                                      
+ERC PATHCHK ! LABELED
+0 0 0 Dec 18 21:25:27 2024                                      

@@ -1,0 +1,24 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "NOR"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/student/Desktop/Workspace"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "EE113lab5/NOR/schematic" "NOR" )
+ )
+( term
+ )
+( param
+ )
+( "NOR" "ihnl/cds0/map" )
+ )

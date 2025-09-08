@@ -1,0 +1,10 @@
+And_Gate 1000
+SOFTCHK nwell CONTACT.
+0 0 0 Nov 13 21:26:34 2024                                      
+SOFTCHK pwell CONTACT.
+1 1 0 Nov 13 21:26:34 2024                                      
+p 1 4
+700 -6830
+1920 -6830
+1920 -6410
+700 -6410

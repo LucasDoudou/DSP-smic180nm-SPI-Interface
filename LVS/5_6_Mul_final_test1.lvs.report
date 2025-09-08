@@ -1,0 +1,254 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         5_6_Mul_final_test1.lvs.report
+LAYOUT NAME:              /home/student/Desktop/Workspace/LVS/5_6_Mul_final_test1.sp ('5_6_Mul_final_test1')
+SOURCE NAME:              /home/student/Desktop/Workspace/LVS/5_6_Mul_final_test1.src.net ('5_6_Mul_final_test1')
+RULE FILE:                /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+CREATION TIME:            Wed Dec 18 22:17:14 2024
+CURRENT DIRECTORY:        /home/student/Desktop/Workspace/LVS
+USER NAME:                student
+CALIBRE VERSION:          v2011.2_34.26    Wed Jul 6 05:20:09 PDT 2011
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  CORRECT        5_6_Mul_final_test1           5_6_Mul_final_test1
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD" "SAVDD?" "?VDD?" "?VCC?" "?vcc?" "?vdd?"
+   LVS GROUND NAME                        "VSS" "SAVSS?" "?gnd?" "?GND?" "?VSS?" "?vss?"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       YES
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       YES
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  YES
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            NO
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        65536
+   // LVS SIGNATURE MAXIMUM
+   // LVS FILTER UNUSED OPTION
+   // LVS REPORT OPTION
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+
+   // Map Device
+
+   LVS MAP DEVICE                      MN(NM) MN(N18)
+   LVS MAP DEVICE                      MP(PM) MP(P18)
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Trace Property
+
+   TRACE PROPERTY  mn(nm)  l l 5
+   TRACE PROPERTY  mn(nm)  w w 5
+   TRACE PROPERTY  mn(n33)  l l 5
+   TRACE PROPERTY  mn(n33)  w w 5
+   TRACE PROPERTY  m(c1)  l l 5
+   TRACE PROPERTY  m(c1)  w w 5
+   TRACE PROPERTY  m(c2)  l l 5
+   TRACE PROPERTY  m(c2)  w w 5
+   TRACE PROPERTY  mp(pm)  l l 5
+   TRACE PROPERTY  mp(pm)  w w 5
+   TRACE PROPERTY  mp(p33)  l l 5
+   TRACE PROPERTY  mp(p33)  w w 5
+   TRACE PROPERTY  d(pdio18)  a a 5
+   TRACE PROPERTY  d(pdio33)  a a 5
+   TRACE PROPERTY  d(ndio18)  a a 5
+   TRACE PROPERTY  d(ndio33)  a a 5
+   TRACE PROPERTY  d(nwdio)  a a 5
+   TRACE PROPERTY  q(pnp)  a a 5
+   TRACE PROPERTY  r(rnwaa)  r r 10
+   TRACE PROPERTY  r(rnwsti)  r r 10
+   TRACE PROPERTY  r(rndif)  r r 10
+   TRACE PROPERTY  r(rndifsab)  r r 10
+   TRACE PROPERTY  r(rpdif)  r r 10
+   TRACE PROPERTY  r(rpdifsab)  r r 10
+   TRACE PROPERTY  r(rnpo)  r r 10
+   TRACE PROPERTY  r(rnposab)  r r 10
+   TRACE PROPERTY  r(rppo)  r r 10
+   TRACE PROPERTY  r(rpposab)  r r 10
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+LAYOUT CELL NAME:         5_6_Mul_final_test1
+SOURCE CELL NAME:         5_6_Mul_final_test1
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             22        22
+
+ Nets:             336       336
+
+ Instances:        324       324         MN (4 pins)
+                   324       324         MP (4 pins)
+                ------    ------
+ Total Inst:       648       648
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             22        22
+
+ Nets:             132       132
+
+ Instances:         18        18         SPDW_2_1 (4 pins)
+                    18        18         SPDW_3_1 (5 pins)
+                    18        18         SPUP_2_1 (4 pins)
+                    18        18         SPUP_3_1 (5 pins)
+                    60        60         _invv (4 pins)
+                    24        24         _nand2v (5 pins)
+                    18        18         _smn2v (4 pins)
+                    18        18         _smn3v (5 pins)
+                    18        18         _sup2v (4 pins)
+                    18        18         _sup3v (5 pins)
+                ------    ------
+ Total Inst:       228       228
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:              22         22            0            0
+
+   Nets:              132        132            0            0
+
+   Instances:          18         18            0            0    SPDW_2_1
+                       18         18            0            0    SPDW_3_1
+                       18         18            0            0    SPUP_2_1
+                       18         18            0            0    SPUP_3_1
+                       60         60            0            0    _invv
+                       24         24            0            0    _nand2v
+                       18         18            0            0    _smn2v
+                       18         18            0            0    _smn3v
+                       18         18            0            0    _sup2v
+                       18         18            0            0    _sup3v
+                  -------    -------    ---------    ---------
+   Total Inst:        228        228            0            0
+
+
+o Initial Correspondence Points:
+
+   Ports:        VDD GND X<0> X<1> X<2> X<3> X<4> X<5> Y<1> Y<0> Z<0> Z<1> Y<2> Y<3> OUT<1>
+                 OUT<2> OUT<3> OUT<4> OUT<5> OUT<6> Z<2> Z<3>
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      0 sec
+Total Elapsed Time:  0 sec

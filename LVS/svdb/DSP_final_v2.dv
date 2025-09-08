@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/DSP_final_v2.dv
+dv_start matched
+dv_cell {DSP_final_v2} {DSP_final_v2} matched
+dv_obj_count -transformed_nets {340 340} -transformed_inst {618 618} -transformed_port {40 40}
+dv_end

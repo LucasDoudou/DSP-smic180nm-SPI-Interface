@@ -1,0 +1,28 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "12_RAM_v1"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/student/Desktop/Workspace/LVS"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "EE113_SPI/RAM_v1/schematic" "RAM_v1" )
+( "EE113Lab2/inv/schematic" "inv" )
+( "EE113_SPI/12_RAM_v1/schematic" "12_RAM_v1" )
+ )
+( term
+ )
+( param
+ )
+( "inv" "ihnl/cds0/map" )
+( "RAM_v1" "ihnl/cds1/map" )
+( "12_RAM_v1" "ihnl/cds2/map" )
+ )

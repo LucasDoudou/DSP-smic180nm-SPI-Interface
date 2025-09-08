@@ -1,0 +1,11 @@
+(cosim port) 38520
+(cosim inputs) nil
+(cosim server) ""
+(cosim whenStartMatlab) "no"
+(cosim outputs) nil
+(cosim design) ""
+(cosim serverr) "localhost"
+(cosim matlabStartDir) ""
+(cosim timeout) 60
+(cosim matlabStartCmd) "matlab"
+(cosim enable) nil

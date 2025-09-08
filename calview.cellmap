@@ -1,0 +1,36 @@
+
+(pm
+  (smic18mmrf p18 symbol)
+  (
+    (b B)
+    (d D)
+    (g G)
+    (s S)
+  )
+)
+
+(nm
+  (smic18mmrf n18 symbol)
+  (
+    (b B)
+    (d D)
+    (g G)
+    (s S)
+  )
+)
+
+((p cap c)
+  (analogLib cap symbol)
+  (
+    (MINUS)
+    (PLUS)
+  )
+)
+
+((p res r)
+  (analogLib res symbol)
+  (
+    (MINUS)
+    (PLUS)
+  )
+)

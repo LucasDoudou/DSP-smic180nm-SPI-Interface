@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+smic18mmrf/rhrpo_ckt_rf type="cell"
+smic18mmrf/rndifsab_ckt_rf type="cell"
+smic18mmrf/rnposab_ckt_rf type="cell"
+smic18mmrf/rpdifsab_ckt_rf type="cell"
+smic18mmrf/rpposab_ckt_rf type="cell"

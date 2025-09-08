@@ -1,0 +1,8 @@
+TDMCHECKPOINT="1.0"
+smic18mmrf/metalStack type="cell"
+smic18mmrf/primPvardio type="cell"
+smic18mmrf/primRes2 type="cell"
+smic18mmrf/primRes2_ckt type="cell"
+smic18mmrf/primRes3 type="cell"
+smic18mmrf/primRes3_ckt type="cell"
+smic18mmrf/rfprimRes2 type="cell"

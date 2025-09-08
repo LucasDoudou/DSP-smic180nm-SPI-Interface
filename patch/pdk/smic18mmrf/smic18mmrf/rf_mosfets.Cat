@@ -1,0 +1,7 @@
+TDMCHECKPOINT="1.0"
+smic18mmrf/dnw18_ckt_rf type="cell"
+smic18mmrf/dnw33_ckt_rf type="cell"
+smic18mmrf/n18_ckt_rf type="cell"
+smic18mmrf/n33_ckt_rf type="cell"
+smic18mmrf/p18_ckt_rf type="cell"
+smic18mmrf/p33_ckt_rf type="cell"

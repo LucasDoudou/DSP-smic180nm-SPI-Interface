@@ -1,0 +1,91 @@
+
+
+==================================================================================
+=== CALIBRE::ERC-H SUMMARY REPORT
+===
+Execution Date/Time:          Sun Dec 15 14:51:41 2024
+Calibre Version:              v2011.2_34.26    Wed Jul 6 05:20:09 PDT 2011
+Rule File Pathname:           /home/student/Desktop/Workspace/LVS/_SmicSP6.1P_cal018_log_p1mtx_sali.lvs_
+Rule File Title:              
+Layout System:                GDSII
+Layout Path(s):               inv.calibre.db
+Layout Primary Cell:          inv
+Current Directory:            /home/student/Desktop/Workspace/LVS
+User Name:                    student
+Maximum Results/ERC Check:    1000
+Maximum ERC Result Vertices:  4096
+ERC Results Database:         inv.erc.results (ASCII)
+ERC PATHCHK Results Database: svdb/inv.pathchk.erc
+ERC PATHCHK Report:           svdb/inv.pathchk.rep
+Layout Depth:                 ALL
+Text Depth:                   PRIMARY
+Summary Report File:          inv.erc.summary (REPLACE)
+Geometry Flagging:            ACUTE = NO  SKEW = YES  ANGLED = NO  OFFGRID = YES
+                              NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Excluded Cells:              
+CheckText Mapping:            COMMENT TEXT + RULE FILE INFORMATION
+Layers:                       MEMORY-BASED
+Keep Empty Checks:            YES
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+There is no data for layout net name ?VCC?.
+There is no data for layout net name ?VSS?.
+There is no data for layout net name ?VSS?.
+There is no data for layout net name ?VCC?.
+There is no data for layout net name ?VSS?.
+There is no data for layout net name ?VCC?.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER SUBD ..... TOTAL Original Geometry Count = 0  (0)
+LAYER NW ....... TOTAL Original Geometry Count = 1  (1)
+LAYER SP ....... TOTAL Original Geometry Count = 3  (3)
+LAYER AA ....... TOTAL Original Geometry Count = 10 (10)
+LAYER SN ....... TOTAL Original Geometry Count = 3  (3)
+LAYER SAB ...... TOTAL Original Geometry Count = 0  (0)
+LAYER Res_AA ... TOTAL Original Geometry Count = 0  (0)
+LAYER Res_P1 ... TOTAL Original Geometry Count = 0  (0)
+LAYER GT ....... TOTAL Original Geometry Count = 12 (12)
+LAYER Res_NW ... TOTAL Original Geometry Count = 0  (0)
+LAYER DSTR ..... TOTAL Original Geometry Count = 0  (0)
+LAYER DG ....... TOTAL Original Geometry Count = 0  (0)
+LAYER BJTDM .... TOTAL Original Geometry Count = 0  (0)
+LAYER CT ....... TOTAL Original Geometry Count = 9  (9)
+LAYER M1 ....... TOTAL Original Geometry Count = 11 (11)
+LAYER M2 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER M3 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER M4 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER M5 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER M6 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER V5 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER V4 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER V3 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER V2 ....... TOTAL Original Geometry Count = 0  (0)
+LAYER V1 ....... TOTAL Original Geometry Count = 0  (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK ptd_to_power .... TOTAL Result Count = 0 (0)
+RULECHECK ntd_to_ground ... TOTAL Result Count = 0 (0)
+RULECHECK mntopg .......... TOTAL Result Count = 0 (0)
+RULECHECK mptopg .......... TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- ERC RULECHECK RESULTS STATISTICS (BY CELL)
+---
+----------------------------------------------------------------------------------
+--- ERC PATHCHK RESULTS STATISTICS
+---
+  PATHCHK GROUND && ! POWER:
+  PATHCHK POWER && ! GROUND:
+  PATHCHK ! POWER && ! GROUND:
+  PATHCHK ! LABELED:
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                              0
+TOTAL REAL Time:                             0
+TOTAL Original Layer Geometries:             49 (49)
+TOTAL ERC RuleChecks Executed:               4
+TOTAL ERC RuleCheck Results Generated:       0 (0)
+TOTAL ERC PATHCHK Operations Executed:       4

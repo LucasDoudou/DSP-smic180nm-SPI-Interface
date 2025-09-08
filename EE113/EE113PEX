@@ -1,0 +1,26 @@
+*pexRulesFile: /home/student/Desktop/Workspace/rule_file_smic180/calibre/pex/SmicSP6.1P_cal018_log_p1mtx_sali.lvs_pex
+*pexRunDir: /home/student/Desktop/Workspace/PEX
+*pexLayoutPaths: DSP_final_v2.calibre.db
+*pexLayoutPrimary: DSP_final_v2
+*pexLayoutLibrary: EE113_DSP
+*pexLayoutView: layout
+*pexLayoutGetFromViewer: 1
+*pexSourcePath: DSP_final_v2.src.net
+*pexSourcePrimary: DSP_final_v2
+*pexSourceLibrary: EE113_DSP
+*pexSourceGetFromViewer: 1
+*pexReportFile: DSP_final_v2.lvs.report
+*pexPexNetlistFile: DSP_final_v2.pex.netlist
+*pexPexNetlistFormat: CALIBREVIEW
+*pexPexReportFile: DSP_final_v2.pex.report
+*pexMaskDBFile: DSP_final_v2.maskdb
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0
+*cmnUseCBforRVE: 0
+*cmnRunHier: 2
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: EE113_DSP
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: DSP_final_v2.def
