@@ -3,7 +3,6 @@
 For safety concern, this project won't provide PDK.
 
 > A digital signal processing project implemented in **Cadence Virtuoso** using the **SMIC 180nm PDK**.
-> Finished Schematic and **Layout by hand!** including DRC&LVS&PEX all passed.
 > Developed by **Shikai Shen** and **Zheng Zheng**.
 
 ---
@@ -11,6 +10,7 @@ For safety concern, this project won't provide PDK.
 ## 📖 Overview
 This project implements the basic functionality of a **DSP48A1** chip. 
 All design and simulation work was carried out in **Cadence Virtuoso** on the **SMIC 180nm technology node**.
+Finished Schematic and **Layout by hand!** including DRC, LVS and PEX all passed.
 
 The design integrates:
 - ✅ 4-bit Full Adder  
