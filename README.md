@@ -30,11 +30,17 @@ The design integrates:
 ## 📂 Repository Structure
 DSP-smic180nm-SPI-Interface/
 ├── src/ # HDL / schematics / design files
+
 ├── docs/ # documentation, block diagrams, reports
+
 ├── tests/ # verification and testbenches
+
 ├── scripts/ # helper scripts
+
 ├── .gitignore
+
 ├── README.md
+
 └── LICENSE
 
 ---
